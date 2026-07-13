@@ -37,7 +37,11 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: Update live job data
-        run: python work/export_live_jobs.py
+        shell: bash
+        run: |
+          if ! python work/export_live_jobs.py; then
+            echo "::warning::Live job refresh failed. Deploying the last committed jobs-data.js instead."
+          fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
