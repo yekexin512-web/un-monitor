@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UN Monitor V2</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="brand">
+          <div class="brand-mark">UN</div>
+          <div>
+            <h1>UN Monitor</h1>
+            <p>Internship cockpit</p>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active" data-view="opportunities" type="button">
+            <span>Opportunities</span>
+          </button>
+          <button class="nav-item" data-view="dashboard" type="button">
+            <span>Dashboard</span>
+          </button>
+          <button class="nav-item" data-view="studio" type="button">
+            <span>Resume Studio</span>
+          </button>
+        </nav>
+
+        <section class="profile-card">
+          <span class="eyebrow">Current profile</span>
+          <strong>Economics + Data</strong>
+          <p>Policy research, Python, Excel, dashboards, SDGs.</p>
+        </section>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Deployable MVP</p>
+            <h2 id="view-title">Opportunities</h2>
+            <p class="update-stamp" id="last-updated">Last updated: loading</p>
+          </div>
+          <div class="topbar-actions">
+            <button class="secondary-btn" id="reset-demo" type="button">Reset demo data</button>
+            <button class="primary-btn" id="open-add-job" type="button">Add job</button>
+          </div>
+        </header>
+
+        <section class="view active" id="opportunities-view">
+          <div class="toolbar">
+            <label class="search-box">
+              <span>Search</span>
+              <input id="job-search" type="search" placeholder="Role, agency, location, keyword" />
+            </label>
+            <label>
+              <span>Category</span>
+              <select id="category-filter">
+                <option value="all">All categories</option>
+              </select>
+            </label>
+            <label>
+              <span>Source</span>
+              <select id="source-filter">
+                <option value="all">All sources</option>
+              </select>
+            </label>
+            <label>
+              <span>Continent</span>
+              <select id="continent-filter">
+                <option value="all">All continents</option>
+                <option value="Africa">Africa</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="North America">North America</option>
+                <option value="South America">South America</option>
+                <option value="Oceania">Oceania</option>
+                <option value="Remote / Global">Remote / Global</option>
+              </select>
+            </label>
+            <label>
+              <span>Status</span>
+              <select id="status-filter">
+                <option value="all">All statuses</option>
+                <option value="found">Found</option>
+                <option value="applied">Applied</option>
+                <option value="assessment">Assessment</option>
+                <option value="interview">Interview</option>
+                <option value="rejected">Reject</option>
+              </select>
+            </label>
+            <label>
+              <span>Posted</span>
+              <select id="posted-filter">
+                <option value="all">Any time</option>
+                <option value="today">Today</option>
+                <option value="7">Last 7 days</option>
+              </select>
+            </label>
+            <label>
+              <span>Deadline</span>
+              <select id="deadline-filter">
+                <option value="all">Any deadline</option>
+                <option value="expired7">Expired in last 7 days</option>
+                <option value="tomorrow">Tomorrow</option>
+                <option value="soon3">Next 3 days</option>
+                <option value="soon7">Next 7 days</option>
+                <option value="soon14">Next 14 days</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="content-grid">
+            <section class="panel wide">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Job discovery</p>
+                  <h3>Job list</h3>
+                </div>
+                <span id="job-count" class="pill">0 jobs</span>
+              </div>
+              <div class="job-list" id="job-list"></div>
+            </section>
+
+            <aside class="panel detail-panel" id="job-detail">
+              <div class="empty-state">
+                <h3>Select a job</h3>
+                <p>Review the JD, category, deadline, and move it into your application pipeline.</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="dashboard-view">
+          <div class="metric-grid">
+            <article class="metric">
+              <span>New today</span>
+              <strong id="metric-new-today">0</strong>
+              <p>Jobs collected today</p>
+            </article>
+            <article class="metric">
+              <span>Expiring soon</span>
+              <strong id="metric-expiring">0</strong>
+              <p>Deadlines within 7 days</p>
+            </article>
+            <article class="metric">
+              <span>Applied today</span>
+              <strong id="metric-applied-today">0</strong>
+              <p>Submitted today</p>
+            </article>
+            <article class="metric">
+              <span>30-day applied</span>
+              <strong id="metric-applied-30">0</strong>
+              <p>Submitted in last 30 days</p>
+            </article>
+            <article class="metric">
+              <span>Total applied</span>
+              <strong id="metric-applied-total">0</strong>
+              <p>All submitted records</p>
+            </article>
+          </div>
+
+          <div class="content-grid">
+            <section class="panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Application volume</p>
+                  <h3>Application activity</h3>
+                </div>
+                <div class="segmented" role="group" aria-label="Time range">
+                  <button class="active" data-range="7" type="button">7 days</button>
+                  <button data-range="30" type="button">30 days</button>
+                </div>
+              </div>
+              <div class="bar-chart" id="application-chart"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Categories</p>
+                  <h3>Applications by type</h3>
+                </div>
+              </div>
+              <div class="category-chart" id="category-chart"></div>
+            </section>
+          </div>
+
+          <section class="panel board-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Pipeline</p>
+                <h3>Application board</h3>
+              </div>
+            </div>
+            <div class="kanban" id="kanban"></div>
+          </section>
+        </section>
+
+        <section class="view" id="studio-view">
+          <div class="studio-layout">
+            <section class="panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Profile</p>
+                  <h3>Evidence bank</h3>
+                </div>
+              </div>
+              <form class="profile-form" id="profile-form">
+                <label>
+                  <span>Target tracks</span>
+                  <input name="targets" value="Economics, Data, Programme" />
+                </label>
+                <label>
+                  <span>Skill keywords</span>
+                  <textarea name="skills">Python, Excel, policy research, data visualization, SDGs, report writing</textarea>
+                </label>
+                <label>
+                  <span>Experience evidence</span>
+                  <textarea name="evidence">Add reusable CV bullets and project examples here.</textarea>
+                </label>
+                <button class="primary-btn" type="submit">Save profile</button>
+              </form>
+            </section>
+
+            <section class="panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Resume Studio</p>
+                  <h3>Lightweight materials hub</h3>
+                </div>
+              </div>
+              <div class="studio-placeholder">
+                <h4>AI motivation-letter editing is parked for now</h4>
+                <p>This MVP keeps the profile, application notes, and job-to-material workflow ready. A switchable LLM provider can be added later.</p>
+                <label>
+                  <span>Application draft notes</span>
+                  <textarea id="draft-note" placeholder="Save motivation-letter ideas, Inspira answers, or tailoring notes here."></textarea>
+                </label>
+                <button class="secondary-btn" id="save-draft-note" type="button">Save draft note</button>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="add-job-dialog">
+      <form method="dialog" class="dialog-card" id="add-job-form">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Manual import</p>
+            <h3>Add job</h3>
+          </div>
+          <button class="icon-btn" value="cancel" type="submit" aria-label="Close">x</button>
+        </div>
+        <label>
+          <span>Job title</span>
+          <input name="title" required />
+        </label>
+        <label>
+          <span>Agency</span>
+          <input name="organization" required />
+        </label>
+        <label>
+          <span>Category</span>
+          <select name="category" id="add-category"></select>
+        </label>
+        <label>
+          <span>Location</span>
+          <input name="location" value="Remote / New York" />
+        </label>
+        <label>
+          <span>Deadline</span>
+          <input name="deadline" type="date" required />
+        </label>
+        <label>
+          <span>JD summary</span>
+          <textarea name="summary" required></textarea>
+        </label>
+        <div class="dialog-actions">
+          <button class="secondary-btn" value="cancel" type="submit">Cancel</button>
+          <button class="primary-btn" value="default" type="submit">Add</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./jobs-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
