@@ -2,6 +2,12 @@
 
 Static internship monitor for UN Careers/Inspira and selected UN agency internship feeds.
 
+Website entry:
+
+```text
+outputs/unmonitor-v2/index.html
+```
+
 ## Local Update
 
 ```powershell
