@@ -466,25 +466,47 @@ textarea {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
-  align-items: end;
   gap: 8px;
-  padding-top: 20px;
+  padding-top: 12px;
 }
 
 .bar-wrap {
   display: grid;
+  grid-template-rows: 22px minmax(0, 1fr) 24px;
   gap: 8px;
-  align-items: end;
+  align-items: stretch;
   text-align: center;
   color: var(--muted);
   font-size: 12px;
   height: 100%;
+  min-width: 0;
+}
+
+.bar-count,
+.bar-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bar-slot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-bottom: 1px solid var(--line);
+  min-height: 0;
 }
 
 .bar {
+  width: min(36px, 70%);
   min-height: 6px;
   border-radius: 6px 6px 2px 2px;
   background: linear-gradient(180deg, #2f80ed, #0f766e);
+}
+
+.bar.zero {
+  min-height: 0;
+  background: transparent;
 }
 
 .category-chart {

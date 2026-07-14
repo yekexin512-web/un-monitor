@@ -787,7 +787,8 @@ function updateJobStatus(jobId, status, markDate = false) {
 function renderDashboard() {
   document.getElementById("metric-new-today").textContent = state.jobs.filter((job) => daysSince(job.postedDate) === 0).length;
   document.getElementById("metric-expiring").textContent = state.jobs.filter((job) => daysUntil(job.deadline) >= 0 && daysUntil(job.deadline) <= 7).length;
-  document.getElementById("metric-applied-today").textContent = state.jobs.filter((job) => job.appliedAt === "2026-06-29").length;
+  const todayKey = today.toISOString().slice(0, 10);
+  document.getElementById("metric-applied-today").textContent = state.jobs.filter((job) => job.appliedAt === todayKey).length;
   document.getElementById("metric-applied-30").textContent = state.jobs.filter((job) => job.appliedAt && daysSince(job.appliedAt) <= 30).length;
   document.getElementById("metric-applied-total").textContent = state.jobs.filter((job) => job.appliedAt || job.status === "applied").length;
   renderApplicationChart();
@@ -827,7 +828,14 @@ function renderApplicationChart() {
   days.forEach((item) => {
     const wrap = document.createElement("div");
     wrap.className = "bar-wrap";
-    wrap.innerHTML = `<span>${item.count}</span><div class="bar" style="height:${Math.max(6, (item.count / max) * 210)}px"></div><span>${item.label}</span>`;
+    const height = item.count ? Math.max(8, (item.count / max) * 190) : 0;
+    wrap.innerHTML = `
+      <span class="bar-count">${item.count}</span>
+      <div class="bar-slot">
+        <div class="bar ${item.count ? "" : "zero"}" style="height:${height}px"></div>
+      </div>
+      <span class="bar-label">${item.label}</span>
+    `;
     chart.append(wrap);
   });
 }
