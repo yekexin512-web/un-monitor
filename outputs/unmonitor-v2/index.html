@@ -29,6 +29,17 @@
           </button>
         </nav>
 
+        <section class="auth-card" id="auth-card">
+          <span class="eyebrow">Account</span>
+          <div id="auth-status">Local browser mode</div>
+          <form id="login-form" class="login-form">
+            <input id="login-email" type="email" placeholder="Email" autocomplete="email" />
+            <button class="primary-btn" type="submit">Sign in</button>
+          </form>
+          <button class="secondary-btn" id="sign-out" type="button" hidden>Sign out</button>
+          <p id="sync-status">Records save in this browser until Supabase is configured.</p>
+        </section>
+
         <section class="profile-card">
           <span class="eyebrow">Current profile</span>
           <strong>Economics + Data</strong>
@@ -287,6 +298,8 @@
       </form>
     </dialog>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./supabase-config.js"></script>
     <script src="./jobs-data.js"></script>
     <script src="./app.js"></script>
   </body>

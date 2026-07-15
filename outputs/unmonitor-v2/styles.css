@@ -118,9 +118,39 @@ button {
   background: rgba(255, 255, 255, 0.08);
 }
 
+.auth-card {
+  display: grid;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.auth-card .eyebrow,
+.auth-card div,
+.auth-card p {
+  color: #dbeafe;
+}
+
+.auth-card p,
 .profile-card p {
   color: #cbd5e1;
   line-height: 1.45;
+}
+
+.auth-card p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.login-form {
+  display: grid;
+  gap: 8px;
+}
+
+.login-form input {
+  width: 100%;
 }
 
 .main {

@@ -494,6 +494,9 @@ const sampleJobs = [
 let state = loadState();
 let selectedJobId = state.jobs[0]?.id;
 let chartRange = 7;
+let supabaseClient = null;
+let currentUser = null;
+let cloudReady = false;
 
 function loadState() {
   const liveJobs = window.UN_MONITOR_LIVE_JOBS?.jobs;
@@ -594,6 +597,101 @@ function inferContinent(location) {
 
 function saveState() {
   localStorage.setItem("unmonitor-v2-state", JSON.stringify(state));
+}
+
+function isSupabaseConfigured() {
+  const config = window.UN_MONITOR_SUPABASE || {};
+  return Boolean(config.url && config.anonKey && window.supabase);
+}
+
+function applicationRecords() {
+  return state.jobs.filter((job) => job.source === "Manual" || job.status !== "found" || job.appliedAt || job.statusUpdatedAt);
+}
+
+function applyRemoteApplications(records) {
+  if (!Array.isArray(records)) return;
+  const jobsById = new Map(state.jobs.map((job) => [job.id, job]));
+  records.forEach((record) => {
+    const job = jobsById.get(record.job_id);
+    if (!job) return;
+    job.status = allowedStatuses.includes(record.status) ? record.status : job.status;
+    job.appliedAt = record.applied_at || null;
+    job.statusUpdatedAt = record.status_updated_at || null;
+    job.firstTrackedAt = record.first_tracked_at || null;
+  });
+  saveState();
+}
+
+function serializeApplication(job) {
+  return {
+    user_id: currentUser.id,
+    job_id: job.id,
+    status: job.status,
+    applied_at: job.appliedAt || null,
+    status_updated_at: job.statusUpdatedAt || new Date().toISOString(),
+    first_tracked_at: job.firstTrackedAt || job.statusUpdatedAt || new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  };
+}
+
+async function syncLocalApplicationsToCloud() {
+  if (!cloudReady || !currentUser) return;
+  const rows = applicationRecords().map(serializeApplication);
+  if (!rows.length) return;
+  const { error } = await supabaseClient.from("user_applications").upsert(rows, { onConflict: "user_id,job_id" });
+  if (error) throw error;
+}
+
+async function loadCloudApplications() {
+  if (!cloudReady || !currentUser) return;
+  const { data, error } = await supabaseClient.from("user_applications").select("*");
+  if (error) throw error;
+  applyRemoteApplications(data);
+  renderAll();
+}
+
+async function persistApplication(job) {
+  if (!cloudReady || !currentUser) return;
+  try {
+    const { error } = await supabaseClient.from("user_applications").upsert(serializeApplication(job), { onConflict: "user_id,job_id" });
+    if (error) {
+      setSyncStatus(`Cloud sync failed: ${error.message}`);
+      return;
+    }
+    setSyncStatus("Saved to cloud");
+  } catch (error) {
+    setSyncStatus(`Cloud sync failed: ${error.message}`);
+  }
+}
+
+function setSyncStatus(message) {
+  const status = document.getElementById("sync-status");
+  if (status) status.textContent = message;
+}
+
+function renderAuth() {
+  const authStatus = document.getElementById("auth-status");
+  const loginForm = document.getElementById("login-form");
+  const signOut = document.getElementById("sign-out");
+  if (!authStatus || !loginForm || !signOut) return;
+  if (!isSupabaseConfigured()) {
+    authStatus.textContent = "Local browser mode";
+    loginForm.hidden = true;
+    signOut.hidden = true;
+    setSyncStatus("Add Supabase URL and anon key to enable cloud accounts.");
+    return;
+  }
+  if (currentUser) {
+    authStatus.textContent = currentUser.email || "Signed in";
+    loginForm.hidden = true;
+    signOut.hidden = false;
+    setSyncStatus("Personal dashboard synced");
+  } else {
+    authStatus.textContent = "Sign in for cloud dashboard";
+    loginForm.hidden = false;
+    signOut.hidden = true;
+    setSyncStatus("Magic-link login keeps records across browsers.");
+  }
 }
 
 function parseDate(dateString) {
@@ -827,6 +925,7 @@ function updateJobStatus(jobId, status, markDate = false) {
   if (!job.firstTrackedAt) job.firstTrackedAt = job.statusUpdatedAt;
   if (status === "applied" && (markDate || !job.appliedAt)) job.appliedAt = today.toISOString().slice(0, 10);
   saveState();
+  persistApplication(job);
   renderAll();
 }
 
@@ -1000,6 +1099,63 @@ function setupForms() {
   });
 }
 
+function setupAuth() {
+  const loginForm = document.getElementById("login-form");
+  const signOut = document.getElementById("sign-out");
+  loginForm?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!cloudReady) return;
+    const email = document.getElementById("login-email").value.trim();
+    if (!email) return;
+    setSyncStatus("Sending magic link...");
+    const { error } = await supabaseClient.auth.signInWithOtp({
+      email,
+      options: {
+        emailRedirectTo: window.location.href.split("#")[0],
+      },
+    });
+    setSyncStatus(error ? `Sign-in failed: ${error.message}` : "Check your email for the sign-in link.");
+  });
+  signOut?.addEventListener("click", async () => {
+    if (!cloudReady) return;
+    await supabaseClient.auth.signOut();
+    currentUser = null;
+    renderAuth();
+  });
+}
+
+async function initCloudSync() {
+  renderAuth();
+  if (!isSupabaseConfigured()) return;
+  const config = window.UN_MONITOR_SUPABASE;
+  supabaseClient = window.supabase.createClient(config.url, config.anonKey);
+  cloudReady = true;
+  const {
+    data: { session },
+  } = await supabaseClient.auth.getSession();
+  currentUser = session?.user || null;
+  renderAuth();
+  if (currentUser) {
+    try {
+      await syncLocalApplicationsToCloud();
+      await loadCloudApplications();
+    } catch (error) {
+      setSyncStatus(`Cloud sync failed: ${error.message}`);
+    }
+  }
+  supabaseClient.auth.onAuthStateChange(async (_event, session) => {
+    currentUser = session?.user || null;
+    renderAuth();
+    if (!currentUser) return;
+    try {
+      await syncLocalApplicationsToCloud();
+      await loadCloudApplications();
+    } catch (error) {
+      setSyncStatus(`Cloud sync failed: ${error.message}`);
+    }
+  });
+}
+
 function guessFitScore(summary, category) {
   const text = `${summary} ${category}`.toLowerCase();
   let score = 55;
@@ -1044,5 +1200,7 @@ setupNavigation();
 setupFilters();
 setupCharts();
 setupForms();
+setupAuth();
 hydrateProfile();
 renderAll();
+initCloudSync();

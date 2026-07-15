@@ -39,3 +39,13 @@ After pushing to GitHub:
 5. Run `Deploy UN Monitor V2` manually once, or wait for the daily schedule.
 
 The workflow runs every day at 08:00 UTC, refreshes `jobs-data.js`, and deploys `outputs/unmonitor-v2` to GitHub Pages.
+
+## Optional Multi-User Dashboard
+
+Supabase Auth and Row Level Security can store each user's application records in the cloud.
+
+See:
+
+```text
+SUPABASE_SETUP.md
+```
