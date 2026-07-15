@@ -391,6 +391,14 @@ textarea {
   text-decoration: none;
 }
 
+.status-history {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .jd-section {
   border-top: 1px solid var(--line);
   padding-top: 12px;

@@ -499,17 +499,24 @@ function loadState() {
   const liveJobs = window.UN_MONITOR_LIVE_JOBS?.jobs;
   const liveGeneratedAt = window.UN_MONITOR_LIVE_JOBS?.generatedAt || "";
   const saved = localStorage.getItem("unmonitor-v2-state");
+  const defaults = {
+    profile: {
+      targets: "Economics, Data, Programme",
+      skills: "Python, Excel, policy research, data visualization, SDGs, report writing",
+      evidence: "Add reusable CV bullets and project examples here.",
+    },
+    draftNote: "",
+  };
   if (saved) {
     try {
       const parsed = JSON.parse(saved);
-      if (
-        Array.isArray(parsed.jobs) &&
-        parsed.liveGeneratedAt === liveGeneratedAt &&
-        parsed.jobs.length >= (liveJobs?.length || sampleJobs.length)
-      ) {
+      if (Array.isArray(parsed.jobs)) {
+        const savedJobs = parsed.jobs.map(normalizeJob);
         return {
+          ...defaults,
           ...parsed,
-          jobs: parsed.jobs.map(normalizeJob),
+          liveGeneratedAt,
+          jobs: mergeJobs(Array.isArray(liveJobs) && liveJobs.length ? liveJobs : sampleJobs, savedJobs),
         };
       }
     } catch {
@@ -518,24 +525,14 @@ function loadState() {
   }
   if (Array.isArray(liveJobs) && liveJobs.length) {
     return {
+      ...defaults,
       liveGeneratedAt,
       jobs: liveJobs.map(normalizeJob),
-      profile: {
-        targets: "Economics, Data, Programme",
-        skills: "Python, Excel, policy research, data visualization, SDGs, report writing",
-        evidence: "Add reusable CV bullets and project examples here.",
-      },
-      draftNote: "",
     };
   }
   return {
+    ...defaults,
     jobs: sampleJobs.map(normalizeJob),
-    profile: {
-      targets: "Economics, Data, Programme",
-      skills: "Python, Excel, policy research, data visualization, SDGs, report writing",
-      evidence: "Add reusable CV bullets and project examples here.",
-    },
-    draftNote: "",
   };
 }
 
@@ -553,7 +550,38 @@ function normalizeJob(job) {
     category: categoryAliases[job.category] || job.category || "Programme & Project",
     continent: job.continent || inferContinent(job.location),
     status: allowedStatuses.includes(status) ? status : "found",
+    appliedAt: job.appliedAt || null,
+    statusUpdatedAt: job.statusUpdatedAt || null,
+    firstTrackedAt: job.firstTrackedAt || null,
+    archived: Boolean(job.archived),
   };
+}
+
+function mergeJobs(sourceJobs, savedJobs) {
+  const savedById = new Map(savedJobs.map((job) => [job.id, job]));
+  const liveIds = new Set();
+  const merged = sourceJobs.map((sourceJob) => {
+    const liveJob = normalizeJob(sourceJob);
+    const savedJob = savedById.get(liveJob.id);
+    liveIds.add(liveJob.id);
+    if (!savedJob) return liveJob;
+    return {
+      ...liveJob,
+      status: savedJob.status,
+      appliedAt: savedJob.appliedAt || null,
+      statusUpdatedAt: savedJob.statusUpdatedAt || null,
+      firstTrackedAt: savedJob.firstTrackedAt || null,
+      archived: false,
+    };
+  });
+
+  savedJobs.forEach((job) => {
+    const shouldKeep =
+      !liveIds.has(job.id) &&
+      (job.source === "Manual" || job.status !== "found" || job.appliedAt || job.statusUpdatedAt);
+    if (shouldKeep) merged.push({ ...job, archived: true });
+  });
+  return merged;
 }
 
 function inferContinent(location) {
@@ -585,6 +613,17 @@ function formatDeadline(dateString) {
   if (days < 0) return `Expired ${Math.abs(days)}d ago`;
   if (days === 0) return "Due today";
   return `Due in ${days}d`;
+}
+
+function formatDateTime(value) {
+  if (!value) return "";
+  return new Date(value).toLocaleString([], {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 }
 
 function setupNavigation() {
@@ -736,6 +775,7 @@ function renderJobDetail() {
       <div class="job-tags">
         <span class="tag">${escapeHtml(job.category)}</span>
         ${(job.tags || []).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
+        ${job.archived ? '<span class="tag expired">No longer in latest feed</span>' : ""}
       </div>
       <div class="action-block">
         <label>
@@ -750,6 +790,10 @@ function renderJobDetail() {
           <button class="primary-btn" id="mark-applied" type="button">Mark applied</button>
           <a class="primary-btn apply-link" href="${escapeHtml(job.url)}" target="_blank" rel="noreferrer">Open JD / Apply</a>
           <button class="secondary-btn" id="send-studio" type="button">Open Studio</button>
+        </div>
+        <div class="status-history">
+          ${job.appliedAt ? `<span>Applied: ${escapeHtml(job.appliedAt)}</span>` : ""}
+          ${job.statusUpdatedAt ? `<span>Status updated: ${escapeHtml(formatDateTime(job.statusUpdatedAt))}</span>` : ""}
         </div>
       </div>
       <section class="jd-section">
@@ -779,6 +823,8 @@ function updateJobStatus(jobId, status, markDate = false) {
   const job = state.jobs.find((item) => item.id === jobId);
   if (!job) return;
   job.status = status;
+  job.statusUpdatedAt = new Date().toISOString();
+  if (!job.firstTrackedAt) job.firstTrackedAt = job.statusUpdatedAt;
   if (status === "applied" && (markDate || !job.appliedAt)) job.appliedAt = today.toISOString().slice(0, 10);
   saveState();
   renderAll();
@@ -874,7 +920,15 @@ function renderKanban() {
     jobs.forEach((job) => {
       const card = document.createElement("div");
       card.className = "kanban-card";
-      card.innerHTML = `<strong>${escapeHtml(job.title)}</strong><span>${escapeHtml(job.organization)}</span><div class="job-tags"><span>${formatDeadline(job.deadline)}</span></div>`;
+      card.innerHTML = `
+        <strong>${escapeHtml(job.title)}</strong>
+        <span>${escapeHtml(job.organization)}</span>
+        <div class="job-tags">
+          <span>${formatDeadline(job.deadline)}</span>
+          ${job.appliedAt ? `<span>Applied ${escapeHtml(job.appliedAt)}</span>` : ""}
+          ${job.archived ? '<span>No longer listed</span>' : ""}
+        </div>
+      `;
       col.append(card);
     });
     board.append(col);
