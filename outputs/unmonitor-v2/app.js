@@ -745,7 +745,7 @@ function setupFilters() {
     addCategory.append(new Option(category, category));
   });
   populateSourceFilter();
-  ["job-search", "category-filter", "source-filter", "continent-filter", "status-filter", "posted-filter", "deadline-filter"].forEach((id) => {
+  ["job-search", "category-filter", "source-filter", "site-type-filter", "continent-filter", "status-filter", "posted-filter", "deadline-filter"].forEach((id) => {
     document.getElementById(id).addEventListener("input", renderOpportunities);
   });
 }
@@ -770,6 +770,7 @@ function getFilteredJobs() {
   const query = document.getElementById("job-search").value.trim().toLowerCase();
   const category = document.getElementById("category-filter").value;
   const source = document.getElementById("source-filter").value;
+  const siteType = document.getElementById("site-type-filter").value;
   const continent = document.getElementById("continent-filter").value;
   const status = document.getElementById("status-filter").value;
   const posted = document.getElementById("posted-filter").value;
@@ -802,12 +803,22 @@ function getFilteredJobs() {
       (!query || searchText.includes(query)) &&
       (category === "all" || job.category === category) &&
       (source === "all" || job.source === source) &&
+      (siteType === "all" || getSiteType(job) === siteType) &&
       (continent === "all" || (job.continent || inferContinent(job.location)) === continent) &&
       (status === "all" || job.status === status) &&
       postedMatch &&
       deadlineMatch
     );
   });
+}
+
+function getSiteType(job) {
+  const source = String(job.source || job.organization || "").toLowerCase();
+  const url = String(job.url || "").toLowerCase();
+  if (source.includes("un careers") || source.includes("inspira") || url.includes("careers.un.org") || url.includes("inspira.un.org")) {
+    return "un-careers";
+  }
+  return "other-orgs";
 }
 
 function renderOpportunities() {
@@ -963,11 +974,14 @@ function renderLastUpdated() {
 function renderApplicationChart() {
   const chart = document.getElementById("application-chart");
   chart.innerHTML = "";
+  chart.classList.toggle("dense", chartRange > 14);
   const days = Array.from({ length: chartRange }, (_, index) => {
     const date = new Date(today);
     date.setDate(today.getDate() - (chartRange - index - 1));
     const key = date.toISOString().slice(0, 10);
-    return { key, count: state.jobs.filter((job) => job.appliedAt === key).length, label: `${date.getMonth() + 1}/${date.getDate()}` };
+    const label = `${date.getMonth() + 1}/${date.getDate()}`;
+    const showLabel = chartRange <= 14 || index === 0 || index === chartRange - 1 || index % 5 === 0;
+    return { key, count: state.jobs.filter((job) => job.appliedAt === key).length, label, showLabel };
   });
   const max = Math.max(1, ...days.map((item) => item.count));
   days.forEach((item) => {
@@ -975,11 +989,11 @@ function renderApplicationChart() {
     wrap.className = "bar-wrap";
     const height = item.count ? Math.max(8, (item.count / max) * 190) : 0;
     wrap.innerHTML = `
-      <span class="bar-count">${item.count}</span>
+      <span class="bar-count">${item.count || ""}</span>
       <div class="bar-slot">
         <div class="bar ${item.count ? "" : "zero"}" style="height:${height}px"></div>
       </div>
-      <span class="bar-label">${item.label}</span>
+      <span class="bar-label">${item.showLabel ? item.label : ""}</span>
     `;
     chart.append(wrap);
   });

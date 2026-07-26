@@ -231,9 +231,13 @@ button {
 
 .toolbar {
   display: grid;
-  grid-template-columns: minmax(240px, 1.2fr) repeat(5, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 12px;
   margin-bottom: 16px;
+}
+
+.toolbar .search-box {
+  grid-column: span 2;
 }
 
 label {
@@ -507,7 +511,7 @@ textarea {
   height: 280px;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  grid-auto-columns: minmax(32px, 1fr);
   gap: 8px;
   padding-top: 12px;
 }
@@ -526,8 +530,7 @@ textarea {
 
 .bar-count,
 .bar-label {
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: visible;
   white-space: nowrap;
 }
 
@@ -549,6 +552,24 @@ textarea {
 .bar.zero {
   min-height: 0;
   background: transparent;
+}
+
+.bar-chart.dense {
+  grid-auto-columns: minmax(26px, 1fr);
+  gap: 4px;
+}
+
+.bar-chart.dense .bar-wrap {
+  grid-template-rows: 18px minmax(0, 1fr) 28px;
+  font-size: 11px;
+}
+
+.bar-chart.dense .bar {
+  width: min(22px, 72%);
+}
+
+.bar-chart.dense .bar-label {
+  align-self: start;
 }
 
 .category-chart {
@@ -665,6 +686,10 @@ dialog::backdrop {
   .studio-layout,
   .toolbar {
     grid-template-columns: 1fr;
+  }
+
+  .toolbar .search-box {
+    grid-column: auto;
   }
 
   .detail-panel {
