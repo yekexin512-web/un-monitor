@@ -745,7 +745,7 @@ function setupFilters() {
     addCategory.append(new Option(category, category));
   });
   populateSourceFilter();
-  ["job-search", "category-filter", "source-filter", "site-type-filter", "continent-filter", "status-filter", "posted-filter", "deadline-filter"].forEach((id) => {
+  ["job-search", "category-filter", "source-filter", "continent-filter", "status-filter", "posted-filter", "deadline-filter"].forEach((id) => {
     document.getElementById(id).addEventListener("input", renderOpportunities);
   });
 }
@@ -770,7 +770,6 @@ function getFilteredJobs() {
   const query = document.getElementById("job-search").value.trim().toLowerCase();
   const category = document.getElementById("category-filter").value;
   const organization = document.getElementById("source-filter").value;
-  const siteType = document.getElementById("site-type-filter").value;
   const continent = document.getElementById("continent-filter").value;
   const status = document.getElementById("status-filter").value;
   const posted = document.getElementById("posted-filter").value;
@@ -803,22 +802,12 @@ function getFilteredJobs() {
       (!query || searchText.includes(query)) &&
       (category === "all" || job.category === category) &&
       (organization === "all" || job.organization === organization) &&
-      (siteType === "all" || getSiteType(job) === siteType) &&
       (continent === "all" || (job.continent || inferContinent(job.location)) === continent) &&
       (status === "all" || job.status === status) &&
       postedMatch &&
       deadlineMatch
     );
   });
-}
-
-function getSiteType(job) {
-  const source = String(job.source || job.organization || "").toLowerCase();
-  const url = String(job.url || "").toLowerCase();
-  if (source.includes("un careers") || source.includes("inspira") || url.includes("careers.un.org") || url.includes("inspira.un.org")) {
-    return "un-careers";
-  }
-  return "other-orgs";
 }
 
 function renderOpportunities() {
