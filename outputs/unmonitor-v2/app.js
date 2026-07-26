@@ -753,23 +753,23 @@ function setupFilters() {
 function populateSourceFilter() {
   const sourceFilter = document.getElementById("source-filter");
   const currentValue = sourceFilter.value || "all";
-  sourceFilter.innerHTML = '<option value="all">All sources</option>';
-  getSources().forEach((source) => {
-    sourceFilter.append(new Option(source, source));
+  sourceFilter.innerHTML = '<option value="all">All organizations</option>';
+  getOrganizations().forEach((organization) => {
+    sourceFilter.append(new Option(organization, organization));
   });
   sourceFilter.value = Array.from(sourceFilter.options).some((option) => option.value === currentValue)
     ? currentValue
     : "all";
 }
 
-function getSources() {
-  return Array.from(new Set(state.jobs.map((job) => job.source).filter(Boolean))).sort();
+function getOrganizations() {
+  return Array.from(new Set(state.jobs.map((job) => job.organization).filter(Boolean))).sort();
 }
 
 function getFilteredJobs() {
   const query = document.getElementById("job-search").value.trim().toLowerCase();
   const category = document.getElementById("category-filter").value;
-  const source = document.getElementById("source-filter").value;
+  const organization = document.getElementById("source-filter").value;
   const siteType = document.getElementById("site-type-filter").value;
   const continent = document.getElementById("continent-filter").value;
   const status = document.getElementById("status-filter").value;
@@ -802,7 +802,7 @@ function getFilteredJobs() {
     return (
       (!query || searchText.includes(query)) &&
       (category === "all" || job.category === category) &&
-      (source === "all" || job.source === source) &&
+      (organization === "all" || job.organization === organization) &&
       (siteType === "all" || getSiteType(job) === siteType) &&
       (continent === "all" || (job.continent || inferContinent(job.location)) === continent) &&
       (status === "all" || job.status === status) &&
