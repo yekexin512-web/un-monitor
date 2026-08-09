@@ -1,8 +1,6 @@
 window.UN_MONITOR_LIVE_JOBS = {
-  "generatedAt": "2026-08-08T08:32:52",
-  "errors": [
-    "UNHCR: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')"
-  ],
+  "generatedAt": "2026-08-09T08:35:08",
+  "errors": [],
   "jobs": [
     {
       "id": "281029",
@@ -1322,6 +1320,63 @@ window.UN_MONITOR_LIVE_JOBS = {
       ]
     },
     {
+      "id": "UNHCR-JR2668178",
+      "title": "Donor Relation and Data Intern",
+      "organization": "UNHCR",
+      "location": "Paris, France",
+      "continent": "Europe",
+      "source": "UNHCR",
+      "category": "Data & Analytics",
+      "tags": [
+        "data"
+      ],
+      "deadline": "2026-08-17",
+      "postedDate": "2026-08-04",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://unhcr.wd3.myworkdayjobs.com/job/Paris-France/Donor-Relation-and-Data-Intern_JR2668178-1",
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UNHCR. Location: Paris, France. Title signal: Donor Relation and Data Intern.",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
+      "id": "UNHCR-JR2668210",
+      "title": "Fundraising Communications Intern (French-speaking)",
+      "organization": "UNHCR",
+      "location": "Brussels, Belgium",
+      "continent": "Europe",
+      "source": "UNHCR",
+      "category": "Communications & Advocacy",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "deadline": "2026-08-17",
+      "postedDate": "2026-08-04",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://unhcr.wd3.myworkdayjobs.com/job/Brussels-Belgium/Fundraising-Communications-Intern--French-speaking-_JR2668210-2",
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNHCR. Location: Brussels, Belgium. Title signal: Fundraising Communications Intern (French-speaking).",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
       "id": "279799",
       "title": "News Writing / Reporting - Public Information Intern - News and Content - Chinese",
       "organization": "UN Careers",
@@ -1601,6 +1656,32 @@ window.UN_MONITOR_LIVE_JOBS = {
         "Background or strong interest in environment, climate, energy, sustainability, or development.",
         "Research, writing, and data-handling skills.",
         "Ability to connect technical topics with policy or programme needs."
+      ]
+    },
+    {
+      "id": "UNHCR-JR2668299",
+      "title": "Protection Intern",
+      "organization": "UNHCR",
+      "location": "Paris, France",
+      "continent": "Europe",
+      "source": "UNHCR",
+      "category": "Humanitarian & Protection",
+      "tags": [],
+      "deadline": "2026-08-19",
+      "postedDate": "2026-08-05",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://unhcr.wd3.myworkdayjobs.com/job/Paris-France/Protection-Intern_JR2668299",
+      "summary": "Humanitarian, migration, protection, health, nutrition, education, or social-policy role supporting vulnerable populations. Source: UNHCR. Location: Paris, France. Title signal: Protection Intern.",
+      "responsibilities": [
+        "Support programme implementation, research, monitoring, or field coordination.",
+        "Contribute to documentation, needs analysis, protection or service-delivery follow-up.",
+        "Prepare notes, data summaries, and programme materials for humanitarian or social-policy teams."
+      ],
+      "requirements": [
+        "Interest or background in humanitarian affairs, migration, protection, public health, education, or social policy.",
+        "Research, documentation, and coordination skills.",
+        "Sensitivity to working with vulnerable populations and rights-based approaches."
       ]
     },
     {
