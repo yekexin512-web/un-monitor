@@ -3,7 +3,8 @@ name: Deploy UN Monitor V2
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 8 * * *"
+    # 09:00 Beijing time (UTC+8).
+    - cron: "0 1 * * *"
   push:
     branches:
       - main

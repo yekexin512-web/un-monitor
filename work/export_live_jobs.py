@@ -324,7 +324,7 @@ def convert(job) -> dict:
 
 def main() -> None:
     from un_intern_monitor.config import load_settings
-    from un_intern_monitor.multi_scraper import fetch_unhcr_jobs, fetch_unicef_jobs, fetch_wfp_jobs
+    from un_intern_monitor.multi_scraper import fetch_fao_jobs, fetch_itu_jobs, fetch_unhcr_jobs, fetch_unicef_jobs, fetch_wfp_jobs
     from un_intern_monitor.scraper import fetch_internship_jobs
 
     today = date.today()
@@ -336,6 +336,8 @@ def main() -> None:
         ("UNICEF", fetch_unicef_jobs),
         ("UNHCR", lambda: fetch_unhcr_jobs(today)),
         ("WFP", lambda: fetch_wfp_jobs(today)),
+        ("FAO", fetch_fao_jobs),
+        ("ITU", fetch_itu_jobs),
     ]:
         try:
             jobs.extend(fetcher())

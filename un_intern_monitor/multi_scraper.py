@@ -1,11 +1,13 @@
 from __future__ import annotations
 
+import json
 import re
+import time
 from datetime import date, timedelta
 from urllib.parse import urljoin, urlparse
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 from .date_utils import parse_date
 from .models import Job
@@ -21,6 +23,11 @@ HEADERS = {
     "Content-Type": "application/json",
     "Accept-Language": "en-US,en;q=0.9",
 }
+GET_HEADERS = {key: value for key, value in HEADERS.items() if key.lower() != "content-type"}
+WFP_INTERNSHIP_URL = (
+    "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs"
+    "?workerSubType=59387fe40123101e856f1834e09b0002"
+)
 
 
 def fetch_all_internship_jobs(un_careers_url: str, *, headless: bool, today: date) -> list[Job]:
@@ -32,6 +39,8 @@ def fetch_all_internship_jobs(un_careers_url: str, *, headless: bool, today: dat
         lambda: fetch_unido_jobs(),
         lambda: fetch_wfp_jobs(today),
         lambda: fetch_unicef_jobs(),
+        lambda: fetch_fao_jobs(),
+        lambda: fetch_itu_jobs(),
     ]
     for fetcher in fetchers:
         try:
@@ -55,7 +64,7 @@ def fetch_wfp_jobs(today: date) -> list[Job]:
     return _fetch_workday_jobs(
         source="WFP",
         api_base="https://wd3.myworkdaysite.com/wday/cxs/wfp/job_openings",
-        public_base="https://wd3.myworkdaysite.com/recruiting/wfp/job_openings",
+        public_base=WFP_INTERNSHIP_URL,
         payload={
             "limit": 20,
             "offset": 0,
@@ -75,30 +84,41 @@ def _fetch_workday_jobs(source: str, api_base: str, public_base: str, payload: d
         "Origin": _origin(api_base),
         "Referer": _origin(api_base),
     }
-    response = requests.post(f"{api_base}/jobs", json=payload, headers=headers, timeout=30)
-    response.raise_for_status()
     jobs: list[Job] = []
-    for item in response.json().get("jobPostings", []):
-        title = item.get("title") or ""
-        if not is_internship_text(title) and source != "WFP":
-            continue
-        external_path = item.get("externalPath") or ""
-        raw_id = _first_bullet_id(item.get("bulletFields", [])) or _id_from_path(external_path)
-        if not raw_id:
-            continue
-        detail = _workday_detail(api_base, external_path)
-        jobs.append(
-            Job(
-                job_opening_id=f"{source}-{raw_id}",
-                title=title,
-                department=source,
-                location=item.get("locationsText") or "",
-                posted_date=_parse_workday_posted(item.get("postedOn"), today),
-                deadline_date=_deadline_from_html(detail),
-                apply_url=urljoin(public_base, external_path),
-                source=source,
+    offset = int(payload.get("offset") or 0)
+    limit = int(payload.get("limit") or 20)
+    total: int | None = None
+    while total is None or offset < total:
+        page_payload = {**payload, "offset": offset, "limit": limit}
+        response = requests.post(f"{api_base}/jobs", json=page_payload, headers=headers, timeout=30)
+        response.raise_for_status()
+        data = response.json()
+        postings = data.get("jobPostings", [])
+        if not postings:
+            break
+        for item in postings:
+            title = item.get("title") or ""
+            if not is_internship_text(title) and source != "WFP":
+                continue
+            external_path = item.get("externalPath") or ""
+            raw_id = _first_bullet_id(item.get("bulletFields", [])) or _id_from_path(external_path)
+            if not raw_id:
+                continue
+            detail = _workday_detail(api_base, external_path)
+            jobs.append(
+                Job(
+                    job_opening_id=f"{source}-{raw_id}",
+                    title=title,
+                    department=source,
+                    location=item.get("locationsText") or "",
+                    posted_date=_parse_workday_posted(item.get("postedOn"), today),
+                    deadline_date=_deadline_from_html(detail),
+                    apply_url=_workday_public_url(public_base, external_path),
+                    source=source,
+                )
             )
-        )
+        total = int(data.get("total") or len(jobs))
+        offset += limit
     return jobs
 
 
@@ -110,9 +130,17 @@ def _workday_detail(api_base: str, external_path: str) -> str:
     return response.json().get("jobPostingInfo", {}).get("jobDescription", "")
 
 
+def _workday_public_url(public_base: str, external_path: str) -> str:
+    if "/jobs?" in public_base:
+        return public_base
+    if not external_path:
+        return public_base
+    return f"{public_base.rstrip('/')}/{external_path.lstrip('/')}"
+
+
 def fetch_unido_jobs() -> list[Job]:
     url = "https://careers.unido.org/search/?q=&q2=&alertId=&locationsearch=&title=&location=&department=&facility=intern&shifttype=#searchresults"
-    response = requests.get(url, headers=HEADERS, timeout=30)
+    response = _get(url, timeout=30)
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")
     jobs: list[Job] = []
@@ -161,6 +189,100 @@ def fetch_unicef_jobs() -> list[Job]:
             deadline_date=parse_date(_field_after_label(text, "Deadline")),
             apply_url=href,
             source="UNICEF",
+        )
+    return list(jobs_by_id.values())
+
+
+def fetch_fao_jobs() -> list[Job]:
+    url = "https://jobs.fao.org/careersection/rest/jobboard/searchjobs?lang=en&portal=8105120163"
+    filtered_payload = {
+        "multilineEnabled": True,
+        "sortingSelection": {"sortBySelectionParam": "1", "ascendingSortingOrder": "false"},
+        "fieldData": {"fields": {}, "valid": True},
+        "filterSelectionParam": {
+            "searchFilterSelections": [{"id": "JOB_TYPE", "selectedValues": ["2"]}]
+        },
+        "advancedSearchFiltersSelectionParam": {"searchFilterSelections": []},
+    }
+    headers = {
+        "User-Agent": HEADERS["User-Agent"],
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Accept-Language": HEADERS["Accept-Language"],
+        "Referer": "https://jobs.fao.org/careersection/fao_external/jobsearch.ftl?lang=en",
+        "Origin": "https://jobs.fao.org",
+        "tz": "GMT+00:00",
+        "tzname": "Europe/London",
+    }
+    session = requests.Session()
+    session.get(headers["Referer"], headers=headers, timeout=30)
+    jobs = _fetch_fao_pages(session, url, headers, filtered_payload)
+    if jobs:
+        return jobs
+
+    all_jobs_payload = {
+        **filtered_payload,
+        "filterSelectionParam": {"searchFilterSelections": []},
+    }
+    return _fetch_fao_pages(session, url, headers, all_jobs_payload)
+
+
+def _fetch_fao_pages(session: requests.Session, url: str, headers: dict[str, str], payload_base: dict) -> list[Job]:
+    jobs: list[Job] = []
+    total_count = None
+    page_no = 1
+    while total_count is None or len(jobs) < total_count:
+        payload = {**payload_base, "pageNo": page_no}
+        response = session.post(url, json=payload, headers=headers, timeout=30)
+        response.raise_for_status()
+        data = response.json()
+        postings = data.get("requisitionList", [])
+        if not postings:
+            break
+        for item in postings:
+            job = _fao_job_from_item(item)
+            if job:
+                jobs.append(job)
+        paging = data.get("pagingData", {})
+        total_count = int(paging.get("totalCount") or len(jobs))
+        page_size = int(paging.get("pageSize") or len(postings) or 25)
+        if page_no * page_size >= total_count:
+            break
+        page_no += 1
+    return jobs
+
+
+def fetch_itu_jobs() -> list[Job]:
+    url = (
+        "https://jobs.itu.int/go/View-all-categories/8942455/"
+        "?q=&q2=&alertId=&locationsearch=&title=intern&location=&department=&date=#searchresults"
+    )
+    response = _get(url, timeout=30)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+    jobs_by_id: dict[str, Job] = {}
+    for row in soup.select("tr.data-row"):
+        link = row.select_one("span.jobTitle.hidden-phone a[href]") or row.find("a", href=True)
+        if not link:
+            continue
+        title = link.get_text(" ", strip=True)
+        family = _select_text(row, ".colDepartment .jobDepartment")
+        if not is_internship_text(title) and not is_internship_text(family):
+            continue
+        href = urljoin(url, str(link["href"]))
+        raw_id = _id_from_path(href)
+        if not raw_id:
+            continue
+        detail = _itu_detail(href)
+        jobs_by_id[f"ITU-{raw_id}"] = Job(
+            job_opening_id=f"ITU-{raw_id}",
+            title=title,
+            department=_itu_department(detail),
+            location=_itu_location(detail) or _select_text(row, ".colLocation .jobLocation"),
+            posted_date=parse_date(_select_text(row, ".colDate .jobDate")),
+            deadline_date=_itu_deadline(detail),
+            apply_url=href,
+            source="ITU",
         )
     return list(jobs_by_id.values())
 
@@ -233,6 +355,59 @@ def _field_after_label(text: str, label: str) -> str:
     return ""
 
 
+def _select_text(soup: BeautifulSoup | Tag, selector: str) -> str:
+    element = soup.select_one(selector)
+    return element.get_text(" ", strip=True) if element else ""
+
+
+def _itu_detail(url: str) -> str:
+    response = _get(url, timeout=30)
+    response.raise_for_status()
+    return response.text
+
+
+def _get(url: str, *, timeout: int) -> requests.Response:
+    last_error: Exception | None = None
+    for attempt in range(3):
+        try:
+            response = requests.get(url, headers=GET_HEADERS, timeout=timeout)
+            response.raise_for_status()
+            return response
+        except requests.RequestException as exc:
+            last_error = exc
+            if attempt < 2:
+                time.sleep(1 + attempt)
+    assert last_error is not None
+    raise last_error
+
+
+def _itu_deadline(html: str) -> date | None:
+    text = BeautifulSoup(html, "html.parser").get_text("\n", strip=True)
+    value = _field_after_label(text, "Application deadline (Midnight Geneva Time)")
+    if not value:
+        match = re.search(
+            r"Application deadline\s*\(Midnight Geneva Time\)\s*:?\s*([A-Za-z]+\s+\d{1,2},?\s+\d{4}|\d{1,2}\s+[A-Za-z]+\s+\d{4})",
+            BeautifulSoup(html, "html.parser").get_text(" ", strip=True),
+            flags=re.IGNORECASE,
+        )
+        value = match.group(1) if match else ""
+    return parse_date(value)
+
+
+def _itu_department(html: str) -> str:
+    text = BeautifulSoup(html, "html.parser").get_text("\n", strip=True)
+    sector = _field_after_label(text, "Sector")
+    department = _field_after_label(text, "Department")
+    return " / ".join(part for part in (sector, department) if part) or "ITU"
+
+
+def _itu_location(html: str) -> str:
+    text = BeautifulSoup(html, "html.parser").get_text("\n", strip=True)
+    duty_station = _field_after_label(text, "Duty station")
+    country = _field_after_label(text, "Country of contract")
+    return ", ".join(part for part in (duty_station, country) if part)
+
+
 def _first_bullet_id(values: list[str]) -> str:
     for value in values:
         if re.search(r"[A-Za-z]*\d{4,}", str(value)):
@@ -247,6 +422,42 @@ def _id_from_path(value: str) -> str:
 
 def _pick_cell(cells: list[str], index: int) -> str:
     return cells[index] if len(cells) > index else ""
+
+
+def _fao_job_from_item(item: dict) -> Job | None:
+    columns = item.get("column") or []
+    contest_no = str(item.get("contestNo") or _pick_cell(columns, 1)).strip()
+    if not contest_no:
+        return None
+    title = _clean_fao_text(_pick_cell(columns, 0))
+    if not is_internship_text(title) and not is_internship_text(_pick_cell(columns, 2)):
+        return None
+    return Job(
+        job_opening_id=f"FAO-{contest_no}",
+        title=title,
+        department=_clean_fao_text(_pick_cell(columns, 3)) or "FAO",
+        location=_fao_location(_pick_cell(columns, 4)),
+        posted_date=parse_date(_pick_cell(columns, 5)),
+        deadline_date=parse_date(_pick_cell(columns, 6)),
+        apply_url=f"https://jobs.fao.org/careersection/fao_external/jobdetail.ftl?lang=en&job={contest_no}",
+        source="FAO",
+    )
+
+
+def _fao_location(value: str) -> str:
+    if not value:
+        return ""
+    try:
+        parsed = json.loads(value)
+    except json.JSONDecodeError:
+        return value.strip()
+    if isinstance(parsed, list):
+        return ", ".join(_clean_fao_text(str(item)) for item in parsed if str(item).strip())
+    return _clean_fao_text(str(parsed))
+
+
+def _clean_fao_text(value: str) -> str:
+    return value.replace("\ufffdC", "-").replace("–", "-").replace("—", "-").strip()
 
 
 def _origin(url: str) -> str:

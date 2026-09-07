@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 from urllib.parse import parse_qs, urljoin, urlparse
 
+import requests
 from bs4 import BeautifulSoup, Tag
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
@@ -12,9 +13,26 @@ from .models import Job
 
 
 DETAIL_URL = "https://inspira.un.org/psc/UNCAREERS/EMPLOYEE/HRMS/c/UN_CUSTOMIZATIONS.UN_JOB_DETAIL.GBL?JobOpeningId={job_id}"
+JOB_FEED_URL = "https://careers.un.org/jobfeed?isPage=true&language=en"
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
 
 
 def fetch_internship_jobs(search_url: str, headless: bool = True) -> list[Job]:
+    try:
+        feed_jobs = fetch_internship_jobs_from_feed()
+        if feed_jobs:
+            return feed_jobs
+    except Exception as exc:
+        print(f"Warning: UN Careers feed failed, falling back to browser: {exc}")
+
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(
             headless=headless,
@@ -41,6 +59,77 @@ def fetch_internship_jobs(search_url: str, headless: bool = True) -> list[Job]:
         for job in jobs:
             jobs_by_id[job.job_opening_id] = job
     return sorted(jobs_by_id.values(), key=lambda job: (job.deadline_date is None, job.deadline_date or job.posted_date, job.title))
+
+
+def fetch_internship_jobs_from_feed() -> list[Job]:
+    response = requests.get(JOB_FEED_URL, headers=HEADERS, timeout=60)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+    text = soup.get_text("\n", strip=True)
+    return parse_jobs_from_feed_text(text)
+
+
+def parse_jobs_from_feed_text(text: str) -> list[Job]:
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    jobs_by_id: dict[str, Job] = {}
+    job_id_indexes = [
+        index for index, line in enumerate(lines) if re.fullmatch(r"Job ID\s*:\s*\d+", line, flags=re.IGNORECASE)
+    ]
+    for pos, job_id_index in enumerate(job_id_indexes):
+        block_start = job_id_indexes[pos - 1] + 1 if pos > 0 else 0
+        block_end = job_id_indexes[pos + 1] if pos + 1 < len(job_id_indexes) else len(lines)
+        job = _job_from_feed_block(lines[block_start:block_end])
+        if job:
+            jobs_by_id[job.job_opening_id] = job
+    return sorted(jobs_by_id.values(), key=lambda job: (job.deadline_date is None, job.deadline_date or job.posted_date, job.title))
+
+
+def _job_from_feed_block(lines: list[str]) -> Job | None:
+    fields: dict[str, str] = {}
+    job_id_index = -1
+    for index, line in enumerate(lines):
+        label, separator, value = line.partition(":")
+        if not separator:
+            continue
+        normalized = label.strip().lower()
+        if normalized == "job id":
+            job_id_index = index
+        fields[normalized] = value.strip()
+    job_id = fields.get("job id", "")
+    if not job_id:
+        return None
+
+    title = _feed_title(lines, job_id_index, job_id)
+    category = fields.get("category", "")
+    recruitment_type = fields.get("recruitment type", "")
+    level = fields.get("level", "")
+    if not (
+        "intern" in category.lower()
+        or "intern" in recruitment_type.lower()
+        or level.upper().startswith("I-")
+        or "intern" in title.lower()
+    ):
+        return None
+
+    return Job(
+        job_opening_id=job_id,
+        title=title,
+        department=fields.get("department/office", ""),
+        location=fields.get("duty station", ""),
+        posted_date=parse_date(fields.get("date posted")),
+        deadline_date=parse_date(fields.get("deadline")),
+        apply_url=f"https://careers.un.org/jobSearchDescription/{job_id}?language=en",
+        source="UN Careers",
+    )
+
+
+def _feed_title(lines: list[str], job_id_index: int, job_id: str) -> str:
+    if job_id_index > 0:
+        for index in range(job_id_index - 1, -1, -1):
+            line = lines[index]
+            if ":" not in line:
+                return _clean_label(line, job_id)
+    return f"Internship {job_id}"
 
 
 def _collect_result_pages(page, max_pages: int = 50) -> list[tuple[str, str]]:
