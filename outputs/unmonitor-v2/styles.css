@@ -606,9 +606,54 @@ textarea {
   margin-top: 16px;
 }
 
+.pipeline-sankey {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 16px;
+  overflow-x: auto;
+  padding: 2px 0 18px;
+}
+
+.pipeline-sankey svg {
+  display: block;
+  width: 100%;
+  min-width: 760px;
+  height: auto;
+}
+
+.pipeline-link {
+  fill: none;
+  stroke-linecap: butt;
+  mix-blend-mode: multiply;
+}
+
+.pipeline-node {
+  shape-rendering: crispEdges;
+}
+
+.pipeline-count {
+  fill: var(--text);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.pipeline-label {
+  fill: var(--text);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.pipeline-board-title h4 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+
+.pipeline-sankey .empty-state {
+  min-height: 180px;
+}
+
 .kanban {
   display: grid;
-  grid-template-columns: repeat(5, minmax(190px, 1fr));
+  grid-template-columns: repeat(7, minmax(170px, 1fr));
   gap: 12px;
   overflow-x: auto;
 }

@@ -99,7 +99,9 @@
                 <option value="applied">Applied</option>
                 <option value="assessment">Assessment</option>
                 <option value="interview">Interview</option>
-                <option value="rejected">Reject</option>
+                <option value="offer">Offer</option>
+                <option value="withdrawn">Withdrawn</option>
+                <option value="rejected">Rejected</option>
               </select>
             </label>
             <label>
@@ -203,8 +205,12 @@
             <div class="panel-heading">
               <div>
                 <p class="eyebrow">Pipeline</p>
-                <h3>Application board</h3>
+                <h3>Application pipeline</h3>
               </div>
+            </div>
+            <div class="pipeline-sankey" id="pipeline-sankey"></div>
+            <div class="pipeline-board-title">
+              <h4>Status board</h4>
             </div>
             <div class="kanban" id="kanban"></div>
           </section>

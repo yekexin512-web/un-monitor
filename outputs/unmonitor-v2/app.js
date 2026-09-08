@@ -29,11 +29,25 @@ const statusLabels = {
   applied: "Applied",
   assessment: "Assessment",
   interview: "Interview",
-  rejected: "Reject",
+  offer: "Offer",
+  withdrawn: "Withdrawn",
+  rejected: "Rejected",
 };
 
 const allowedStatuses = Object.keys(statusLabels);
-const dashboardStatuses = ["found", "applied", "assessment", "interview", "rejected"];
+const dashboardStatuses = ["found", "applied", "assessment", "interview", "offer", "withdrawn", "rejected"];
+const submittedStatuses = dashboardStatuses.filter((status) => status !== "found");
+const pipelineColors = {
+  tracked: { node: "#b8aea7", flow: "rgba(184, 174, 167, 0.58)" },
+  found: { node: "#f28c28", flow: "rgba(248, 180, 108, 0.66)" },
+  submitted: { node: "#537da8", flow: "rgba(146, 177, 207, 0.62)" },
+  applied: { node: "#78b7b0", flow: "rgba(146, 208, 200, 0.58)" },
+  assessment: { node: "#e7c743", flow: "rgba(241, 218, 112, 0.58)" },
+  interview: { node: "#3f73a8", flow: "rgba(117, 156, 196, 0.58)" },
+  offer: { node: "#e6535c", flow: "rgba(235, 119, 127, 0.58)" },
+  withdrawn: { node: "#6fb1aa", flow: "rgba(129, 199, 193, 0.58)" },
+  rejected: { node: "#4e9b52", flow: "rgba(136, 191, 139, 0.58)" },
+};
 const now = new Date();
 const today = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0);
 const unicefSearchUrl = "https://jobs.unicef.org/en-us/search/?search-keyword=internship";
@@ -544,7 +558,7 @@ function normalizeJob(job) {
     shortlisted: "found",
     drafting: "found",
     ready: "found",
-    offer: "interview",
+    withdraw: "withdrawn",
     reject: "rejected",
   };
   const status = statusMap[job.status] || job.status || "found";
@@ -606,6 +620,10 @@ function isSupabaseConfigured() {
 
 function applicationRecords() {
   return state.jobs.filter((job) => job.source === "Manual" || job.status !== "found" || job.appliedAt || job.statusUpdatedAt);
+}
+
+function isSubmittedApplication(job) {
+  return Boolean(job.appliedAt || job.status !== "found");
 }
 
 function applyRemoteApplications(records) {
@@ -935,9 +953,10 @@ function renderDashboard() {
   const todayKey = today.toISOString().slice(0, 10);
   document.getElementById("metric-applied-today").textContent = state.jobs.filter((job) => job.appliedAt === todayKey).length;
   document.getElementById("metric-applied-30").textContent = state.jobs.filter((job) => job.appliedAt && daysSince(job.appliedAt) <= 30).length;
-  document.getElementById("metric-applied-total").textContent = state.jobs.filter((job) => job.appliedAt || job.status === "applied").length;
+  document.getElementById("metric-applied-total").textContent = state.jobs.filter(isSubmittedApplication).length;
   renderApplicationChart();
   renderCategoryChart();
+  renderPipelineSankey();
   renderKanban();
 }
 
@@ -992,7 +1011,7 @@ function renderCategoryChart() {
   const chart = document.getElementById("category-chart");
   chart.innerHTML = "";
   const counts = categories
-    .map((category) => ({ category, count: state.jobs.filter((job) => job.category === category && (job.appliedAt || job.status === "applied")).length }))
+    .map((category) => ({ category, count: state.jobs.filter((job) => job.category === category && isSubmittedApplication(job)).length }))
     .filter((item) => item.count > 0)
     .sort((a, b) => b.count - a.count);
   const max = Math.max(1, ...counts.map((item) => item.count));
@@ -1009,6 +1028,98 @@ function renderCategoryChart() {
     `;
     chart.append(row);
   });
+}
+
+function renderPipelineSankey() {
+  const chart = document.getElementById("pipeline-sankey");
+  if (!chart) return;
+  chart.innerHTML = "";
+
+  const total = state.jobs.length;
+  if (!total) {
+    chart.innerHTML = '<p class="empty-state">No pipeline records yet.</p>';
+    return;
+  }
+
+  const counts = Object.fromEntries(dashboardStatuses.map((status) => [status, state.jobs.filter((job) => job.status === status).length]));
+  const submitted = submittedStatuses.reduce((sum, status) => sum + counts[status], 0);
+  const positiveStatuses = submittedStatuses.filter((status) => counts[status] > 0);
+  const viewWidth = 940;
+  const viewHeight = 350;
+  const nodeWidth = 28;
+  const x = {
+    tracked: 110,
+    middle: 370,
+    status: 675,
+  };
+  const y = {
+    tracked: 178,
+    submitted: 102,
+    found: 256,
+  };
+  const flowWidth = (count) => {
+    if (!count) return 0;
+    return Math.max(8, Math.min(112, (count / total) * 118));
+  };
+  const nodeHeight = (count) => Math.max(16, flowWidth(count));
+  const curve = (fromX, fromY, toX, toY) => {
+    const midX = fromX + (toX - fromX) * 0.55;
+    return `M ${fromX} ${fromY} C ${midX} ${fromY}, ${midX} ${toY}, ${toX} ${toY}`;
+  };
+  const label = (count, text, labelX, labelY, anchor = "start") => `
+    <text class="pipeline-count" x="${labelX}" y="${labelY}" text-anchor="${anchor}">${count}</text>
+    <text class="pipeline-label" x="${labelX}" y="${labelY + 31}" text-anchor="${anchor}">${escapeHtml(text)}</text>
+  `;
+  const node = (nodeX, centerY, count, color) => {
+    const height = nodeHeight(count);
+    return `<rect class="pipeline-node" x="${nodeX}" y="${centerY - height / 2}" width="${nodeWidth}" height="${height}" fill="${color}" />`;
+  };
+  const link = (fromX, fromY, toX, toY, count, color, name) => `
+    <path class="pipeline-link" d="${curve(fromX, fromY, toX, toY)}" stroke="${color}" stroke-width="${flowWidth(count)}">
+      <title>${count} ${escapeHtml(name)}</title>
+    </path>
+  `;
+
+  const statusY = new Map();
+  const statusTop = positiveStatuses.length > 4 ? 46 : 62;
+  const statusBottom = positiveStatuses.length > 4 ? 306 : 284;
+  const statusStep = positiveStatuses.length > 1 ? (statusBottom - statusTop) / (positiveStatuses.length - 1) : 0;
+  positiveStatuses.forEach((status, index) => {
+    statusY.set(status, positiveStatuses.length === 1 ? 184 : statusTop + statusStep * index);
+  });
+
+  const links = [];
+  if (submitted) links.push(link(x.tracked + nodeWidth, y.submitted, x.middle, y.submitted, submitted, pipelineColors.submitted.flow, "submitted"));
+  if (counts.found) links.push(link(x.tracked + nodeWidth, y.found, x.middle, y.found, counts.found, pipelineColors.found.flow, statusLabels.found));
+  positiveStatuses.forEach((status) => {
+    links.push(link(x.middle + nodeWidth, y.submitted, x.status, statusY.get(status), counts[status], pipelineColors[status].flow, statusLabels[status]));
+  });
+
+  const middleNodes = [];
+  if (submitted) middleNodes.push(node(x.middle, y.submitted, submitted, pipelineColors.submitted.node));
+  if (counts.found) middleNodes.push(node(x.middle, y.found, counts.found, pipelineColors.found.node));
+  const statusNodes = positiveStatuses.map((status) => node(x.status, statusY.get(status), counts[status], pipelineColors[status].node));
+
+  const middleLabels = [];
+  if (submitted) middleLabels.push(label(submitted, "Submitted", x.middle + 44, y.submitted - 18));
+  if (counts.found) middleLabels.push(label(counts.found, statusLabels.found, x.middle + 44, y.found - 18));
+  const statusLabelsSvg = positiveStatuses.map((status) => label(counts[status], statusLabels[status], x.status + 44, statusY.get(status) - 18));
+
+  chart.innerHTML = `
+    <svg viewBox="0 0 ${viewWidth} ${viewHeight}" role="img" aria-label="Application pipeline flow">
+      <g>${links.join("")}</g>
+      <g>
+        ${node(x.tracked, y.tracked, total, pipelineColors.tracked.node)}
+        ${middleNodes.join("")}
+        ${statusNodes.join("")}
+      </g>
+      <g>
+        ${label(total, "Opportunities", x.tracked - 24, y.tracked - 18, "end")}
+        ${middleLabels.join("")}
+        ${statusLabelsSvg.join("")}
+      </g>
+    </svg>
+  `;
 }
 
 function renderKanban() {
