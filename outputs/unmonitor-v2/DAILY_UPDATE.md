@@ -9,7 +9,7 @@ powershell -ExecutionPolicy Bypass -File outputs\unmonitor-v2\update_daily.ps1
 This command:
 
 1. Runs `work/export_live_jobs.py`.
-2. Scrapes UN Careers / Inspira, UNICEF, UNHCR, and WFP.
+2. Scrapes UN Careers / Inspira, UNICEF, UNHCR, UNIDO, WFP, FAO, ITU, and UNU.
 3. Writes `outputs/unmonitor-v2/jobs-data.js`.
 4. Updates the `Last updated` timestamp shown on the website.
 

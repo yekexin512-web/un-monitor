@@ -12,6 +12,8 @@ DATE_PATTERNS = (
     "%d %b %Y",
     "%B %d, %Y",
     "%b %d, %Y",
+    "%d-%b-%Y",
+    "%d-%b-%y",
     "%b-%d-%y",
     "%b-%d-%Y",
 )

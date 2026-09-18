@@ -140,7 +140,7 @@ def _workday_public_url(public_base: str, external_path: str) -> str:
 
 
 def fetch_unido_jobs() -> list[Job]:
-    url = "https://careers.unido.org/search/?q=&q2=&alertId=&locationsearch=&title=&location=&department=&facility=intern&shifttype=#searchresults"
+    url = "https://careers.unido.org/search/?q=intern&q2=&alertId=&locationsearch=&title=&location=&department=&facility=Intern&shifttype=#searchresults"
     response = _get(url, timeout=30)
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")
@@ -152,6 +152,7 @@ def fetch_unido_jobs() -> list[Job]:
         cells = [cell.get_text(" ", strip=True) for cell in row.find_all("td")]
         href = urljoin(url, str(link["href"]))
         raw_id = _id_from_path(href)
+        deadline = _last_parsed_date(cells)
         jobs.append(
             Job(
                 job_opening_id=f"UNIDO-{raw_id}",
@@ -159,7 +160,7 @@ def fetch_unido_jobs() -> list[Job]:
                 department="UNIDO",
                 location=_pick_cell(cells, 1),
                 posted_date=None,
-                deadline_date=parse_date(cells[-1] if cells else None),
+                deadline_date=deadline,
                 apply_url=href,
                 source="UNIDO",
             )
@@ -517,6 +518,14 @@ def _id_from_path(value: str) -> str:
 
 def _pick_cell(cells: list[str], index: int) -> str:
     return cells[index] if len(cells) > index else ""
+
+
+def _last_parsed_date(values: list[str]) -> date | None:
+    for value in reversed(values):
+        parsed = parse_date(value)
+        if parsed:
+            return parsed
+    return None
 
 
 def _fao_job_from_item(item: dict) -> Job | None:

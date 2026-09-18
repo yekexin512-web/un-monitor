@@ -31,6 +31,7 @@ Current update sources:
 - UN Careers / Inspira
 - UNICEF
 - UNHCR
+- UNIDO
 - WFP
 
 Current local update command:
