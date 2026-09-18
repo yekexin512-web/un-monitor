@@ -728,14 +728,17 @@ function renderAuth() {
   const authStatus = document.getElementById("auth-status");
   const loginForm = document.getElementById("login-form");
   const signOut = document.getElementById("sign-out");
-  if (!authStatus || !loginForm || !signOut) return;
+  const clearSession = document.getElementById("clear-session");
+  if (!authStatus || !loginForm || !signOut || !clearSession) return;
   if (!isSupabaseConfigured()) {
     authStatus.textContent = "Local browser mode";
     loginForm.hidden = true;
     signOut.hidden = true;
+    clearSession.hidden = true;
     setSyncStatus("Add Supabase URL and anon key to enable cloud accounts.");
     return;
   }
+  clearSession.hidden = false;
   if (currentUser) {
     authStatus.textContent = currentUser.email || "Signed in";
     loginForm.hidden = true;
@@ -1325,6 +1328,7 @@ function setupForms() {
 function setupAuth() {
   const loginForm = document.getElementById("login-form");
   const signOut = document.getElementById("sign-out");
+  const clearSession = document.getElementById("clear-session");
   loginForm?.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!cloudReady) return;
@@ -1346,6 +1350,19 @@ function setupAuth() {
     await clearCloudSession();
     restoreSignedOutState();
     renderAuth();
+  });
+  clearSession?.addEventListener("click", async () => {
+    if (cloudReady) {
+      await clearCloudSession();
+    } else {
+      currentUser = null;
+      clearCloudSessionMarker();
+      clearSupabaseAuthStorage();
+      clearApplicationStateStorage();
+    }
+    restoreSignedOutState();
+    renderAuth();
+    setSyncStatus("Account data cleared in this browser.");
   });
 }
 
