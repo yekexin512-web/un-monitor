@@ -51,6 +51,7 @@ const pipelineColors = {
 const now = new Date();
 const today = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0);
 const unicefSearchUrl = "https://jobs.unicef.org/en-us/search/?search-keyword=internship";
+const productionAppUrl = "https://yekexin512-web.github.io/un-monitor/outputs/unmonitor-v2/";
 const legacyStateKey = "unmonitor-v2-state";
 const localStateKey = "unmonitor-v2-local-state";
 const localStateVersion = 2;
@@ -784,6 +785,17 @@ function hasAuthCallback() {
   return hash.includes("access_token=") || search.includes("code=");
 }
 
+function authRedirectUrl() {
+  if (window.location.hostname.endsWith("github.io")) return productionAppUrl;
+  const url = new URL(window.location.href);
+  url.hash = "";
+  url.search = "";
+  if (!url.pathname.endsWith("/")) {
+    url.pathname = url.pathname.replace(/[^/]*$/, "");
+  }
+  return url.toString();
+}
+
 function shouldKeepCloudSession(session) {
   if (!session?.user) return false;
   const marker = sessionStorage.getItem(cloudSessionKey);
@@ -1339,7 +1351,7 @@ function setupAuth() {
     const { error } = await supabaseClient.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: window.location.href.split("#")[0],
+        emailRedirectTo: authRedirectUrl(),
       },
     });
     if (error) clearCloudSessionMarker();

@@ -59,12 +59,20 @@ In Supabase, open:
 Authentication -> URL Configuration
 ```
 
-Add your GitHub Pages URL to the allowed redirect URLs, for example:
+Use the deployed GitHub Pages app URL, including the final slash:
 
 ```text
-https://yekexin512-web.github.io/un-monitor/
+Site URL:
 https://yekexin512-web.github.io/un-monitor/outputs/unmonitor-v2/
 ```
+
+Add the same URL to allowed redirect URLs:
+
+```text
+https://yekexin512-web.github.io/un-monitor/outputs/unmonitor-v2/
+```
+
+If the URL is missing `/outputs/unmonitor-v2/` or the final slash, the email link can land on a GitHub Pages `404 Not Found` page.
 
 ## Data Model
 
