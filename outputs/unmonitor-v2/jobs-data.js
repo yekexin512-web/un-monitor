@@ -1,5 +1,5 @@
 window.UN_MONITOR_LIVE_JOBS = {
-  "generatedAt": "2026-09-18T05:28:12",
+  "generatedAt": "2026-09-18T17:25:38",
   "errors": [],
   "jobs": [
     {
@@ -113,6 +113,34 @@ window.UN_MONITOR_LIVE_JOBS = {
         "Strong writing, editing, storytelling, and communication skills.",
         "Experience or interest in social media, campaigns, multimedia, or public information.",
         "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNU-2739419",
+      "title": "REMOTE Internship: Research Intern - Neuroscience, Learning and AI in Higher Education",
+      "organization": "UNU",
+      "location": "Remote - Offsite",
+      "continent": "Remote / Global",
+      "source": "UNU",
+      "category": "Humanitarian & Protection",
+      "tags": [
+        "research"
+      ],
+      "deadline": "2026-09-18",
+      "postedDate": "2026-06-29",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unu.edu/o/remote-intern-neuroscience-learning-and-ai-in-higher-edu",
+      "summary": "Humanitarian, migration, protection, health, nutrition, education, or social-policy role supporting vulnerable populations. Source: UNU. Location: Remote - Offsite. Title signal: REMOTE Internship: Research Intern - Neuroscience, Learning and AI in Higher Education.",
+      "responsibilities": [
+        "Support programme implementation, research, monitoring, or field coordination.",
+        "Contribute to documentation, needs analysis, protection or service-delivery follow-up.",
+        "Prepare notes, data summaries, and programme materials for humanitarian or social-policy teams."
+      ],
+      "requirements": [
+        "Interest or background in humanitarian affairs, migration, protection, public health, education, or social policy.",
+        "Research, documentation, and coordination skills.",
+        "Sensitivity to working with vulnerable populations and rights-based approaches."
       ]
     },
     {
@@ -429,7 +457,7 @@ window.UN_MONITOR_LIVE_JOBS = {
       "category": "Partnerships",
       "tags": [],
       "deadline": "2026-09-21",
-      "postedDate": "2026-09-08",
+      "postedDate": "2026-09-07",
       "status": "found",
       "appliedAt": null,
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Seoul-Korea-Republic-of/External-Relations-Intern_JR2668310-1",
@@ -455,7 +483,7 @@ window.UN_MONITOR_LIVE_JOBS = {
       "category": "Humanitarian & Protection",
       "tags": [],
       "deadline": "2026-09-21",
-      "postedDate": "2026-09-08",
+      "postedDate": "2026-09-07",
       "status": "found",
       "appliedAt": null,
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Seoul-Korea-Republic-of/Protection-Intern_JR2668311-1",
@@ -709,7 +737,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "programme"
       ],
       "deadline": "2026-09-23",
-      "postedDate": "2026-09-11",
+      "postedDate": "2026-09-10",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -1346,7 +1374,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "finance"
       ],
       "deadline": "2026-09-29",
-      "postedDate": "2026-09-17",
+      "postedDate": "2026-09-16",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -1374,7 +1402,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "programme"
       ],
       "deadline": "2026-09-29",
-      "postedDate": "2026-09-16",
+      "postedDate": "2026-09-15",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -1573,7 +1601,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "programme"
       ],
       "deadline": "2026-09-30",
-      "postedDate": "2026-09-17",
+      "postedDate": "2026-09-16",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -1672,6 +1700,34 @@ window.UN_MONITOR_LIVE_JOBS = {
         "Strong writing, editing, storytelling, and communication skills.",
         "Experience or interest in social media, campaigns, multimedia, or public information.",
         "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNU-2745726",
+      "title": "Finance Intern (Remote Internship) - 2 Internship Opportunities",
+      "organization": "UNU",
+      "location": "Remote - Putrajaya, Malaysia",
+      "continent": "Remote / Global",
+      "source": "UNU",
+      "category": "Economics & Development",
+      "tags": [
+        "finance"
+      ],
+      "deadline": "2026-10-04",
+      "postedDate": "2026-06-29",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unu.edu/o/finance-intern-remote-internship-2-internship-opportunities",
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UNU. Location: Remote - Putrajaya, Malaysia. Title signal: Finance Intern (Remote Internship) - 2 Internship Opportunities.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
       ]
     },
     {

@@ -41,6 +41,7 @@ def fetch_all_internship_jobs(un_careers_url: str, *, headless: bool, today: dat
         lambda: fetch_unicef_jobs(),
         lambda: fetch_fao_jobs(),
         lambda: fetch_itu_jobs(),
+        lambda: fetch_unu_jobs(),
     ]
     for fetcher in fetchers:
         try:
@@ -287,6 +288,51 @@ def fetch_itu_jobs() -> list[Job]:
     return list(jobs_by_id.values())
 
 
+def fetch_unu_jobs() -> list[Job]:
+    url = "https://careers.unu.edu/?jobs-c08a5887%5Bsearch%5D=intern"
+    response = _get(url, timeout=30)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+    app = soup.select_one('div[data-component="PublicApp"][data-props]')
+    if not app:
+        return []
+    data = json.loads(str(app["data-props"]))
+    config = data.get("appConfig", {})
+    departments = {
+        item.get("id"): item.get("translations", {}).get("en", {}).get("name", "")
+        for item in config.get("departments", [])
+    }
+    locations = {
+        item.get("id"): item.get("translations", {}).get("en", {})
+        for item in config.get("locations", [])
+    }
+    jobs: list[Job] = []
+    for offer in config.get("offers", []):
+        translation = offer.get("translations", {}).get("en", {})
+        title = _clean_unu_text(translation.get("title") or "")
+        employment_type = str(offer.get("employmentType") or "")
+        description = _unu_offer_text(translation)
+        if "internship" not in employment_type.lower() and not is_internship_text(f"{title} {description}"):
+            continue
+        raw_id = str(offer.get("externalId") or offer.get("id") or offer.get("guid") or offer.get("slug") or "")
+        if not raw_id:
+            continue
+        slug = str(offer.get("slug") or "")
+        jobs.append(
+            Job(
+                job_opening_id=f"UNU-{raw_id}",
+                title=title,
+                department=departments.get(offer.get("departmentId")) or "UNU",
+                location=_unu_location(offer, locations),
+                posted_date=None,
+                deadline_date=_unu_deadline(description),
+                apply_url=f"https://careers.unu.edu/o/{slug}" if slug else url,
+                source="UNU",
+            )
+        )
+    return jobs
+
+
 def fetch_undp_jobs() -> list[Job]:
     url = "https://jobs.undp.org/cj_view_jobs.cfm"
     response = requests.get(url, headers=HEADERS, timeout=90)
@@ -406,6 +452,55 @@ def _itu_location(html: str) -> str:
     duty_station = _field_after_label(text, "Duty station")
     country = _field_after_label(text, "Country of contract")
     return ", ".join(part for part in (duty_station, country) if part)
+
+
+def _unu_offer_text(translation: dict) -> str:
+    html = " ".join(
+        str(translation.get(key) or "")
+        for key in ("highlightHtml", "descriptionHtml", "requirementsHtml", "sharingDescription")
+    )
+    return _clean_unu_text(BeautifulSoup(html, "html.parser").get_text("\n", strip=True))
+
+
+def _unu_deadline(text: str) -> date | None:
+    match = re.search(
+        r"(?:Application\s+deadline|Deadline)\s*:?\s*(?:\n|\s)+([^\n]+)",
+        text,
+        flags=re.IGNORECASE,
+    )
+    return parse_date(match.group(1)) if match else parse_date(text)
+
+
+def _unu_location(offer: dict, locations: dict) -> str:
+    names = []
+    for location_id in offer.get("locationIds", []):
+        location = locations.get(location_id, {})
+        name = location.get("name") or ", ".join(
+            part for part in (location.get("city"), location.get("country")) if part
+        )
+        if name:
+            names.append(_clean_unu_text(name))
+    if not names:
+        city = offer.get("city") or ""
+        country = offer.get("countryCode") or ""
+        if city or country:
+            names.append(_clean_unu_text(", ".join(part for part in (city, country) if part)))
+    location_text = "; ".join(dict.fromkeys(names))
+    if offer.get("remote"):
+        return f"Remote - {location_text}" if location_text else "Remote"
+    return location_text
+
+
+def _clean_unu_text(value: str) -> str:
+    return (
+        str(value or "")
+        .replace("\ufffdC", "-")
+        .replace("\ufffd", "")
+        .replace("–", "-")
+        .replace("—", "-")
+        .replace("\xa0", " ")
+        .strip()
+    )
 
 
 def _first_bullet_id(values: list[str]) -> str:
