@@ -53,6 +53,7 @@ const today = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 
 const unicefSearchUrl = "https://jobs.unicef.org/en-us/search/?search-keyword=internship";
 const legacyStateKey = "unmonitor-v2-state";
 const localStateKey = "unmonitor-v2-local-state";
+const localStateVersion = 2;
 
 const continentKeywords = {
   Africa: [
@@ -518,7 +519,8 @@ function loadState() {
   const liveJobs = window.UN_MONITOR_LIVE_JOBS?.jobs;
   const liveGeneratedAt = window.UN_MONITOR_LIVE_JOBS?.generatedAt || "";
   const saved = parseSavedState(localStorage.getItem(localStateKey), localStateKey);
-  const legacySaved = saved ? null : parseSavedState(localStorage.getItem(legacyStateKey), legacyStateKey);
+  const savedHasTrustedJobs = saved?.storageVersion === localStateVersion && saved?.stateScope === "local";
+  const legacySaved = savedHasTrustedJobs ? null : parseSavedState(localStorage.getItem(legacyStateKey), legacyStateKey);
   const defaults = {
     profile: {
       targets: "Economics, Data, Programme",
@@ -537,10 +539,13 @@ function loadState() {
     draftNote: typeof savedMeta.draftNote === "string" ? savedMeta.draftNote : defaults.draftNote,
     liveGeneratedAt,
   };
+  if (saved && !savedHasTrustedJobs) {
+    localStorage.removeItem(localStateKey);
+  }
   if (legacySaved) {
     localStorage.removeItem(legacyStateKey);
   }
-  if (saved && Array.isArray(saved.jobs)) {
+  if (savedHasTrustedJobs && Array.isArray(saved.jobs)) {
     const savedJobs = saved.jobs.map(normalizeJob);
     return {
       ...baseState,
@@ -627,7 +632,14 @@ function inferContinent(location) {
 
 function saveState() {
   if (currentUser) return;
-  localStorage.setItem(localStateKey, JSON.stringify(state));
+  localStorage.setItem(
+    localStateKey,
+    JSON.stringify({
+      ...state,
+      storageVersion: localStateVersion,
+      stateScope: "local",
+    }),
+  );
   localStorage.removeItem(legacyStateKey);
 }
 
