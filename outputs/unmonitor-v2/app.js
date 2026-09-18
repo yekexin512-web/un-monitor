@@ -51,6 +51,8 @@ const pipelineColors = {
 const now = new Date();
 const today = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0);
 const unicefSearchUrl = "https://jobs.unicef.org/en-us/search/?search-keyword=internship";
+const legacyStateKey = "unmonitor-v2-state";
+const localStateKey = "unmonitor-v2-local-state";
 
 const continentKeywords = {
   Africa: [
@@ -515,7 +517,8 @@ let cloudReady = false;
 function loadState() {
   const liveJobs = window.UN_MONITOR_LIVE_JOBS?.jobs;
   const liveGeneratedAt = window.UN_MONITOR_LIVE_JOBS?.generatedAt || "";
-  const saved = localStorage.getItem("unmonitor-v2-state");
+  const saved = parseSavedState(localStorage.getItem(localStateKey), localStateKey);
+  const legacySaved = saved ? null : parseSavedState(localStorage.getItem(legacyStateKey), legacyStateKey);
   const defaults = {
     profile: {
       targets: "Economics, Data, Programme",
@@ -524,33 +527,46 @@ function loadState() {
     },
     draftNote: "",
   };
-  if (saved) {
-    try {
-      const parsed = JSON.parse(saved);
-      if (Array.isArray(parsed.jobs)) {
-        const savedJobs = parsed.jobs.map(normalizeJob);
-        return {
-          ...defaults,
-          ...parsed,
-          liveGeneratedAt,
-          jobs: mergeJobs(Array.isArray(liveJobs) && liveJobs.length ? liveJobs : sampleJobs, savedJobs),
-        };
-      }
-    } catch {
-      localStorage.removeItem("unmonitor-v2-state");
-    }
+  const savedMeta = saved || legacySaved || {};
+  const baseState = {
+    ...defaults,
+    profile: {
+      ...defaults.profile,
+      ...(savedMeta.profile && typeof savedMeta.profile === "object" ? savedMeta.profile : {}),
+    },
+    draftNote: typeof savedMeta.draftNote === "string" ? savedMeta.draftNote : defaults.draftNote,
+    liveGeneratedAt,
+  };
+  if (legacySaved) {
+    localStorage.removeItem(legacyStateKey);
+  }
+  if (saved && Array.isArray(saved.jobs)) {
+    const savedJobs = saved.jobs.map(normalizeJob);
+    return {
+      ...baseState,
+      jobs: mergeJobs(Array.isArray(liveJobs) && liveJobs.length ? liveJobs : sampleJobs, savedJobs),
+    };
   }
   if (Array.isArray(liveJobs) && liveJobs.length) {
     return {
-      ...defaults,
-      liveGeneratedAt,
+      ...baseState,
       jobs: liveJobs.map(normalizeJob),
     };
   }
   return {
-    ...defaults,
+    ...baseState,
     jobs: sampleJobs.map(normalizeJob),
   };
+}
+
+function parseSavedState(value, key) {
+  if (!value) return null;
+  try {
+    return JSON.parse(value);
+  } catch {
+    localStorage.removeItem(key);
+    return null;
+  }
 }
 
 function normalizeJob(job) {
@@ -610,7 +626,9 @@ function inferContinent(location) {
 }
 
 function saveState() {
-  localStorage.setItem("unmonitor-v2-state", JSON.stringify(state));
+  if (currentUser) return;
+  localStorage.setItem(localStateKey, JSON.stringify(state));
+  localStorage.removeItem(legacyStateKey);
 }
 
 function isSupabaseConfigured() {
@@ -637,7 +655,6 @@ function applyRemoteApplications(records) {
     job.statusUpdatedAt = record.status_updated_at || null;
     job.firstTrackedAt = record.first_tracked_at || null;
   });
-  saveState();
 }
 
 function serializeApplication(job) {
@@ -710,6 +727,13 @@ function renderAuth() {
     signOut.hidden = true;
     setSyncStatus("Magic-link login keeps records across browsers.");
   }
+}
+
+function restoreSignedOutState() {
+  state = loadState();
+  selectedJobId = state.jobs[0]?.id;
+  hydrateProfile();
+  renderAll();
 }
 
 function parseDate(dateString) {
@@ -1205,7 +1229,8 @@ function setupForms() {
     saveState();
   });
   document.getElementById("reset-demo").addEventListener("click", () => {
-    localStorage.removeItem("unmonitor-v2-state");
+    localStorage.removeItem(localStateKey);
+    localStorage.removeItem(legacyStateKey);
     state = loadState();
     selectedJobId = state.jobs[0]?.id;
     hydrateProfile();
@@ -1234,6 +1259,7 @@ function setupAuth() {
     if (!cloudReady) return;
     await supabaseClient.auth.signOut();
     currentUser = null;
+    restoreSignedOutState();
     renderAuth();
   });
 }
@@ -1260,7 +1286,10 @@ async function initCloudSync() {
   supabaseClient.auth.onAuthStateChange(async (_event, session) => {
     currentUser = session?.user || null;
     renderAuth();
-    if (!currentUser) return;
+    if (!currentUser) {
+      restoreSignedOutState();
+      return;
+    }
     try {
       await syncLocalApplicationsToCloud();
       await loadCloudApplications();
