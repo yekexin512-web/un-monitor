@@ -783,8 +783,18 @@ function hasAuthCallback() {
 
 function shouldKeepCloudSession(session) {
   if (!session?.user) return false;
-  const marker = localStorage.getItem(cloudSessionKey);
+  const marker = sessionStorage.getItem(cloudSessionKey);
   return marker === "active" || marker === "requested" || hasAuthCallback();
+}
+
+function setCloudSessionMarker(value) {
+  localStorage.removeItem(cloudSessionKey);
+  sessionStorage.setItem(cloudSessionKey, value);
+}
+
+function clearCloudSessionMarker() {
+  localStorage.removeItem(cloudSessionKey);
+  sessionStorage.removeItem(cloudSessionKey);
 }
 
 async function clearCloudSession() {
@@ -798,7 +808,7 @@ async function clearCloudSession() {
     clearingCloudSession = false;
   }
   currentUser = null;
-  localStorage.removeItem(cloudSessionKey);
+  clearCloudSessionMarker();
   clearSupabaseAuthStorage();
   clearApplicationStateStorage();
 }
@@ -1321,14 +1331,14 @@ function setupAuth() {
     const email = document.getElementById("login-email").value.trim();
     if (!email) return;
     setSyncStatus("Sending magic link...");
-    localStorage.setItem(cloudSessionKey, "requested");
+    setCloudSessionMarker("requested");
     const { error } = await supabaseClient.auth.signInWithOtp({
       email,
       options: {
         emailRedirectTo: window.location.href.split("#")[0],
       },
     });
-    if (error) localStorage.removeItem(cloudSessionKey);
+    if (error) clearCloudSessionMarker();
     setSyncStatus(error ? `Sign-in failed: ${error.message}` : "Check your email for the sign-in link.");
   });
   signOut?.addEventListener("click", async () => {
@@ -1352,7 +1362,7 @@ async function initCloudSync() {
     await clearCloudSession();
   } else {
     currentUser = session?.user || null;
-    if (currentUser) localStorage.setItem(cloudSessionKey, "active");
+    if (currentUser) setCloudSessionMarker("active");
   }
   renderAuth();
   if (currentUser) {
@@ -1372,11 +1382,11 @@ async function initCloudSync() {
       return;
     }
     currentUser = session?.user || null;
-    if (currentUser) localStorage.setItem(cloudSessionKey, "active");
+    if (currentUser) setCloudSessionMarker("active");
     renderAuth();
     if (!currentUser) {
       if (event === "SIGNED_OUT") {
-        localStorage.removeItem(cloudSessionKey);
+        clearCloudSessionMarker();
         clearSupabaseAuthStorage();
       }
       restoreSignedOutState();
