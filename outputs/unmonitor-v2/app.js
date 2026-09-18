@@ -54,6 +54,7 @@ const unicefSearchUrl = "https://jobs.unicef.org/en-us/search/?search-keyword=in
 const legacyStateKey = "unmonitor-v2-state";
 const localStateKey = "unmonitor-v2-local-state";
 const localStateVersion = 2;
+const cloudSessionKey = "unmonitor-v2-cloud-session";
 
 const continentKeywords = {
   Africa: [
@@ -514,11 +515,13 @@ let chartRange = 7;
 let supabaseClient = null;
 let currentUser = null;
 let cloudReady = false;
+let clearingCloudSession = false;
 
 function loadState() {
   const liveJobs = window.UN_MONITOR_LIVE_JOBS?.jobs;
   const liveGeneratedAt = window.UN_MONITOR_LIVE_JOBS?.generatedAt || "";
   const saved = parseSavedState(localStorage.getItem(localStateKey), localStateKey);
+  const includeLocalJobs = !isSupabaseConfigured();
   const savedHasTrustedJobs = saved?.storageVersion === localStateVersion && saved?.stateScope === "local";
   const legacySaved = savedHasTrustedJobs ? null : parseSavedState(localStorage.getItem(legacyStateKey), legacyStateKey);
   const defaults = {
@@ -545,7 +548,7 @@ function loadState() {
   if (legacySaved) {
     localStorage.removeItem(legacyStateKey);
   }
-  if (savedHasTrustedJobs && Array.isArray(saved.jobs)) {
+  if (includeLocalJobs && savedHasTrustedJobs && Array.isArray(saved.jobs)) {
     const savedJobs = saved.jobs.map(normalizeJob);
     return {
       ...baseState,
@@ -632,6 +635,11 @@ function inferContinent(location) {
 
 function saveState() {
   if (currentUser) return;
+  if (isSupabaseConfigured()) {
+    localStorage.removeItem(localStateKey);
+    localStorage.removeItem(legacyStateKey);
+    return;
+  }
   localStorage.setItem(
     localStateKey,
     JSON.stringify({
@@ -741,7 +749,62 @@ function renderAuth() {
   }
 }
 
+function clearApplicationStateStorage() {
+  localStorage.removeItem(localStateKey);
+  localStorage.removeItem(legacyStateKey);
+}
+
+function supabaseProjectRef() {
+  try {
+    const host = new URL(window.UN_MONITOR_SUPABASE?.url || "").hostname;
+    return host.split(".")[0] || "";
+  } catch {
+    return "";
+  }
+}
+
+function clearSupabaseAuthStorage() {
+  const projectRef = supabaseProjectRef();
+  [localStorage, sessionStorage].forEach((storage) => {
+    const keys = Array.from({ length: storage.length }, (_, index) => storage.key(index)).filter(Boolean);
+    keys.forEach((key) => {
+      const isProjectAuth = projectRef && key.startsWith(`sb-${projectRef}-`);
+      const isGenericAuth = key.includes("supabase.auth.token");
+      if (isProjectAuth || isGenericAuth) storage.removeItem(key);
+    });
+  });
+}
+
+function hasAuthCallback() {
+  const hash = window.location.hash || "";
+  const search = window.location.search || "";
+  return hash.includes("access_token=") || search.includes("code=");
+}
+
+function shouldKeepCloudSession(session) {
+  if (!session?.user) return false;
+  const marker = localStorage.getItem(cloudSessionKey);
+  return marker === "active" || marker === "requested" || hasAuthCallback();
+}
+
+async function clearCloudSession() {
+  if (clearingCloudSession) return;
+  clearingCloudSession = true;
+  try {
+    if (supabaseClient) await supabaseClient.auth.signOut();
+  } catch {
+    // Local cleanup still matters if the network sign-out fails.
+  } finally {
+    clearingCloudSession = false;
+  }
+  currentUser = null;
+  localStorage.removeItem(cloudSessionKey);
+  clearSupabaseAuthStorage();
+  clearApplicationStateStorage();
+}
+
 function restoreSignedOutState() {
+  clearApplicationStateStorage();
   state = loadState();
   selectedJobId = state.jobs[0]?.id;
   hydrateProfile();
@@ -1241,8 +1304,7 @@ function setupForms() {
     saveState();
   });
   document.getElementById("reset-demo").addEventListener("click", () => {
-    localStorage.removeItem(localStateKey);
-    localStorage.removeItem(legacyStateKey);
+    clearApplicationStateStorage();
     state = loadState();
     selectedJobId = state.jobs[0]?.id;
     hydrateProfile();
@@ -1259,18 +1321,19 @@ function setupAuth() {
     const email = document.getElementById("login-email").value.trim();
     if (!email) return;
     setSyncStatus("Sending magic link...");
+    localStorage.setItem(cloudSessionKey, "requested");
     const { error } = await supabaseClient.auth.signInWithOtp({
       email,
       options: {
         emailRedirectTo: window.location.href.split("#")[0],
       },
     });
+    if (error) localStorage.removeItem(cloudSessionKey);
     setSyncStatus(error ? `Sign-in failed: ${error.message}` : "Check your email for the sign-in link.");
   });
   signOut?.addEventListener("click", async () => {
     if (!cloudReady) return;
-    await supabaseClient.auth.signOut();
-    currentUser = null;
+    await clearCloudSession();
     restoreSignedOutState();
     renderAuth();
   });
@@ -1285,7 +1348,12 @@ async function initCloudSync() {
   const {
     data: { session },
   } = await supabaseClient.auth.getSession();
-  currentUser = session?.user || null;
+  if (session?.user && !shouldKeepCloudSession(session)) {
+    await clearCloudSession();
+  } else {
+    currentUser = session?.user || null;
+    if (currentUser) localStorage.setItem(cloudSessionKey, "active");
+  }
   renderAuth();
   if (currentUser) {
     try {
@@ -1295,10 +1363,22 @@ async function initCloudSync() {
       setSyncStatus(`Cloud sync failed: ${error.message}`);
     }
   }
-  supabaseClient.auth.onAuthStateChange(async (_event, session) => {
+  supabaseClient.auth.onAuthStateChange(async (event, session) => {
+    if (clearingCloudSession) return;
+    if (session?.user && !shouldKeepCloudSession(session)) {
+      await clearCloudSession();
+      restoreSignedOutState();
+      renderAuth();
+      return;
+    }
     currentUser = session?.user || null;
+    if (currentUser) localStorage.setItem(cloudSessionKey, "active");
     renderAuth();
     if (!currentUser) {
+      if (event === "SIGNED_OUT") {
+        localStorage.removeItem(cloudSessionKey);
+        clearSupabaseAuthStorage();
+      }
       restoreSignedOutState();
       return;
     }
