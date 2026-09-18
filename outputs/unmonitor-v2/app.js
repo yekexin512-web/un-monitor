@@ -785,6 +785,22 @@ function hasAuthCallback() {
   return hash.includes("access_token=") || search.includes("code=");
 }
 
+function authErrorFromUrl() {
+  const hash = new URLSearchParams((window.location.hash || "").replace(/^#/, ""));
+  const search = new URLSearchParams(window.location.search || "");
+  const code = hash.get("error_code") || search.get("error_code");
+  const description = hash.get("error_description") || search.get("error_description");
+  if (!code && !description) return "";
+  if (code === "otp_expired") return "Email link expired or was already used. Send a new magic link and open the newest email.";
+  return description ? description.replaceAll("+", " ") : "Sign-in link failed. Send a new magic link.";
+}
+
+function clearAuthUrlHash() {
+  if (!window.location.hash) return;
+  const cleanUrl = `${window.location.pathname}${window.location.search}`;
+  window.history.replaceState({}, document.title, cleanUrl);
+}
+
 function authRedirectUrl() {
   if (window.location.hostname.endsWith("github.io")) return productionAppUrl;
   const url = new URL(window.location.href);
@@ -1384,6 +1400,15 @@ async function initCloudSync() {
   const config = window.UN_MONITOR_SUPABASE;
   supabaseClient = window.supabase.createClient(config.url, config.anonKey);
   cloudReady = true;
+  const authError = authErrorFromUrl();
+  if (authError) {
+    await clearCloudSession();
+    restoreSignedOutState();
+    renderAuth();
+    setSyncStatus(authError);
+    clearAuthUrlHash();
+    return;
+  }
   const {
     data: { session },
   } = await supabaseClient.auth.getSession();
