@@ -1,148 +1,7 @@
 window.UN_MONITOR_LIVE_JOBS = {
-  "generatedAt": "2026-09-18T17:52:18",
+  "generatedAt": "2026-09-19T05:23:53",
   "errors": [],
   "jobs": [
-    {
-      "id": "282158",
-      "title": "Graphic Design Intern",
-      "organization": "UN Careers",
-      "location": "BEIRUT",
-      "continent": "Remote / Global",
-      "source": "UN Careers",
-      "category": "Programme & Project",
-      "tags": [
-        "programme"
-      ],
-      "deadline": "2026-09-18",
-      "postedDate": "2026-08-05",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.un.org/jobSearchDescription/282158?language=en",
-      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: BEIRUT. Title signal: Graphic Design Intern.",
-      "responsibilities": [
-        "Track activities, deliverables, meetings, and programme documentation.",
-        "Support reporting, coordination, note-taking, research, and knowledge management.",
-        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
-      ],
-      "requirements": [
-        "Strong organization, writing, coordination, and research skills.",
-        "Interest in project/programme management and UN operational workflows.",
-        "Ability to work across teams and keep clear records."
-      ]
-    },
-    {
-      "id": "282407",
-      "title": "INTERN - STATISTICS DIVISION - Population and Social Statistics",
-      "organization": "UN Careers",
-      "location": "BANGKOK",
-      "continent": "Asia",
-      "source": "UN Careers",
-      "category": "Data & Analytics",
-      "tags": [
-        "data"
-      ],
-      "deadline": "2026-09-18",
-      "postedDate": "2026-08-10",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.un.org/jobSearchDescription/282407?language=en",
-      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UN Careers. Location: BANGKOK. Title signal: INTERN - STATISTICS DIVISION - Population and Social Statistics.",
-      "responsibilities": [
-        "Clean, organize, and analyze datasets or monitoring information.",
-        "Support dashboards, indicators, visualizations, reports, or information-management products.",
-        "Document data workflows and help teams use evidence for decision-making."
-      ],
-      "requirements": [
-        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
-        "Comfort with data cleaning, structured analysis, and documentation.",
-        "Ability to translate data into clear written or visual outputs."
-      ]
-    },
-    {
-      "id": "282402",
-      "title": "Intern on population and social development",
-      "organization": "UN Careers",
-      "location": "BANGKOK",
-      "continent": "Asia",
-      "source": "UN Careers",
-      "category": "Programme & Project",
-      "tags": [
-        "programme"
-      ],
-      "deadline": "2026-09-18",
-      "postedDate": "2026-08-05",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.un.org/jobSearchDescription/282402?language=en",
-      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: BANGKOK. Title signal: Intern on population and social development.",
-      "responsibilities": [
-        "Track activities, deliverables, meetings, and programme documentation.",
-        "Support reporting, coordination, note-taking, research, and knowledge management.",
-        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
-      ],
-      "requirements": [
-        "Strong organization, writing, coordination, and research skills.",
-        "Interest in project/programme management and UN operational workflows.",
-        "Ability to work across teams and keep clear records."
-      ]
-    },
-    {
-      "id": "283927",
-      "title": "Public information intern: assisting in creation of original content for social media platforms",
-      "organization": "UN Careers",
-      "location": "NEW YORK",
-      "continent": "North America",
-      "source": "UN Careers",
-      "category": "Communications & Advocacy",
-      "tags": [
-        "communications",
-        "advocacy"
-      ],
-      "deadline": "2026-09-18",
-      "postedDate": "2026-09-03",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.un.org/jobSearchDescription/283927?language=en",
-      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: NEW YORK. Title signal: Public information intern: assisting in creation of original content for social media platforms.",
-      "responsibilities": [
-        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
-        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
-        "Help translate programme evidence into accessible public-facing content."
-      ],
-      "requirements": [
-        "Strong writing, editing, storytelling, and communication skills.",
-        "Experience or interest in social media, campaigns, multimedia, or public information.",
-        "Ability to adapt messages for different audiences."
-      ]
-    },
-    {
-      "id": "UNU-2739419",
-      "title": "REMOTE Internship: Research Intern - Neuroscience, Learning and AI in Higher Education",
-      "organization": "UNU",
-      "location": "Remote - Offsite",
-      "continent": "Remote / Global",
-      "source": "UNU",
-      "category": "Humanitarian & Protection",
-      "tags": [
-        "research"
-      ],
-      "deadline": "2026-09-18",
-      "postedDate": "2026-06-29",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.unu.edu/o/remote-intern-neuroscience-learning-and-ai-in-higher-edu",
-      "summary": "Humanitarian, migration, protection, health, nutrition, education, or social-policy role supporting vulnerable populations. Source: UNU. Location: Remote - Offsite. Title signal: REMOTE Internship: Research Intern - Neuroscience, Learning and AI in Higher Education.",
-      "responsibilities": [
-        "Support programme implementation, research, monitoring, or field coordination.",
-        "Contribute to documentation, needs analysis, protection or service-delivery follow-up.",
-        "Prepare notes, data summaries, and programme materials for humanitarian or social-policy teams."
-      ],
-      "requirements": [
-        "Interest or background in humanitarian affairs, migration, protection, public health, education, or social policy.",
-        "Research, documentation, and coordination skills.",
-        "Sensitivity to working with vulnerable populations and rights-based approaches."
-      ]
-    },
     {
       "id": "283958",
       "title": "HUMANITARIAN AFFAIRS Intern",
@@ -457,7 +316,7 @@ window.UN_MONITOR_LIVE_JOBS = {
       "category": "Partnerships",
       "tags": [],
       "deadline": "2026-09-21",
-      "postedDate": "2026-09-07",
+      "postedDate": "2026-09-08",
       "status": "found",
       "appliedAt": null,
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Seoul-Korea-Republic-of/External-Relations-Intern_JR2668310-1",
@@ -483,7 +342,7 @@ window.UN_MONITOR_LIVE_JOBS = {
       "category": "Humanitarian & Protection",
       "tags": [],
       "deadline": "2026-09-21",
-      "postedDate": "2026-09-07",
+      "postedDate": "2026-09-08",
       "status": "found",
       "appliedAt": null,
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Seoul-Korea-Republic-of/Protection-Intern_JR2668311-1",
@@ -737,7 +596,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "programme"
       ],
       "deadline": "2026-09-23",
-      "postedDate": "2026-09-10",
+      "postedDate": "2026-09-11",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -931,6 +790,35 @@ window.UN_MONITOR_LIVE_JOBS = {
       "appliedAt": null,
       "url": "https://careers.un.org/jobSearchDescription/284263?language=en",
       "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: BEIRUT. Title signal: Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "282837",
+      "title": "Intern - Research assistant",
+      "organization": "UN Careers",
+      "location": "TUNIS",
+      "continent": "Remote / Global",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "tags": [
+        "research",
+        "programme"
+      ],
+      "deadline": "2026-09-25",
+      "postedDate": "2026-08-19",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.un.org/jobSearchDescription/282837?language=en",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: TUNIS. Title signal: Intern - Research assistant.",
       "responsibilities": [
         "Track activities, deliverables, meetings, and programme documentation.",
         "Support reporting, coordination, note-taking, research, and knowledge management.",
@@ -1224,6 +1112,34 @@ window.UN_MONITOR_LIVE_JOBS = {
       ]
     },
     {
+      "id": "284441",
+      "title": "Human Rights intern",
+      "organization": "UN Careers",
+      "location": "YAOUNDE",
+      "continent": "Remote / Global",
+      "source": "UN Careers",
+      "category": "Legal & Human Rights",
+      "tags": [
+        "legal"
+      ],
+      "deadline": "2026-09-28",
+      "postedDate": "2026-09-15",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.un.org/jobSearchDescription/284441?language=en",
+      "summary": "Legal, governance, or human-rights role focused on research, analysis, documentation, and support to legal/policy teams. Source: UN Careers. Location: YAOUNDE. Title signal: Human Rights intern.",
+      "responsibilities": [
+        "Conduct legal, governance, or human-rights desk research.",
+        "Summarize documents, cases, policies, or country developments.",
+        "Support reports, briefings, meeting preparation, or documentation workflows."
+      ],
+      "requirements": [
+        "Background in law, international relations, human rights, governance, or related field.",
+        "Strong legal/policy research and concise writing skills.",
+        "Attention to detail and ability to handle sensitive material."
+      ]
+    },
+    {
       "id": "284306",
       "title": "Marketing Intern",
       "organization": "UN Careers",
@@ -1336,6 +1252,34 @@ window.UN_MONITOR_LIVE_JOBS = {
       ]
     },
     {
+      "id": "284780",
+      "title": "INTERN - PROJECT MANAGEMENT",
+      "organization": "UN Careers",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "tags": [
+        "programme"
+      ],
+      "deadline": "2026-09-29",
+      "postedDate": "2026-09-16",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.un.org/jobSearchDescription/284780?language=en",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: NEW YORK. Title signal: INTERN - PROJECT MANAGEMENT.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "284796",
       "title": "Intern - Political Affairs, I (Temporary Job Opening) (Multiple positions)",
       "organization": "UN Careers",
@@ -1403,7 +1347,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "finance"
       ],
       "deadline": "2026-09-29",
-      "postedDate": "2026-09-16",
+      "postedDate": "2026-09-17",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -1431,7 +1375,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "programme"
       ],
       "deadline": "2026-09-29",
-      "postedDate": "2026-09-15",
+      "postedDate": "2026-09-16",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -1590,6 +1534,34 @@ window.UN_MONITOR_LIVE_JOBS = {
       ]
     },
     {
+      "id": "284176",
+      "title": "Intern - Weapons of Mass Destruction Branch, UN Office for Disarmament Affairs",
+      "organization": "UN Careers",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "tags": [
+        "programme"
+      ],
+      "deadline": "2026-09-30",
+      "postedDate": "2026-09-16",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.un.org/jobSearchDescription/284176?language=en",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: NEW YORK. Title signal: Intern - Weapons of Mass Destruction Branch, UN Office for Disarmament Affairs.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "284766",
       "title": "UNEP Finance Initiative (UNEP FI) Administrative Internship",
       "organization": "UN Careers",
@@ -1630,7 +1602,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "programme"
       ],
       "deadline": "2026-09-30",
-      "postedDate": "2026-09-16",
+      "postedDate": "2026-09-17",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -1841,6 +1813,34 @@ window.UN_MONITOR_LIVE_JOBS = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "282457",
+      "title": "Intern - Geographic Information Systems (GIS)",
+      "organization": "UN Careers",
+      "location": "ISTANBUL",
+      "continent": "Remote / Global",
+      "source": "UN Careers",
+      "category": "Data & Analytics",
+      "tags": [
+        "data"
+      ],
+      "deadline": "2026-10-08",
+      "postedDate": "2026-09-18",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.un.org/jobSearchDescription/282457?language=en",
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UN Careers. Location: ISTANBUL. Title signal: Intern - Geographic Information Systems (GIS).",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
       ]
     },
     {
@@ -2067,34 +2067,6 @@ window.UN_MONITOR_LIVE_JOBS = {
         "Strong writing, editing, storytelling, and communication skills.",
         "Experience or interest in social media, campaigns, multimedia, or public information.",
         "Ability to adapt messages for different audiences."
-      ]
-    },
-    {
-      "id": "284740",
-      "title": "INTERN - SOCIAL SCIENCES (GENDER EQUALITY AND WOMEN'S EMPOWERMENT)",
-      "organization": "UN Careers",
-      "location": "BANGKOK",
-      "continent": "Asia",
-      "source": "UN Careers",
-      "category": "Programme & Project",
-      "tags": [
-        "programme"
-      ],
-      "deadline": "2026-10-27",
-      "postedDate": "2026-09-13",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.un.org/jobSearchDescription/284740?language=en",
-      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: BANGKOK. Title signal: INTERN - SOCIAL SCIENCES (GENDER EQUALITY AND WOMEN'S EMPOWERMENT).",
-      "responsibilities": [
-        "Track activities, deliverables, meetings, and programme documentation.",
-        "Support reporting, coordination, note-taking, research, and knowledge management.",
-        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
-      ],
-      "requirements": [
-        "Strong organization, writing, coordination, and research skills.",
-        "Interest in project/programme management and UN operational workflows.",
-        "Ability to work across teams and keep clear records."
       ]
     },
     {
