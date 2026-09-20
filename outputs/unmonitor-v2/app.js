@@ -818,6 +818,12 @@ function shouldKeepCloudSession(session) {
   return marker === "active" || marker === "requested" || hasAuthCallback();
 }
 
+function shouldKeepAuthEvent(session, event) {
+  if (!session?.user) return false;
+  if (event === "SIGNED_IN") return true;
+  return shouldKeepCloudSession(session);
+}
+
 function setCloudSessionMarker(value) {
   localStorage.removeItem(cloudSessionKey);
   sessionStorage.setItem(cloudSessionKey, value);
@@ -1397,8 +1403,16 @@ function setupAuth() {
 async function initCloudSync() {
   renderAuth();
   if (!isSupabaseConfigured()) return;
+  const callbackPresent = hasAuthCallback();
   const config = window.UN_MONITOR_SUPABASE;
-  supabaseClient = window.supabase.createClient(config.url, config.anonKey);
+  supabaseClient = window.supabase.createClient(config.url, config.anonKey, {
+    auth: {
+      flowType: "implicit",
+      detectSessionInUrl: true,
+      persistSession: true,
+      autoRefreshToken: true,
+    },
+  });
   cloudReady = true;
   const authError = authErrorFromUrl();
   if (authError) {
@@ -1412,7 +1426,7 @@ async function initCloudSync() {
   const {
     data: { session },
   } = await supabaseClient.auth.getSession();
-  if (session?.user && !shouldKeepCloudSession(session)) {
+  if (session?.user && !shouldKeepCloudSession(session) && !callbackPresent) {
     await clearCloudSession();
   } else {
     currentUser = session?.user || null;
@@ -1429,7 +1443,7 @@ async function initCloudSync() {
   }
   supabaseClient.auth.onAuthStateChange(async (event, session) => {
     if (clearingCloudSession) return;
-    if (session?.user && !shouldKeepCloudSession(session)) {
+    if (session?.user && !shouldKeepAuthEvent(session, event)) {
       await clearCloudSession();
       restoreSignedOutState();
       renderAuth();
