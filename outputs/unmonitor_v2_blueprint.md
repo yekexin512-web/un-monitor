@@ -33,6 +33,10 @@ Current update sources:
 - UNHCR
 - UNIDO
 - WFP
+- FAO
+- ITU
+- UNU
+- UNESCO
 
 Current local update command:
 

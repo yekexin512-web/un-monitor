@@ -1,7 +1,35 @@
 window.UN_MONITOR_LIVE_JOBS = {
-  "generatedAt": "2026-09-20T05:36:29",
+  "generatedAt": "2026-09-20T22:13:12",
   "errors": [],
   "jobs": [
+    {
+      "id": "UNESCO-1347780957",
+      "title": "INTERNSHIP: Division of Internal Oversight Services",
+      "organization": "UNESCO",
+      "location": "Paris, France",
+      "continent": "Europe",
+      "source": "UNESCO",
+      "category": "Programme & Project",
+      "tags": [
+        "programme"
+      ],
+      "deadline": "2026-06-30",
+      "postedDate": "2026-08-27",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Paris-INTERNSHIP-Division-of-Internal-Oversight-Services/1347780957/",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNESCO. Location: Paris, France. Title signal: INTERNSHIP: Division of Internal Oversight Services.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
     {
       "id": "UNICEF-594814",
       "title": "Internship - Section Planning, Suivi & Evaluation, Rabat, Maroc, 3 mois",
@@ -180,7 +208,7 @@ window.UN_MONITOR_LIVE_JOBS = {
       "category": "Partnerships",
       "tags": [],
       "deadline": "2026-09-21",
-      "postedDate": "2026-09-08",
+      "postedDate": "2026-09-07",
       "status": "found",
       "appliedAt": null,
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Seoul-Korea-Republic-of/External-Relations-Intern_JR2668310-1",
@@ -206,7 +234,7 @@ window.UN_MONITOR_LIVE_JOBS = {
       "category": "Humanitarian & Protection",
       "tags": [],
       "deadline": "2026-09-21",
-      "postedDate": "2026-09-08",
+      "postedDate": "2026-09-07",
       "status": "found",
       "appliedAt": null,
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Seoul-Korea-Republic-of/Protection-Intern_JR2668311-1",
@@ -460,7 +488,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "programme"
       ],
       "deadline": "2026-09-23",
-      "postedDate": "2026-09-11",
+      "postedDate": "2026-09-10",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -1211,7 +1239,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "finance"
       ],
       "deadline": "2026-09-29",
-      "postedDate": "2026-09-17",
+      "postedDate": "2026-09-16",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -1239,7 +1267,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "programme"
       ],
       "deadline": "2026-09-29",
-      "postedDate": "2026-09-16",
+      "postedDate": "2026-09-15",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -1466,7 +1494,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "programme"
       ],
       "deadline": "2026-09-30",
-      "postedDate": "2026-09-17",
+      "postedDate": "2026-09-16",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -2101,6 +2129,368 @@ window.UN_MONITOR_LIVE_JOBS = {
         "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
         "Comfort with data cleaning, structured analysis, and documentation.",
         "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
+      "id": "UNESCO-1331682557",
+      "title": "INTERNSHIP: All Sectors/Bureaus",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Programme & Project",
+      "tags": [
+        "programme"
+      ],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-08-27",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-All-SectorsBureaus/1331682557/",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: All Sectors/Bureaus.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNESCO-1347540857",
+      "title": "INTERNSHIP: Bureau Of Human Resources Management",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Admin, Finance & HR",
+      "tags": [
+        "finance"
+      ],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-08-23",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Bureau-Of-Human-Resources-Management/1347540857/",
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Bureau Of Human Resources Management.",
+      "responsibilities": [
+        "Support documentation, tracking, and daily operational workflows.",
+        "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
+        "Prepare records, tables, notes, and process follow-up material."
+      ],
+      "requirements": [
+        "Organization, attention to detail, Excel, and documentation skills.",
+        "Interest in operations, finance, HR, compliance, administration, or procurement.",
+        "Ability to work carefully with procedures and records."
+      ]
+    },
+    {
+      "id": "UNESCO-1347542457",
+      "title": "INTERNSHIP: Communication and Information Sector",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Communications & Advocacy",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-08-23",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Communication-and-Information-Sector/1347542457/",
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Communication and Information Sector.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNESCO-1347728357",
+      "title": "INTERNSHIP: Communications and Public Engagement",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Communications & Advocacy",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-08-27",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Communications-and-Public-Engagement/1347728357/",
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Communications and Public Engagement.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNESCO-1347730257",
+      "title": "INTERNSHIP: Culture Sector",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Programme & Project",
+      "tags": [
+        "programme"
+      ],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-08-27",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Culture-Sector/1347730257/",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Culture Sector.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNESCO-1347770857",
+      "title": "INTERNSHIP: Digital Business Solutions",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Tech & Digital",
+      "tags": [
+        "digital"
+      ],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-08-27",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Digital-Business-Solutions/1347770857/",
+      "summary": "Technical or digital role supporting software, ICT, digital transformation, AI, GIS, or technology-enabled workflows. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Digital Business Solutions.",
+      "responsibilities": [
+        "Support digital tools, systems, prototypes, or technical documentation.",
+        "Assist with requirements gathering, testing, implementation support, or workflow mapping.",
+        "Contribute to technology-enabled analysis, automation, or knowledge products."
+      ],
+      "requirements": [
+        "Technical background in computer science, information systems, GIS, digital innovation, or related field.",
+        "Relevant software, web, database, GIS, or ICT skills.",
+        "Ability to explain technical work clearly to non-technical stakeholders."
+      ]
+    },
+    {
+      "id": "UNESCO-1371236357",
+      "title": "INTERNSHIP: Division of Financial Services",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Programme & Project",
+      "tags": [
+        "programme"
+      ],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-09-03",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Division-of-Financial-Services/1371236357/",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Division of Financial Services.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNESCO-1347773857",
+      "title": "INTERNSHIP: Education Sector",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Humanitarian & Protection",
+      "tags": [],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-08-27",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Education-Sector/1347773857/",
+      "summary": "Humanitarian, migration, protection, health, nutrition, education, or social-policy role supporting vulnerable populations. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Education Sector.",
+      "responsibilities": [
+        "Support programme implementation, research, monitoring, or field coordination.",
+        "Contribute to documentation, needs analysis, protection or service-delivery follow-up.",
+        "Prepare notes, data summaries, and programme materials for humanitarian or social-policy teams."
+      ],
+      "requirements": [
+        "Interest or background in humanitarian affairs, migration, protection, public health, education, or social policy.",
+        "Research, documentation, and coordination skills.",
+        "Sensitivity to working with vulnerable populations and rights-based approaches."
+      ]
+    },
+    {
+      "id": "UNESCO-1347787357",
+      "title": "INTERNSHIP: Governing Bodies Secretariat",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Programme & Project",
+      "tags": [
+        "programme"
+      ],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-08-27",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Governing-Bodies-Secretariat/1347787357/",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Governing Bodies Secretariat.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNESCO-1347790957",
+      "title": "INTERNSHIP: Intergovernmental Oceanographic Commission",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Programme & Project",
+      "tags": [
+        "programme"
+      ],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-08-27",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Intergovernmental-Oceanographic-Commission/1347790957/",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Intergovernmental Oceanographic Commission.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNESCO-1348534057",
+      "title": "INTERNSHIP: Office of the Director-General",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Programme & Project",
+      "tags": [
+        "programme"
+      ],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-09-04",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Office-of-the-Director-General/1348534057/",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Office of the Director-General.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNESCO-1348535957",
+      "title": "INTERNSHIP: Priority Africa and External Relations",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Partnerships",
+      "tags": [],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-09-04",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Priority-Africa-and-External-Relations/1348535957/",
+      "summary": "Partnerships or external-relations role supporting donor engagement, stakeholder mapping, fundraising, or resource mobilization. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Priority Africa and External Relations.",
+      "responsibilities": [
+        "Support donor/stakeholder mapping and external-relations tracking.",
+        "Prepare briefing notes, partner profiles, presentations, or visibility material.",
+        "Assist with resource-mobilization and partnership documentation."
+      ],
+      "requirements": [
+        "Strong research, writing, and stakeholder-analysis skills.",
+        "Interest in partnerships, fundraising, external relations, or private-sector engagement.",
+        "Ability to synthesize information for senior audiences."
+      ]
+    },
+    {
+      "id": "UNESCO-1348537457",
+      "title": "INTERNSHIP: Sciences",
+      "organization": "UNESCO",
+      "location": "Multiple, Multiple",
+      "continent": "Remote / Global",
+      "source": "UNESCO",
+      "category": "Programme & Project",
+      "tags": [
+        "programme"
+      ],
+      "deadline": "2026-12-31",
+      "postedDate": "2026-09-04",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Sciences/1348537457/",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Sciences.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
       ]
     },
     {

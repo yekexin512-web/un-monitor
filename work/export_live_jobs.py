@@ -322,11 +322,22 @@ def convert(job) -> dict:
     }
 
 
+def load_previous_jobs() -> list[dict]:
+    if not OUT_FILE.exists():
+        return []
+    content = OUT_FILE.read_text(encoding="utf-8")
+    prefix = "window.UN_MONITOR_LIVE_JOBS = "
+    if not content.startswith(prefix):
+        raise ValueError("Unrecognized jobs-data.js format; leaving existing data unchanged.")
+    return json.loads(content[len(prefix):].strip().removesuffix(";"))["jobs"]
+
+
 def main() -> None:
     from un_intern_monitor.config import load_settings
     from un_intern_monitor.multi_scraper import (
         fetch_fao_jobs,
         fetch_itu_jobs,
+        fetch_unesco_jobs,
         fetch_unhcr_jobs,
         fetch_unido_jobs,
         fetch_unicef_jobs,
@@ -337,7 +348,9 @@ def main() -> None:
 
     today = date.today()
     settings = load_settings()
+    previous_jobs = load_previous_jobs()
     jobs = []
+    retained_rows = []
     errors: list[str] = []
     for name, fetcher in [
         ("Inspira", lambda: fetch_internship_jobs(settings.search_url, settings.playwright_headless)),
@@ -348,13 +361,17 @@ def main() -> None:
         ("FAO", fetch_fao_jobs),
         ("ITU", fetch_itu_jobs),
         ("UNU", fetch_unu_jobs),
+        ("UNESCO", fetch_unesco_jobs),
     ]:
         try:
             jobs.extend(fetcher())
         except Exception as exc:
-            errors.append(f"{name}: {exc!r}")
+            source = "UN Careers" if name == "Inspira" else name
+            retained = [row for row in previous_jobs if row.get("organization") == source]
+            retained_rows.extend(retained)
+            errors.append(f"{name}: {exc!r}; retained {len(retained)} previous jobs.")
 
-    rows = [convert(job) for job in jobs]
+    rows = [convert(job) for job in jobs] + retained_rows
     rows.sort(key=lambda item: (item["deadline"], item["organization"], item["title"]))
 
     if not rows and errors:

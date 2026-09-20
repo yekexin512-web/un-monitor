@@ -4,7 +4,7 @@ import json
 import re
 import time
 from datetime import date, timedelta
-from urllib.parse import urljoin, urlparse
+from urllib.parse import parse_qsl, urlencode, urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup, Tag
@@ -42,6 +42,7 @@ def fetch_all_internship_jobs(un_careers_url: str, *, headless: bool, today: dat
         lambda: fetch_fao_jobs(),
         lambda: fetch_itu_jobs(),
         lambda: fetch_unu_jobs(),
+        lambda: fetch_unesco_jobs(),
     ]
     for fetcher in fetchers:
         try:
@@ -166,6 +167,65 @@ def fetch_unido_jobs() -> list[Job]:
             )
         )
     return jobs
+
+
+def fetch_unesco_jobs() -> list[Job]:
+    # The title=intern filter misses most INTERNSHIP postings; use the job family.
+    url = "https://careers.unesco.org/go/All-jobs-openings/784002/?department=Internship"
+    pending_pages = [url]
+    visited_paths: set[str] = set()
+    jobs_by_id: dict[str, Job] = {}
+    while pending_pages:
+        page_url = pending_pages.pop(0)
+        path = urlparse(page_url).path
+        if path in visited_paths:
+            continue
+        visited_paths.add(path)
+        response = _get(page_url, timeout=30)
+        soup = BeautifulSoup(response.text, "html.parser")
+        for row in soup.select("tr.data-row"):
+            link = row.select_one("span.jobTitle.hidden-phone a[href]") or row.select_one("a.jobTitle-link[href]")
+            if not link:
+                continue
+            title = link.get_text(" ", strip=True)
+            family = _select_text(row, ".colDepartment .jobDepartment")
+            contract = _select_text(row, ".colFacility .jobFacility")
+            if not any(is_internship_text(value) for value in (title, family, contract)):
+                continue
+            href = urljoin(page_url, str(link["href"]))
+            if urlparse(href).netloc != "careers.unesco.org" or not urlparse(href).path.startswith("/job/"):
+                continue
+            raw_id = _id_from_path(href)
+            if not raw_id:
+                continue
+            posted = _select_text(row, ".jobDate")
+            posted = re.sub(r"\bSept\b", "Sep", posted, flags=re.IGNORECASE)
+            job_id = f"UNESCO-{raw_id}"
+            jobs_by_id[job_id] = Job(
+                job_opening_id=job_id,
+                title=title,
+                department="UNESCO",
+                location=_select_text(row, ".colLocation .jobLocation"),
+                posted_date=parse_date(posted),
+                deadline_date=parse_date(_select_text(row, ".colShifttype .jobShifttype")),
+                apply_url=href,
+                source="UNESCO",
+            )
+
+        for link in soup.select(".pagination a[href]"):
+            next_page = urlparse(urljoin(page_url, str(link["href"])))
+            if next_page.netloc != "careers.unesco.org":
+                continue
+            if not re.fullmatch(r"/go/All-jobs-openings/784002/(?:\d+/)?", next_page.path):
+                continue
+            if next_page.path in visited_paths:
+                continue
+            params = dict(parse_qsl(next_page.query, keep_blank_values=True))
+            params["department"] = "Internship"
+            next_url = next_page._replace(query=urlencode(params), fragment="").geturl()
+            if next_url not in pending_pages:
+                pending_pages.append(next_url)
+    return list(jobs_by_id.values())
 
 
 def fetch_unicef_jobs() -> list[Job]:
