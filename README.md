@@ -38,7 +38,17 @@ After pushing to GitHub:
 4. Go to `Actions`.
 5. Run `Deploy UN Monitor V2` manually once, or wait for the daily schedule.
 
-The workflow runs every day at 08:00 UTC, refreshes `jobs-data.js`, and deploys `outputs/unmonitor-v2` to GitHub Pages.
+The workflow runs every day at 01:00 UTC (09:00 Beijing time), refreshes
+`jobs-data.js`, and stages the website in `_site` before deploying it.
+
+The published layout preserves `outputs/unmonitor-v2/`:
+
+- `https://yekexin512-web.github.io/un-monitor/` redirects to the app.
+- `https://yekexin512-web.github.io/un-monitor/outputs/unmonitor-v2/` serves the app.
+
+The redirect preserves query parameters and URL fragments for Supabase login
+callbacks. Uploading only the contents of `outputs/unmonitor-v2` as the Pages
+artifact would remove this subdirectory and break existing links and callbacks.
 
 ## Optional Multi-User Dashboard
 

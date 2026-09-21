@@ -58,10 +58,17 @@ jobs:
           git commit -m "Update job data [skip ci]"
           git push
 
+      - name: Prepare static site
+        shell: bash
+        run: |
+          mkdir -p _site/outputs/unmonitor-v2
+          cp index.html _site/index.html
+          cp -R outputs/unmonitor-v2/. _site/outputs/unmonitor-v2/
+
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: outputs/unmonitor-v2
+          path: _site
 
   deploy:
     needs: build

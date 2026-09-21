@@ -3,10 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="refresh" content="0; url=outputs/unmonitor-v2/" />
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=outputs/unmonitor-v2/" />
+    </noscript>
     <title>UN Monitor</title>
     <script>
-      window.location.replace("outputs/unmonitor-v2/");
+      const destination = new URL("outputs/unmonitor-v2/", window.location.href);
+      destination.search = window.location.search;
+      destination.hash = window.location.hash;
+      window.location.replace(destination.href);
     </script>
   </head>
   <body>
