@@ -517,6 +517,11 @@ let supabaseClient = null;
 let currentUser = null;
 let cloudReady = false;
 let clearingCloudSession = false;
+let cloudApplicationsLoaded = false;
+let applicationLoadVersion = 0;
+let authEventVersion = 0;
+let applicationLoadTimer = null;
+let applicationWritePending = false;
 
 function loadState() {
   const liveJobs = window.UN_MONITOR_LIVE_JOBS?.jobs;
@@ -533,7 +538,7 @@ function loadState() {
     },
     draftNote: "",
   };
-  const savedMeta = saved || legacySaved || {};
+  const savedMeta = includeLocalJobs ? saved || legacySaved || {} : {};
   const baseState = {
     ...defaults,
     profile: {
@@ -543,12 +548,6 @@ function loadState() {
     draftNote: typeof savedMeta.draftNote === "string" ? savedMeta.draftNote : defaults.draftNote,
     liveGeneratedAt,
   };
-  if (saved && !savedHasTrustedJobs) {
-    localStorage.removeItem(localStateKey);
-  }
-  if (legacySaved) {
-    localStorage.removeItem(legacyStateKey);
-  }
   if (includeLocalJobs && savedHasTrustedJobs && Array.isArray(saved.jobs)) {
     const savedJobs = saved.jobs.map(normalizeJob);
     return {
@@ -559,23 +558,26 @@ function loadState() {
   if (Array.isArray(liveJobs) && liveJobs.length) {
     return {
       ...baseState,
-      jobs: liveJobs.map(normalizeJob),
+      jobs: liveJobs.map(publicJob),
     };
   }
   return {
     ...baseState,
-    jobs: sampleJobs.map(normalizeJob),
+    jobs: sampleJobs.map(publicJob),
   };
 }
 
-function parseSavedState(value, key) {
+function parseSavedState(value) {
   if (!value) return null;
   try {
     return JSON.parse(value);
   } catch {
-    localStorage.removeItem(key);
     return null;
   }
+}
+
+function publicJob(job) {
+  return normalizeJob({ ...job, status: "found", appliedAt: null, statusUpdatedAt: null, firstTrackedAt: null });
 }
 
 function normalizeJob(job) {
@@ -635,12 +637,17 @@ function inferContinent(location) {
 }
 
 function saveState() {
-  if (currentUser) return;
-  if (isSupabaseConfigured()) {
-    localStorage.removeItem(localStateKey);
-    localStorage.removeItem(legacyStateKey);
+  if (currentUser) {
+    if (cloudApplicationsLoaded) {
+      try {
+        localStorage.setItem(accountStateKey(currentUser.id), JSON.stringify({ ...state, userId: currentUser.id }));
+      } catch {
+        // A full or disabled browser cache must not block cloud records.
+      }
+    }
     return;
   }
+  if (isSupabaseConfigured()) return;
   localStorage.setItem(
     localStateKey,
     JSON.stringify({
@@ -649,28 +656,53 @@ function saveState() {
       stateScope: "local",
     }),
   );
-  localStorage.removeItem(legacyStateKey);
 }
 
 function isSupabaseConfigured() {
   const config = window.UN_MONITOR_SUPABASE || {};
-  return Boolean(config.url && config.anonKey && window.supabase);
+  return Boolean(config.url && config.anonKey);
 }
 
-function applicationRecords() {
-  return state.jobs.filter((job) => job.source === "Manual" || job.status !== "found" || job.appliedAt || job.statusUpdatedAt);
+function accountStateKey(userId) {
+  return `unmonitor-v2-account:${supabaseProjectRef()}:${userId}`;
+}
+
+function accountSavedState(userId) {
+  const saved = parseSavedState(localStorage.getItem(accountStateKey(userId)));
+  return saved?.userId === userId && Array.isArray(saved.jobs) ? saved : null;
 }
 
 function isSubmittedApplication(job) {
   return Boolean(job.appliedAt || job.status !== "found");
 }
 
-function applyRemoteApplications(records) {
+function applyRemoteApplications(records, cachedJobs = []) {
   if (!Array.isArray(records)) return;
   const jobsById = new Map(state.jobs.map((job) => [job.id, job]));
+  const cachedById = new Map(cachedJobs.map((job) => [job.id, job]));
   records.forEach((record) => {
-    const job = jobsById.get(record.job_id);
-    if (!job) return;
+    if (!record.job_id || record.user_id !== currentUser?.id) return;
+    let job = jobsById.get(record.job_id);
+    if (!job) {
+      job = normalizeJob({
+        ...(cachedById.get(record.job_id) || {
+          title: `Archived job (${record.job_id})`,
+          organization: "Unknown organization",
+          source: "Archive",
+          category: "Unspecified",
+          continent: "Unknown",
+          location: "Not available",
+          postedDate: null,
+          deadline: null,
+          url: "",
+          summary: "Saved application record. Job details are no longer available in the current feed.",
+        }),
+        id: record.job_id,
+        archived: true,
+      });
+      state.jobs.push(job);
+      jobsById.set(job.id, job);
+    }
     job.status = allowedStatuses.includes(record.status) ? record.status : job.status;
     job.appliedAt = record.applied_at || null;
     job.statusUpdatedAt = record.status_updated_at || null;
@@ -690,33 +722,68 @@ function serializeApplication(job) {
   };
 }
 
-async function syncLocalApplicationsToCloud() {
-  if (!cloudReady || !currentUser) return;
-  const rows = applicationRecords().map(serializeApplication);
-  if (!rows.length) return;
-  const { error } = await supabaseClient.from("user_applications").upsert(rows, { onConflict: "user_id,job_id" });
-  if (error) throw error;
-}
-
 async function loadCloudApplications() {
   if (!cloudReady || !currentUser) return;
-  const { data, error } = await supabaseClient.from("user_applications").select("*");
-  if (error) throw error;
-  applyRemoteApplications(data);
+  if (applicationWritePending) return;
+  const userId = currentUser.id;
+  const version = ++applicationLoadVersion;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 20000);
+  cloudApplicationsLoaded = false;
+  setSyncStatus("Loading saved records...");
   renderAll();
+  try {
+    const records = [];
+    for (let offset = 0; ; offset += 1000) {
+      const { data, error } = await supabaseClient.from("user_applications").select("*")
+        .eq("user_id", userId).order("job_id").range(offset, offset + 999).abortSignal(controller.signal);
+      if (version !== applicationLoadVersion || currentUser?.id !== userId) return;
+      if (error) throw error;
+      if (!Array.isArray(data)) throw new Error("Invalid records response");
+      records.push(...data);
+      if (data.length < 1000) break;
+    }
+    const cachedJobs = accountSavedState(userId)?.jobs || [];
+    state.jobs = loadState().jobs;
+    applyRemoteApplications(records, cachedJobs);
+    cloudApplicationsLoaded = true;
+    saveState();
+    renderAll();
+    setSyncStatus(records.length ? `Loaded ${records.length} saved records.` : "No saved records found for this account.");
+  } catch (error) {
+    if (version === applicationLoadVersion && currentUser?.id === userId) {
+      setSyncStatus(`Cloud load failed: ${controller.signal.aborted ? "Request timed out" : error.message}. Records have not been cleared.`);
+    }
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 async function persistApplication(job) {
-  if (!cloudReady || !currentUser) return;
+  if (!cloudReady || !currentUser || !cloudApplicationsLoaded || applicationWritePending) return false;
+  const userId = currentUser.id;
+  const version = applicationLoadVersion;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 20000);
+  applicationWritePending = true;
+  renderAll();
   try {
-    const { error } = await supabaseClient.from("user_applications").upsert(serializeApplication(job), { onConflict: "user_id,job_id" });
+    const { error } = await supabaseClient.from("user_applications")
+      .upsert(serializeApplication(job), { onConflict: "user_id,job_id" }).abortSignal(controller.signal);
+    if (currentUser?.id !== userId || version !== applicationLoadVersion) return false;
     if (error) {
       setSyncStatus(`Cloud sync failed: ${error.message}`);
-      return;
+      return false;
     }
     setSyncStatus("Saved to cloud");
+    return true;
   } catch (error) {
-    setSyncStatus(`Cloud sync failed: ${error.message}`);
+    if (currentUser?.id === userId) setSyncStatus(`Cloud sync failed: ${error.message}`);
+    return false;
+  } finally {
+    clearTimeout(timeout);
+    applicationWritePending = false;
+    renderAll();
   }
 }
 
@@ -730,6 +797,9 @@ function renderAuth() {
   const loginForm = document.getElementById("login-form");
   const signOut = document.getElementById("sign-out");
   const clearSession = document.getElementById("clear-session");
+  const reloadRecords = document.getElementById("reload-records");
+  if (reloadRecords) reloadRecords.hidden = !currentUser;
+  document.getElementById("reset-demo").hidden = isSupabaseConfigured();
   if (!authStatus || !loginForm || !signOut || !clearSession) return;
   if (!isSupabaseConfigured()) {
     authStatus.textContent = "Local browser mode";
@@ -744,7 +814,6 @@ function renderAuth() {
     authStatus.textContent = currentUser.email || "Signed in";
     loginForm.hidden = true;
     signOut.hidden = false;
-    setSyncStatus("Personal dashboard synced");
   } else {
     authStatus.textContent = "Sign in for cloud dashboard";
     loginForm.hidden = false;
@@ -779,12 +848,6 @@ function clearSupabaseAuthStorage() {
   });
 }
 
-function hasAuthCallback() {
-  const hash = window.location.hash || "";
-  const search = window.location.search || "";
-  return hash.includes("access_token=") || search.includes("code=");
-}
-
 function authErrorFromUrl() {
   const hash = new URLSearchParams((window.location.hash || "").replace(/^#/, ""));
   const search = new URLSearchParams(window.location.search || "");
@@ -812,18 +875,6 @@ function authRedirectUrl() {
   return url.toString();
 }
 
-function shouldKeepCloudSession(session) {
-  if (!session?.user) return false;
-  const marker = sessionStorage.getItem(cloudSessionKey);
-  return marker === "active" || marker === "requested" || hasAuthCallback();
-}
-
-function shouldKeepAuthEvent(session, event) {
-  if (!session?.user) return false;
-  if (event === "SIGNED_IN") return true;
-  return shouldKeepCloudSession(session);
-}
-
 function setCloudSessionMarker(value) {
   localStorage.removeItem(cloudSessionKey);
   sessionStorage.setItem(cloudSessionKey, value);
@@ -837,21 +888,23 @@ function clearCloudSessionMarker() {
 async function clearCloudSession() {
   if (clearingCloudSession) return;
   clearingCloudSession = true;
+  authEventVersion += 1;
+  applicationLoadVersion += 1;
   try {
-    if (supabaseClient) await supabaseClient.auth.signOut();
+    if (supabaseClient) await supabaseClient.auth.signOut({ scope: "local" });
   } catch {
     // Local cleanup still matters if the network sign-out fails.
   } finally {
     clearingCloudSession = false;
   }
   currentUser = null;
+  cloudApplicationsLoaded = false;
+  clearTimeout(applicationLoadTimer);
   clearCloudSessionMarker();
   clearSupabaseAuthStorage();
-  clearApplicationStateStorage();
 }
 
 function restoreSignedOutState() {
-  clearApplicationStateStorage();
   state = loadState();
   selectedJobId = state.jobs[0]?.id;
   hydrateProfile();
@@ -872,6 +925,7 @@ function daysSince(dateString) {
 
 function formatDeadline(dateString) {
   const days = daysUntil(dateString);
+  if (!Number.isFinite(days)) return "Deadline unavailable";
   if (days < 0) return `Expired ${Math.abs(days)}d ago`;
   if (days === 0) return "Due today";
   return `Due in ${days}d`;
@@ -1042,15 +1096,15 @@ function renderJobDetail() {
       <div class="action-block">
         <label>
           <span>Application status</span>
-          <select class="status-select" id="detail-status">
+          <select class="status-select" id="detail-status" ${canEditApplications() ? "" : "disabled"}>
             ${Object.entries(statusLabels)
               .map(([value, label]) => `<option value="${value}" ${job.status === value ? "selected" : ""}>${label}</option>`)
               .join("")}
           </select>
         </label>
         <div class="detail-actions">
-          <button class="primary-btn" id="mark-applied" type="button">Mark applied</button>
-          <a class="primary-btn apply-link" href="${escapeHtml(job.url)}" target="_blank" rel="noreferrer">Open JD / Apply</a>
+          <button class="primary-btn" id="mark-applied" type="button" ${canEditApplications() ? "" : "disabled"}>Mark applied</button>
+          ${job.url ? `<a class="primary-btn apply-link" href="${escapeHtml(job.url)}" target="_blank" rel="noreferrer">Open JD / Apply</a>` : ""}
           <button class="secondary-btn" id="send-studio" type="button">Open Studio</button>
         </div>
         <div class="status-history">
@@ -1081,15 +1135,20 @@ function renderJobDetail() {
   });
 }
 
-function updateJobStatus(jobId, status, markDate = false) {
+function canEditApplications() {
+  return !isSupabaseConfigured() || Boolean(currentUser && cloudApplicationsLoaded && !applicationWritePending);
+}
+
+async function updateJobStatus(jobId, status, markDate = false) {
+  if (!canEditApplications()) return;
   const job = state.jobs.find((item) => item.id === jobId);
   if (!job) return;
-  job.status = status;
-  job.statusUpdatedAt = new Date().toISOString();
-  if (!job.firstTrackedAt) job.firstTrackedAt = job.statusUpdatedAt;
-  if (status === "applied" && (markDate || !job.appliedAt)) job.appliedAt = today.toISOString().slice(0, 10);
+  const updated = { ...job, status, statusUpdatedAt: new Date().toISOString() };
+  if (!updated.firstTrackedAt) updated.firstTrackedAt = updated.statusUpdatedAt;
+  if (status === "applied" && (markDate || !updated.appliedAt)) updated.appliedAt = today.toISOString().slice(0, 10);
+  if (currentUser && !await persistApplication(updated)) return;
+  Object.assign(job, updated);
   saveState();
-  persistApplication(job);
   renderAll();
 }
 
@@ -1156,7 +1215,7 @@ function renderApplicationChart() {
 function renderCategoryChart() {
   const chart = document.getElementById("category-chart");
   chart.innerHTML = "";
-  const counts = categories
+  const counts = [...new Set([...categories, ...state.jobs.map((job) => job.category)])]
     .map((category) => ({ category, count: state.jobs.filter((job) => job.category === category && isSubmittedApplication(job)).length }))
     .filter((item) => item.count > 0)
     .sort((a, b) => b.count - a.count);
@@ -1307,11 +1366,16 @@ function setupCharts() {
 
 function setupForms() {
   const dialog = document.getElementById("add-job-dialog");
-  document.getElementById("open-add-job").addEventListener("click", () => dialog.showModal());
-  document.getElementById("add-job-form").addEventListener("submit", (event) => {
+  document.getElementById("open-add-job").addEventListener("click", () => {
+    if (canEditApplications()) dialog.showModal();
+    else setSyncStatus("Sign in and load saved records before adding a job.");
+  });
+  document.getElementById("add-job-form").addEventListener("submit", async (event) => {
     if (event.submitter?.value === "cancel") return;
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    if (!canEditApplications()) return;
+    const form = event.currentTarget;
+    const data = new FormData(form);
     const summary = data.get("summary");
     const category = data.get("category");
     const job = {
@@ -1333,11 +1397,12 @@ function setupForms() {
       responsibilities: ["Review the pasted JD and add responsibilities here in the next backend version."],
       requirements: ["Review the pasted JD and add requirements here in the next backend version."],
     };
+    if (currentUser && !await persistApplication(job)) return;
     state.jobs.unshift(job);
     selectedJobId = job.id;
     saveState();
     dialog.close();
-    event.currentTarget.reset();
+    form.reset();
     renderAll();
   });
   document.getElementById("profile-form").addEventListener("submit", (event) => {
@@ -1363,6 +1428,7 @@ function setupAuth() {
   const loginForm = document.getElementById("login-form");
   const signOut = document.getElementById("sign-out");
   const clearSession = document.getElementById("clear-session");
+  document.getElementById("reload-records")?.addEventListener("click", loadCloudApplications);
   loginForm?.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!cloudReady) return;
@@ -1386,6 +1452,7 @@ function setupAuth() {
     renderAuth();
   });
   clearSession?.addEventListener("click", async () => {
+    const userId = currentUser?.id;
     if (cloudReady) {
       await clearCloudSession();
     } else {
@@ -1394,16 +1461,55 @@ function setupAuth() {
       clearSupabaseAuthStorage();
       clearApplicationStateStorage();
     }
+    if (userId) localStorage.removeItem(accountStateKey(userId));
+    clearApplicationStateStorage();
     restoreSignedOutState();
     renderAuth();
     setSyncStatus("Account data cleared in this browser.");
   });
 }
 
+function handleCloudSession(session) {
+  const user = session?.user || null;
+  const changed = currentUser?.id !== user?.id;
+  currentUser = user;
+  if (changed) {
+    applicationLoadVersion += 1;
+    cloudApplicationsLoaded = false;
+    state = loadState();
+    const saved = user ? accountSavedState(user.id) : null;
+    if (saved) {
+      state.jobs = mergeJobs(state.jobs, saved.jobs.map(normalizeJob));
+      state.profile = { ...state.profile, ...saved.profile };
+      state.draftNote = saved.draftNote || "";
+    }
+    selectedJobId = state.jobs[0]?.id;
+    hydrateProfile();
+  }
+  renderAuth();
+  renderAll();
+  clearTimeout(applicationLoadTimer);
+  if (!user) {
+    clearCloudSessionMarker();
+    return;
+  }
+  setCloudSessionMarker("active");
+  if (!cloudApplicationsLoaded) {
+    setSyncStatus("Loading saved records...");
+    // Supabase holds its auth lock during callbacks; query after it returns.
+    applicationLoadTimer = setTimeout(() => {
+      if (currentUser?.id === user.id) loadCloudApplications();
+    }, 0);
+  }
+}
+
 async function initCloudSync() {
   renderAuth();
   if (!isSupabaseConfigured()) return;
-  const callbackPresent = hasAuthCallback();
+  if (!window.supabase) {
+    setSyncStatus("Sign-in service failed to load. Reload the page to retry.");
+    return;
+  }
   const config = window.UN_MONITOR_SUPABASE;
   supabaseClient = window.supabase.createClient(config.url, config.anonKey, {
     auth: {
@@ -1423,50 +1529,20 @@ async function initCloudSync() {
     clearAuthUrlHash();
     return;
   }
-  const {
-    data: { session },
-  } = await supabaseClient.auth.getSession();
-  if (session?.user && !shouldKeepCloudSession(session) && !callbackPresent) {
-    await clearCloudSession();
-  } else {
-    currentUser = session?.user || null;
-    if (currentUser) setCloudSessionMarker("active");
-  }
-  renderAuth();
-  if (currentUser) {
-    try {
-      await syncLocalApplicationsToCloud();
-      await loadCloudApplications();
-    } catch (error) {
-      setSyncStatus(`Cloud sync failed: ${error.message}`);
-    }
-  }
-  supabaseClient.auth.onAuthStateChange(async (event, session) => {
+  supabaseClient.auth.onAuthStateChange((event, session) => {
     if (clearingCloudSession) return;
-    if (session?.user && !shouldKeepAuthEvent(session, event)) {
-      await clearCloudSession();
-      restoreSignedOutState();
-      renderAuth();
-      return;
-    }
-    currentUser = session?.user || null;
-    if (currentUser) setCloudSessionMarker("active");
-    renderAuth();
-    if (!currentUser) {
-      if (event === "SIGNED_OUT") {
-        clearCloudSessionMarker();
-        clearSupabaseAuthStorage();
-      }
-      restoreSignedOutState();
-      return;
-    }
-    try {
-      await syncLocalApplicationsToCloud();
-      await loadCloudApplications();
-    } catch (error) {
-      setSyncStatus(`Cloud sync failed: ${error.message}`);
-    }
+    authEventVersion += 1;
+    handleCloudSession(session);
   });
+  const version = authEventVersion;
+  try {
+    const { data, error } = await supabaseClient.auth.getSession();
+    if (version !== authEventVersion) return;
+    if (error) throw error;
+    handleCloudSession(data.session);
+  } catch (error) {
+    setSyncStatus(`Sign-in failed: ${error.message}`);
+  }
 }
 
 function guessFitScore(summary, category) {

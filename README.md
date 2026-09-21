@@ -54,6 +54,26 @@ artifact would remove this subdirectory and break existing links and callbacks.
 
 Supabase Auth and Row Level Security can store each user's application records in the cloud.
 
+Signing in reads cloud records before enabling edits; it never bulk-uploads the
+current page over saved records. Archived job IDs remain in the dashboard even
+when their descriptions have left the feed. Account-specific browser backups
+retain known job details and are hidden when signed out. Legacy unscoped data is
+kept untouched for recovery, not automatically imported into a signed-in account.
+
+`Reload records` retries a failed cloud read. The account panel reports the actual
+loaded count or the error, rather than treating successful login as successful
+data synchronization. No database migration is required for these changes.
+
+Regression tests (synthetic accounts only, no production data):
+
+```text
+node --test tests/test_application_sync.cjs
+node tests/test_application_sync_browser.cjs
+```
+
+The browser test needs Playwright and an installed Edge browser (or set
+`BROWSER_CHANNEL` to another supported installed channel).
+
 See:
 
 ```text

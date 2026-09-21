@@ -37,8 +37,9 @@
             <button class="primary-btn" type="submit">Sign in</button>
           </form>
           <button class="secondary-btn" id="sign-out" type="button" hidden>Sign out</button>
+          <button class="secondary-btn" id="reload-records" type="button" hidden>Reload records</button>
           <button class="secondary-btn" id="clear-session" type="button" hidden>Clear account data</button>
-          <p id="sync-status">Records save in this browser until Supabase is configured.</p>
+          <p id="sync-status" role="status" aria-live="polite">Loading account...</p>
         </section>
 
         <section class="profile-card">
@@ -308,6 +309,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="./supabase-config.js"></script>
     <script src="./jobs-data.js?v=20260920-unesco"></script>
-    <script src="./app.js?v=20260920-auth-fix"></script>
+    <script src="./app.js?v=20260921-records-fix"></script>
   </body>
 </html>
