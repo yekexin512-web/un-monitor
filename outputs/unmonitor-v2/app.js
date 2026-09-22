@@ -1256,30 +1256,24 @@ function renderPipelineSankey() {
   if (!chart) return;
   chart.innerHTML = "";
 
-  const found = state.jobs.filter((job) => job.status === "found").length;
   const noReply = state.jobs.filter((job) => job.status === "applied" || job.status === "no_reply").length;
   const rejected = state.jobs.filter((job) => job.status === "rejected").length;
   const interviewCurrent = state.jobs.filter((job) => job.status === "interview").length;
   const ghosted = state.jobs.filter((job) => job.status === "ghosted").length;
   const rejectedInterview = state.jobs.filter((job) => job.status === "rejected_interview").length;
   const offers = state.jobs.filter((job) => job.status === "offer").length;
-  const withdrawn = state.jobs.filter((job) => job.status === "withdrawn").length;
   const interviewReached = interviewCurrent + ghosted + rejectedInterview + offers;
   const applied = noReply + rejected + interviewReached;
-  const total = found + applied + withdrawn;
-  if (!total) {
-    chart.innerHTML = '<p class="empty-state">No pipeline records yet.</p>';
-    return;
-  }
+  const scaleTotal = Math.max(1, applied);
 
-  const viewWidth = 1180;
-  const viewHeight = 410;
+  const viewWidth = 1100;
+  const viewHeight = 390;
   const nodeWidth = 24;
-  const x = { tracked: 56, applied: 280, first: 550, second: 865 };
-  const y = { tracked: 205, applied: 116, found: 292, noReply: 66, interview: 180, rejected: 310, ghosted: 92, rejectedInterview: 202, offer: 312 };
+  const x = { applied: 70, first: 410, second: 765 };
+  const y = { applied: 195, interview: 65, noReply: 195, rejected: 325, ghosted: 85, rejectedInterview: 195, offer: 305 };
   const flowWidth = (count) => {
     if (!count) return 0;
-    return Math.max(7, Math.min(96, (count / total) * 108));
+    return Math.max(7, Math.min(96, (count / scaleTotal) * 108));
   };
   const nodeHeight = (count) => Math.max(16, flowWidth(count));
   const curve = (fromX, fromY, toX, toY) => {
@@ -1301,8 +1295,6 @@ function renderPipelineSankey() {
   `;
 
   const links = [];
-  if (applied) links.push(link(x.tracked + nodeWidth, y.applied, x.applied, y.applied, applied, pipelineColors.submitted.flow, "applied"));
-  if (found) links.push(link(x.tracked + nodeWidth, y.found, x.applied, y.found, found, pipelineColors.found.flow, "found"));
   if (noReply) links.push(link(x.applied + nodeWidth, y.applied, x.first, y.noReply, noReply, pipelineColors.no_reply.flow, "no reply"));
   if (interviewReached) links.push(link(x.applied + nodeWidth, y.applied, x.first, y.interview, interviewReached, pipelineColors.interview.flow, "interview"));
   if (rejected) links.push(link(x.applied + nodeWidth, y.applied, x.first, y.rejected, rejected, pipelineColors.rejected.flow, "rejected"));
@@ -1310,17 +1302,14 @@ function renderPipelineSankey() {
   if (rejectedInterview) links.push(link(x.first + nodeWidth, y.interview, x.second, y.rejectedInterview, rejectedInterview, pipelineColors.rejected_interview.flow, "rejected after interview"));
   if (offers) links.push(link(x.first + nodeWidth, y.interview, x.second, y.offer, offers, pipelineColors.offer.flow, "offer"));
 
-  const nodes = [node(x.tracked, y.tracked, total, pipelineColors.tracked.node)];
-  const labels = [label(total, "Tracked", x.tracked, y.tracked - 70, "middle")];
+  const nodes = [node(x.applied, y.applied, applied, pipelineColors.submitted.node)];
+  const labels = [label(applied, "Applied", x.applied + 38, y.applied - 18)];
   const addStage = (count, text, nodeX, centerY, colorKey) => {
-    if (!count) return;
     nodes.push(node(nodeX, centerY, count, pipelineColors[colorKey].node));
     labels.push(label(count, text, nodeX + 38, centerY - 18));
   };
-  addStage(applied, "Applied", x.applied, y.applied, "submitted");
-  addStage(found, "Found", x.applied, y.found, "found");
-  addStage(noReply, "No reply", x.first, y.noReply, "no_reply");
   addStage(interviewReached, interviewCurrent ? `Interview (${interviewCurrent} active)` : "Interview", x.first, y.interview, "interview");
+  addStage(noReply, "No reply", x.first, y.noReply, "no_reply");
   addStage(rejected, "Rejected", x.first, y.rejected, "rejected");
   addStage(ghosted, "Ghosted", x.second, y.ghosted, "ghosted");
   addStage(rejectedInterview, "Rejected", x.second, y.rejectedInterview, "rejected_interview");
