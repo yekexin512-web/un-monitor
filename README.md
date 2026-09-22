@@ -73,6 +73,12 @@ kept untouched for recovery, not automatically imported into a signed-in account
 loaded count or the error, rather than treating successful login as successful
 data synchronization. No database migration is required for these changes.
 
+The dashboard pipeline treats existing `applied` records as awaiting a reply:
+Applied branches to Interview, No reply, or Rejected. Interview then branches to
+Ghosted, Rejected after interview, or Offer. Older `assessment` records are shown
+as Interview for backward compatibility. The deadline filter also supports Due
+today, and the 30-day activity axis uses responsive columns at narrow widths.
+
 Regression tests (synthetic accounts only, no production data):
 
 ```text

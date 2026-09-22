@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>UN Monitor V2</title>
-    <link rel="stylesheet" href="./styles.css?v=20260922-history" />
+    <link rel="stylesheet" href="./styles.css?v=20260922-pipeline" />
   </head>
   <body>
     <div class="app-shell">
@@ -99,11 +99,13 @@
                 <option value="all">All statuses</option>
                 <option value="found">Found</option>
                 <option value="applied">Applied</option>
-                <option value="assessment">Assessment</option>
+                <option value="no_reply">No reply</option>
                 <option value="interview">Interview</option>
+                <option value="ghosted">Ghosted after interview</option>
                 <option value="offer">Offer</option>
                 <option value="withdrawn">Withdrawn</option>
-                <option value="rejected">Rejected</option>
+                <option value="rejected">Rejected after application</option>
+                <option value="rejected_interview">Rejected after interview</option>
               </select>
             </label>
             <label>
@@ -119,6 +121,7 @@
               <select id="deadline-filter">
                 <option value="all">Any deadline</option>
                 <option value="expired7">Expired in last 7 days</option>
+                <option value="today">Due today</option>
                 <option value="tomorrow">Tomorrow</option>
                 <option value="soon3">Next 3 days</option>
                 <option value="soon7">Next 7 days</option>
@@ -310,6 +313,6 @@
     <script src="./supabase-config.js"></script>
     <script src="./jobs-data.js?v=20260920-unesco"></script>
     <script src="./jobs-catalog.js?v=20260922-history"></script>
-    <script src="./app.js?v=20260922-history"></script>
+    <script src="./app.js?v=20260922-pipeline"></script>
   </body>
 </html>

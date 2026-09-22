@@ -44,9 +44,11 @@ const mockAuth = `
             const row = { user_id: 'test-a', status: 'applied', applied_at: '2026-09-01' };
             const liveId = window.UN_MONITOR_LIVE_JOBS.jobs[0].id;
             records.set(liveId, { ...row, job_id: liveId, status: 'interview' });
-            for (const id of ['279488', '279596', '279655', '279842', '281956']) {
-              records.set(id, { ...row, job_id: id });
-            }
+            const statuses = ['applied', 'rejected', 'interview', 'ghosted', 'rejected_interview', 'offer'];
+            window.UN_MONITOR_JOB_CATALOG.jobs
+              .filter(job => job.id !== liveId && job.category)
+              .slice(0, 25)
+              .forEach((job, index) => records.set(job.id, { ...row, job_id: job.id, status: statuses[index % statuses.length] }));
           }
           return Promise.resolve({ data: [...records.values()].filter(r => r.user_id === this.userId), error: null }).then(resolve, reject);
         },
@@ -79,9 +81,9 @@ const server = http.createServer((req, res) => {
       await page.route("https://cdn.jsdelivr.net/**", (route) => route.fulfill({ contentType: "text/javascript", body: mockAuth }));
       await page.route("https://*.supabase.co/**", () => { throw new Error("Test must not contact Supabase"); });
       await page.goto(`http://127.0.0.1:${server.address().port}/`);
-      await page.waitForFunction(() => document.getElementById("sync-status").textContent === "Loaded 6 saved records.");
+      await page.waitForFunction(() => document.getElementById("sync-status").textContent === "Loaded 26 saved records.");
       assert.equal(await page.locator("#auth-status").innerText(), "test@example.test");
-      assert.equal(await page.locator("#metric-applied-total").innerText(), "6");
+      assert.equal(await page.locator("#metric-applied-total").innerText(), "26");
       assert.equal(await page.evaluate(() => window.testWrites.length), 0);
       await page.locator('[data-view="dashboard"]').click();
       await page.locator('[data-range="30"]').click();
@@ -91,9 +93,17 @@ const server = http.createServer((req, res) => {
       assert.ok(categories.includes("Communications & Advocacy"));
       assert.ok(!categories.includes("Unspecified"));
       const board = await page.locator("#kanban").innerText();
-      assert.ok(board.includes("Information Management Intern"));
-      assert.ok(board.includes("Administration and Data Analysis Intern"));
       assert.ok(!board.includes("Archived job"));
+      assert.ok(!board.includes("Unknown organization"));
+      const restoredApplications = await page.evaluate(() => state.jobs
+        .filter(job => job.appliedAt || job.status !== "found")
+        .map(job => ({ title: job.title, organization: job.organization, category: job.category })));
+      assert.equal(restoredApplications.length, 26);
+      assert.ok(restoredApplications.every(job => !job.title.startsWith("Archived job") && job.organization !== "Unknown organization" && job.category !== "Unspecified"));
+      const pipeline = await page.locator("#pipeline-sankey").innerText();
+      for (const label of ["Applied", "No reply", "Interview", "Ghosted", "Rejected", "Offer"]) {
+        assert.ok(pipeline.includes(label), `Pipeline is missing ${label}`);
+      }
       const chartBounds = await page.locator("#application-chart").evaluate((chart) => {
         const bounds = chart.getBoundingClientRect();
         return { width: chart.clientWidth, scrollWidth: chart.scrollWidth,
@@ -116,18 +126,39 @@ const server = http.createServer((req, res) => {
         return labels.some((label, index) => index > 0 && labels[index - 1].right + 2 > label.left);
       });
       assert.equal(labelsOverlap, false, `30-day date labels overlap at ${width}px`);
+      const pipelineBounds = await page.locator("#pipeline-sankey svg").evaluate((svg) => {
+        const box = svg.getBoundingClientRect();
+        return [...svg.querySelectorAll("text")].every((text) => {
+          const textBox = text.getBoundingClientRect();
+          return textBox.left >= box.left - 1 && textBox.right <= box.right + 1 && textBox.top >= box.top - 1 && textBox.bottom <= box.bottom + 1;
+        });
+      });
+      assert.ok(pipelineBounds, `Pipeline labels escape SVG at ${width}px`);
       await page.locator("#dashboard-view > .content-grid").screenshot({ path: path.resolve(__dirname, `../logs/history-charts-${width}.png`) });
+      await page.locator("#pipeline-sankey").screenshot({ path: path.resolve(__dirname, `../logs/pipeline-${width}.png`) });
       await page.screenshot({ path: path.resolve(__dirname, `../logs/records-${width}.png`) });
       const accountBox = await page.locator("#auth-card").boundingBox();
       assert.ok(accountBox.x >= 0 && accountBox.x + accountBox.width <= width);
       await page.evaluate(() => { window.testFailReads = true; });
       await page.locator("#reload-records").click();
       await page.waitForFunction(() => document.getElementById("sync-status").textContent.includes("Test offline"));
-      assert.equal(await page.locator("#metric-applied-total").innerText(), "6");
+      assert.equal(await page.locator("#metric-applied-total").innerText(), "26");
       await page.evaluate(() => { window.testFailReads = false; });
       await page.locator("#reload-records").click();
-      await page.waitForFunction(() => document.getElementById("sync-status").textContent === "Loaded 6 saved records.");
+      await page.waitForFunction(() => document.getElementById("sync-status").textContent === "Loaded 26 saved records.");
       await page.locator('[data-view="opportunities"]').click();
+      await page.evaluate(() => {
+        const localToday = new Date();
+        const year = localToday.getFullYear();
+        const month = String(localToday.getMonth() + 1).padStart(2, "0");
+        const day = String(localToday.getDate()).padStart(2, "0");
+        state.jobs[0].deadline = `${year}-${month}-${day}`;
+        renderAll();
+      });
+      await page.locator("#deadline-filter").selectOption("today");
+      assert.ok(Number.parseInt(await page.locator("#job-count").innerText(), 10) >= 1);
+      assert.ok((await page.locator("#job-list").innerText()).includes("Due today"));
+      await page.locator("#deadline-filter").selectOption("all");
       await page.locator("#detail-status").selectOption("offer");
       await page.waitForFunction(() => document.getElementById("sync-status").textContent === "Saved to cloud");
       assert.equal(await page.evaluate(() => window.testWrites.length), 1);
@@ -141,7 +172,7 @@ const server = http.createServer((req, res) => {
       assert.deepEqual(errors, []);
       await page.close();
     }
-    console.log("PASS: four viewport sizes, recovered historical titles/categories, 30-day chart bounds, login, save, retry and account isolation.");
+    console.log("PASS: 25 historical applications, Due today, four viewport timelines, two-stage pipeline, login and account isolation.");
   } finally {
     if (browser) await browser.close();
     await new Promise((resolve) => server.close(resolve));

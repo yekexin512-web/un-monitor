@@ -248,3 +248,10 @@ test("the live feed takes precedence over older catalog metadata", async () => {
   assert.equal(a.jobs()[0].title, liveJob.title);
   assert.equal(a.jobs()[0].archived, false);
 });
+
+test("legacy assessment records remain visible as interview records", async () => {
+  const a = app({ user: userA, records: [record("live-1", "assessment")] });
+  await a.start();
+  assert.equal(a.jobs()[0].status, "interview");
+  assert.equal(a.writes.length, 0);
+});

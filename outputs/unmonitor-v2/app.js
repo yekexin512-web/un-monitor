@@ -26,16 +26,18 @@ const categoryAliases = {
 
 const statusLabels = {
   found: "Found",
-  applied: "Applied",
-  assessment: "Assessment",
+  applied: "Applied / awaiting reply",
+  no_reply: "No reply",
   interview: "Interview",
+  ghosted: "Ghosted after interview",
   offer: "Offer",
   withdrawn: "Withdrawn",
-  rejected: "Rejected",
+  rejected: "Rejected after application",
+  rejected_interview: "Rejected after interview",
 };
 
 const allowedStatuses = Object.keys(statusLabels);
-const dashboardStatuses = ["found", "applied", "assessment", "interview", "offer", "withdrawn", "rejected"];
+const dashboardStatuses = ["found", "applied", "no_reply", "interview", "ghosted", "offer", "rejected", "rejected_interview", "withdrawn"];
 const submittedStatuses = dashboardStatuses.filter((status) => status !== "found");
 const pipelineColors = {
   tracked: { node: "#b8aea7", flow: "rgba(184, 174, 167, 0.58)" },
@@ -44,9 +46,12 @@ const pipelineColors = {
   applied: { node: "#78b7b0", flow: "rgba(146, 208, 200, 0.58)" },
   assessment: { node: "#e7c743", flow: "rgba(241, 218, 112, 0.58)" },
   interview: { node: "#3f73a8", flow: "rgba(117, 156, 196, 0.58)" },
+  no_reply: { node: "#d5a447", flow: "rgba(229, 193, 114, 0.6)" },
+  ghosted: { node: "#8b7ca8", flow: "rgba(173, 157, 198, 0.58)" },
   offer: { node: "#e6535c", flow: "rgba(235, 119, 127, 0.58)" },
   withdrawn: { node: "#6fb1aa", flow: "rgba(129, 199, 193, 0.58)" },
   rejected: { node: "#4e9b52", flow: "rgba(136, 191, 139, 0.58)" },
+  rejected_interview: { node: "#b55b5b", flow: "rgba(205, 133, 133, 0.58)" },
 };
 const now = new Date();
 const today = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0);
@@ -580,20 +585,26 @@ function publicJob(job) {
   return normalizeJob({ ...job, status: "found", appliedAt: null, statusUpdatedAt: null, firstTrackedAt: null });
 }
 
-function normalizeJob(job) {
+function normalizeStatus(status) {
   const statusMap = {
     shortlisted: "found",
     drafting: "found",
     ready: "found",
+    assessment: "interview",
     withdraw: "withdrawn",
     reject: "rejected",
   };
-  const status = statusMap[job.status] || job.status || "found";
+  const normalized = statusMap[status] || status || "found";
+  return allowedStatuses.includes(normalized) ? normalized : "found";
+}
+
+function normalizeJob(job) {
+  const status = normalizeStatus(job.status);
   return {
     ...job,
     category: categoryAliases[job.category] || job.category || "Programme & Project",
     continent: job.continent || inferContinent(job.location),
-    status: allowedStatuses.includes(status) ? status : "found",
+    status,
     appliedAt: job.appliedAt || null,
     statusUpdatedAt: job.statusUpdatedAt || null,
     firstTrackedAt: job.firstTrackedAt || null,
@@ -707,7 +718,7 @@ function applyRemoteApplications(records, cachedJobs = []) {
       state.jobs.push(job);
       jobsById.set(job.id, job);
     }
-    job.status = allowedStatuses.includes(record.status) ? record.status : job.status;
+    job.status = normalizeStatus(record.status);
     job.appliedAt = record.applied_at || null;
     job.statusUpdatedAt = record.status_updated_at || null;
     job.firstTrackedAt = record.first_tracked_at || null;
@@ -1016,6 +1027,7 @@ function getFilteredJobs() {
     const deadlineMatch =
       deadline === "all" ||
       (deadline === "expired7" && dueDays < 0 && dueDays >= -7) ||
+      (deadline === "today" && dueDays === 0) ||
       (deadline === "tomorrow" && dueDays === 1) ||
       (deadline === "soon3" && dueDays >= 0 && dueDays <= 3) ||
       (deadline === "soon7" && dueDays >= 0 && dueDays <= 7) ||
@@ -1244,31 +1256,30 @@ function renderPipelineSankey() {
   if (!chart) return;
   chart.innerHTML = "";
 
-  const total = state.jobs.length;
+  const found = state.jobs.filter((job) => job.status === "found").length;
+  const noReply = state.jobs.filter((job) => job.status === "applied" || job.status === "no_reply").length;
+  const rejected = state.jobs.filter((job) => job.status === "rejected").length;
+  const interviewCurrent = state.jobs.filter((job) => job.status === "interview").length;
+  const ghosted = state.jobs.filter((job) => job.status === "ghosted").length;
+  const rejectedInterview = state.jobs.filter((job) => job.status === "rejected_interview").length;
+  const offers = state.jobs.filter((job) => job.status === "offer").length;
+  const withdrawn = state.jobs.filter((job) => job.status === "withdrawn").length;
+  const interviewReached = interviewCurrent + ghosted + rejectedInterview + offers;
+  const applied = noReply + rejected + interviewReached;
+  const total = found + applied + withdrawn;
   if (!total) {
     chart.innerHTML = '<p class="empty-state">No pipeline records yet.</p>';
     return;
   }
 
-  const counts = Object.fromEntries(dashboardStatuses.map((status) => [status, state.jobs.filter((job) => job.status === status).length]));
-  const submitted = submittedStatuses.reduce((sum, status) => sum + counts[status], 0);
-  const positiveStatuses = submittedStatuses.filter((status) => counts[status] > 0);
-  const viewWidth = 940;
-  const viewHeight = 350;
-  const nodeWidth = 28;
-  const x = {
-    tracked: 110,
-    middle: 370,
-    status: 675,
-  };
-  const y = {
-    tracked: 178,
-    submitted: 102,
-    found: 256,
-  };
+  const viewWidth = 1180;
+  const viewHeight = 410;
+  const nodeWidth = 24;
+  const x = { tracked: 56, applied: 280, first: 550, second: 865 };
+  const y = { tracked: 205, applied: 116, found: 292, noReply: 66, interview: 180, rejected: 310, ghosted: 92, rejectedInterview: 202, offer: 312 };
   const flowWidth = (count) => {
     if (!count) return 0;
-    return Math.max(8, Math.min(112, (count / total) * 118));
+    return Math.max(7, Math.min(96, (count / total) * 108));
   };
   const nodeHeight = (count) => Math.max(16, flowWidth(count));
   const curve = (fromX, fromY, toX, toY) => {
@@ -1289,44 +1300,37 @@ function renderPipelineSankey() {
     </path>
   `;
 
-  const statusY = new Map();
-  const statusTop = positiveStatuses.length > 4 ? 46 : 62;
-  const statusBottom = positiveStatuses.length > 4 ? 306 : 284;
-  const statusStep = positiveStatuses.length > 1 ? (statusBottom - statusTop) / (positiveStatuses.length - 1) : 0;
-  positiveStatuses.forEach((status, index) => {
-    statusY.set(status, positiveStatuses.length === 1 ? 184 : statusTop + statusStep * index);
-  });
-
   const links = [];
-  if (submitted) links.push(link(x.tracked + nodeWidth, y.submitted, x.middle, y.submitted, submitted, pipelineColors.submitted.flow, "submitted"));
-  if (counts.found) links.push(link(x.tracked + nodeWidth, y.found, x.middle, y.found, counts.found, pipelineColors.found.flow, statusLabels.found));
-  positiveStatuses.forEach((status) => {
-    links.push(link(x.middle + nodeWidth, y.submitted, x.status, statusY.get(status), counts[status], pipelineColors[status].flow, statusLabels[status]));
-  });
+  if (applied) links.push(link(x.tracked + nodeWidth, y.applied, x.applied, y.applied, applied, pipelineColors.submitted.flow, "applied"));
+  if (found) links.push(link(x.tracked + nodeWidth, y.found, x.applied, y.found, found, pipelineColors.found.flow, "found"));
+  if (noReply) links.push(link(x.applied + nodeWidth, y.applied, x.first, y.noReply, noReply, pipelineColors.no_reply.flow, "no reply"));
+  if (interviewReached) links.push(link(x.applied + nodeWidth, y.applied, x.first, y.interview, interviewReached, pipelineColors.interview.flow, "interview"));
+  if (rejected) links.push(link(x.applied + nodeWidth, y.applied, x.first, y.rejected, rejected, pipelineColors.rejected.flow, "rejected"));
+  if (ghosted) links.push(link(x.first + nodeWidth, y.interview, x.second, y.ghosted, ghosted, pipelineColors.ghosted.flow, "ghosted"));
+  if (rejectedInterview) links.push(link(x.first + nodeWidth, y.interview, x.second, y.rejectedInterview, rejectedInterview, pipelineColors.rejected_interview.flow, "rejected after interview"));
+  if (offers) links.push(link(x.first + nodeWidth, y.interview, x.second, y.offer, offers, pipelineColors.offer.flow, "offer"));
 
-  const middleNodes = [];
-  if (submitted) middleNodes.push(node(x.middle, y.submitted, submitted, pipelineColors.submitted.node));
-  if (counts.found) middleNodes.push(node(x.middle, y.found, counts.found, pipelineColors.found.node));
-  const statusNodes = positiveStatuses.map((status) => node(x.status, statusY.get(status), counts[status], pipelineColors[status].node));
-
-  const middleLabels = [];
-  if (submitted) middleLabels.push(label(submitted, "Submitted", x.middle + 44, y.submitted - 18));
-  if (counts.found) middleLabels.push(label(counts.found, statusLabels.found, x.middle + 44, y.found - 18));
-  const statusLabelsSvg = positiveStatuses.map((status) => label(counts[status], statusLabels[status], x.status + 44, statusY.get(status) - 18));
+  const nodes = [node(x.tracked, y.tracked, total, pipelineColors.tracked.node)];
+  const labels = [label(total, "Tracked", x.tracked, y.tracked - 70, "middle")];
+  const addStage = (count, text, nodeX, centerY, colorKey) => {
+    if (!count) return;
+    nodes.push(node(nodeX, centerY, count, pipelineColors[colorKey].node));
+    labels.push(label(count, text, nodeX + 38, centerY - 18));
+  };
+  addStage(applied, "Applied", x.applied, y.applied, "submitted");
+  addStage(found, "Found", x.applied, y.found, "found");
+  addStage(noReply, "No reply", x.first, y.noReply, "no_reply");
+  addStage(interviewReached, interviewCurrent ? `Interview (${interviewCurrent} active)` : "Interview", x.first, y.interview, "interview");
+  addStage(rejected, "Rejected", x.first, y.rejected, "rejected");
+  addStage(ghosted, "Ghosted", x.second, y.ghosted, "ghosted");
+  addStage(rejectedInterview, "Rejected", x.second, y.rejectedInterview, "rejected_interview");
+  addStage(offers, "Offer", x.second, y.offer, "offer");
 
   chart.innerHTML = `
     <svg viewBox="0 0 ${viewWidth} ${viewHeight}" role="img" aria-label="Application pipeline flow">
       <g>${links.join("")}</g>
-      <g>
-        ${node(x.tracked, y.tracked, total, pipelineColors.tracked.node)}
-        ${middleNodes.join("")}
-        ${statusNodes.join("")}
-      </g>
-      <g>
-        ${label(total, "Opportunities", x.tracked - 24, y.tracked - 18, "end")}
-        ${middleLabels.join("")}
-        ${statusLabelsSvg.join("")}
-      </g>
+      <g>${nodes.join("")}</g>
+      <g>${labels.join("")}</g>
     </svg>
   `;
 }
