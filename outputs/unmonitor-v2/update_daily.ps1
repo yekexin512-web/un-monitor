@@ -11,9 +11,9 @@ Start-Transcript -Path $LogFile -Append
 try {
   python work\export_live_jobs.py
 
-  $Changed = git status --porcelain -- outputs/unmonitor-v2/jobs-data.js
+  $Changed = git status --porcelain -- outputs/unmonitor-v2/jobs-data.js outputs/unmonitor-v2/jobs-catalog.js
   if ($Changed) {
-    git add outputs/unmonitor-v2/jobs-data.js
+    git add outputs/unmonitor-v2/jobs-data.js outputs/unmonitor-v2/jobs-catalog.js
     git commit -m "Update job data $(Get-Date -Format 'yyyy-MM-dd')"
     git push origin main
     Write-Host "UN Monitor data committed and pushed."

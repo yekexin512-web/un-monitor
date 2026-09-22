@@ -71,6 +71,7 @@ function app(options = {}) {
     window: {
       UN_MONITOR_SUPABASE: { url: "https://testproject.supabase.co", anonKey: "test-only" },
       UN_MONITOR_LIVE_JOBS: { jobs: [liveJob] },
+      UN_MONITOR_JOB_CATALOG: { jobs: options.catalog || [] },
       supabase: options.noSdk ? undefined : { createClient: () => client },
       location: { hash: "", search: "", hostname: "localhost" },
     },
@@ -212,4 +213,38 @@ test("successful changes update both cloud and the account-specific backup", asy
   assert.equal(a.writes[0].user_id, userA.id);
   assert.equal(a.jobs()[0].status, "offer");
   assert.equal(JSON.parse(a.localStorage.getItem("unmonitor-v2-account:testproject:user-a")).jobs[0].status, "offer");
+});
+
+test("historical metadata repairs placeholder caches and preserves cloud application fields", async () => {
+  const a = app({ user: userA, records: [record("expired-1", "offer")],
+    catalog: [{ id: "expired-1", title: "Historical internship", organization: "UN Careers", source: "UN Careers",
+      category: "Data & Analytics", deadline: "2026-07-01", url: "https://careers.un.org/" }],
+    storage: { "unmonitor-v2-account:testproject:user-a": JSON.stringify({ userId: userA.id,
+      jobs: [{ id: "expired-1", title: "Archived job (expired-1)", source: "Archive", category: "Unspecified", status: "applied" }] }) },
+  });
+  await a.start();
+  const restored = a.jobs().find((job) => job.id === "expired-1");
+  assert.equal(restored.title, "Historical internship");
+  assert.equal(restored.category, "Data & Analytics");
+  assert.equal(restored.deadline, "2026-07-01");
+  assert.equal(restored.status, "offer");
+  assert.equal(restored.appliedAt, "2026-09-01");
+  assert.equal(restored.archived, true);
+  assert.equal(a.writes.length, 0);
+});
+
+test("history is only joined to the signed-in user's records, never added to public opportunities", async () => {
+  const a = app({ catalog: [{ id: "old-job", title: "History only", source: "UN Careers" }] });
+  await a.start();
+  assert.equal(a.jobs().length, 1);
+  assert.equal(a.jobs()[0].id, liveJob.id);
+});
+
+test("the live feed takes precedence over older catalog metadata", async () => {
+  const a = app({ user: userA, records: [record("live-1")],
+    catalog: [{ ...liveJob, title: "Old title" }],
+  });
+  await a.start();
+  assert.equal(a.jobs()[0].title, liveJob.title);
+  assert.equal(a.jobs()[0].archived, false);
 });

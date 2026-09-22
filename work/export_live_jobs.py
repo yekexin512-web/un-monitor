@@ -9,6 +9,8 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT_DIR))
 
+from work.job_catalog import update_catalog
+
 OUT_FILE = ROOT_DIR / "outputs" / "unmonitor-v2" / "jobs-data.js"
 
 CATEGORIES = [
@@ -382,6 +384,7 @@ def main() -> None:
         "errors": errors,
         "jobs": rows,
     }
+    update_catalog(OUT_FILE.with_name("jobs-catalog.js"), previous_jobs, rows)
     OUT_FILE.write_text(
         "window.UN_MONITOR_LIVE_JOBS = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n",
         encoding="utf-8",

@@ -56,7 +56,16 @@ Supabase Auth and Row Level Security can store each user's application records i
 
 Signing in reads cloud records before enabling edits; it never bulk-uploads the
 current page over saved records. Archived job IDs remain in the dashboard even
-when their descriptions have left the feed. Account-specific browser backups
+when their descriptions have left the feed. `jobs-catalog.js` preserves public
+vacancy metadata so titles, organizations, categories and deadlines remain
+available across browsers. It is joined only to the signed-in user's saved
+applications; it does not add expired jobs to the public opportunities feed.
+Daily exports update this catalog before replacing the live feed. To rebuild it
+from older committed snapshots, run `python work/job_catalog.py` in a full clone.
+Only allowlisted public fields are exported; account IDs, application states,
+application dates, notes and manually added jobs are excluded.
+
+Account-specific browser backups
 retain known job details and are hidden when signed out. Legacy unscoped data is
 kept untouched for recovery, not automatically imported into a signed-in account.
 

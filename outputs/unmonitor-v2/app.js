@@ -678,14 +678,18 @@ function isSubmittedApplication(job) {
 
 function applyRemoteApplications(records, cachedJobs = []) {
   if (!Array.isArray(records)) return;
-  const jobsById = new Map(state.jobs.map((job) => [job.id, job]));
-  const cachedById = new Map(cachedJobs.map((job) => [job.id, job]));
+  const jobsById = new Map(state.jobs.map((job) => [String(job.id), job]));
+  const cachedById = new Map(cachedJobs.map((job) => [String(job.id), job]));
+  const catalogById = new Map((window.UN_MONITOR_JOB_CATALOG?.jobs || []).map((job) => [String(job.id), job]));
   records.forEach((record) => {
     if (!record.job_id || record.user_id !== currentUser?.id) return;
-    let job = jobsById.get(record.job_id);
+    const jobId = String(record.job_id);
+    let job = jobsById.get(jobId);
     if (!job) {
+      // Public history repairs placeholder caches without changing personal status.
+      const metadata = catalogById.get(jobId) || cachedById.get(jobId);
       job = normalizeJob({
-        ...(cachedById.get(record.job_id) || {
+        ...(metadata || {
           title: `Archived job (${record.job_id})`,
           organization: "Unknown organization",
           source: "Archive",
@@ -697,7 +701,7 @@ function applyRemoteApplications(records, cachedJobs = []) {
           url: "",
           summary: "Saved application record. Job details are no longer available in the current feed.",
         }),
-        id: record.job_id,
+        id: jobId,
         archived: true,
       });
       state.jobs.push(job);
@@ -1085,8 +1089,8 @@ function renderJobDetail() {
         <span>${escapeHtml(job.organization)}</span>
         <span>${escapeHtml(job.location)}</span>
         <span>${escapeHtml(job.continent || inferContinent(job.location))}</span>
-        <span>Posted ${escapeHtml(job.postedDate)}</span>
-        <span>Deadline ${escapeHtml(job.deadline)}</span>
+        <span>Posted ${escapeHtml(job.postedDate || "Unavailable")}</span>
+        <span>Deadline ${escapeHtml(job.deadline || "Unavailable")}</span>
       </div>
       <div class="job-tags">
         <span class="tag">${escapeHtml(job.category)}</span>

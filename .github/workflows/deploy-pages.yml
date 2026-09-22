@@ -48,13 +48,13 @@ jobs:
         if: github.event_name != 'push'
         shell: bash
         run: |
-          if git diff --quiet -- outputs/unmonitor-v2/jobs-data.js; then
+          if git diff --quiet -- outputs/unmonitor-v2/jobs-data.js outputs/unmonitor-v2/jobs-catalog.js; then
             echo "No job data changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add outputs/unmonitor-v2/jobs-data.js
+          git add outputs/unmonitor-v2/jobs-data.js outputs/unmonitor-v2/jobs-catalog.js
           git commit -m "Update job data [skip ci]"
           git push
 

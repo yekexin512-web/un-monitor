@@ -10,6 +10,7 @@ from unittest.mock import patch
 
 from un_intern_monitor.models import Job
 from work import export_live_jobs
+from work.job_catalog import parse_jobs
 
 
 class ExportFallbackTests(unittest.TestCase):
@@ -39,6 +40,9 @@ class ExportFallbackTests(unittest.TestCase):
             self.assertEqual([row["id"] for row in payload["jobs"]], ["UN-123456", "UNESCO-1347773857"])
             self.assertEqual(payload["jobs"][0], existing["jobs"][0])
             self.assertIn("retained 1 previous jobs", payload["errors"][0])
+            catalog = parse_jobs(output.with_name("jobs-catalog.js").read_text(encoding="utf-8"), "UN_MONITOR_JOB_CATALOG")
+            self.assertEqual({job["id"] for job in catalog}, {"UN-123456", "UNESCO-old", "UNESCO-1347773857"})
+            self.assertTrue(all("status" not in job for job in catalog))
 
 
 if __name__ == "__main__":

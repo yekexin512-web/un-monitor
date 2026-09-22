@@ -44,7 +44,9 @@ const mockAuth = `
             const row = { user_id: 'test-a', status: 'applied', applied_at: '2026-09-01' };
             const liveId = window.UN_MONITOR_LIVE_JOBS.jobs[0].id;
             records.set(liveId, { ...row, job_id: liveId, status: 'interview' });
-            records.set('old-job', { ...row, job_id: 'old-job' });
+            for (const id of ['279488', '279596', '279655', '279842', '281956']) {
+              records.set(id, { ...row, job_id: id });
+            }
           }
           return Promise.resolve({ data: [...records.values()].filter(r => r.user_id === this.userId), error: null }).then(resolve, reject);
         },
@@ -70,28 +72,61 @@ const server = http.createServer((req, res) => {
     await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
     browser = await chromium.launch({ channel: process.env.BROWSER_CHANNEL || "msedge", headless: true });
     fs.mkdirSync(path.resolve(__dirname, "../logs"), { recursive: true });
-    for (const width of [1440, 390]) {
+    for (const width of [1440, 1100, 390, 320]) {
       const page = await browser.newPage({ viewport: { width, height: 1000 } });
       const errors = [];
       page.on("pageerror", (error) => errors.push(error.message));
       await page.route("https://cdn.jsdelivr.net/**", (route) => route.fulfill({ contentType: "text/javascript", body: mockAuth }));
       await page.route("https://*.supabase.co/**", () => { throw new Error("Test must not contact Supabase"); });
       await page.goto(`http://127.0.0.1:${server.address().port}/`);
-      await page.waitForFunction(() => document.getElementById("sync-status").textContent === "Loaded 2 saved records.");
+      await page.waitForFunction(() => document.getElementById("sync-status").textContent === "Loaded 6 saved records.");
       assert.equal(await page.locator("#auth-status").innerText(), "test@example.test");
-      assert.equal(await page.locator("#metric-applied-total").innerText(), "2");
+      assert.equal(await page.locator("#metric-applied-total").innerText(), "6");
       assert.equal(await page.evaluate(() => window.testWrites.length), 0);
       await page.locator('[data-view="dashboard"]').click();
+      await page.locator('[data-range="30"]').click();
+      const categories = await page.locator("#category-chart").innerText();
+      assert.ok(categories.includes("Data & Analytics"));
+      assert.ok(categories.includes("Economics & Development"));
+      assert.ok(categories.includes("Communications & Advocacy"));
+      assert.ok(!categories.includes("Unspecified"));
+      const board = await page.locator("#kanban").innerText();
+      assert.ok(board.includes("Information Management Intern"));
+      assert.ok(board.includes("Administration and Data Analysis Intern"));
+      assert.ok(!board.includes("Archived job"));
+      const chartBounds = await page.locator("#application-chart").evaluate((chart) => {
+        const bounds = chart.getBoundingClientRect();
+        return { width: chart.clientWidth, scrollWidth: chart.scrollWidth,
+          overflow: [...chart.querySelectorAll(".bar-wrap, .bar-label")].flatMap((item) => {
+            const box = item.getBoundingClientRect();
+            return box.left < bounds.left - 1 || box.right > bounds.right + 1
+              ? [{ text: item.textContent.trim(), left: box.left - bounds.left, right: box.right - bounds.left }] : [];
+          }) };
+      });
+      assert.ok(chartBounds.scrollWidth <= chartBounds.width + 1 && !chartBounds.overflow.length,
+        `30-day chart overflow at ${width}px: ${JSON.stringify(chartBounds)}`);
+      const labelsOverlap = await page.locator("#application-chart").evaluate((chart) => {
+        const labels = [...chart.querySelectorAll(".bar-label")]
+          .filter((label) => label.textContent && getComputedStyle(label).visibility !== "hidden")
+          .map((label) => {
+            const range = document.createRange();
+            range.selectNodeContents(label);
+            return range.getBoundingClientRect();
+          });
+        return labels.some((label, index) => index > 0 && labels[index - 1].right + 2 > label.left);
+      });
+      assert.equal(labelsOverlap, false, `30-day date labels overlap at ${width}px`);
+      await page.locator("#dashboard-view > .content-grid").screenshot({ path: path.resolve(__dirname, `../logs/history-charts-${width}.png`) });
       await page.screenshot({ path: path.resolve(__dirname, `../logs/records-${width}.png`) });
       const accountBox = await page.locator("#auth-card").boundingBox();
       assert.ok(accountBox.x >= 0 && accountBox.x + accountBox.width <= width);
       await page.evaluate(() => { window.testFailReads = true; });
       await page.locator("#reload-records").click();
       await page.waitForFunction(() => document.getElementById("sync-status").textContent.includes("Test offline"));
-      assert.equal(await page.locator("#metric-applied-total").innerText(), "2");
+      assert.equal(await page.locator("#metric-applied-total").innerText(), "6");
       await page.evaluate(() => { window.testFailReads = false; });
       await page.locator("#reload-records").click();
-      await page.waitForFunction(() => document.getElementById("sync-status").textContent === "Loaded 2 saved records.");
+      await page.waitForFunction(() => document.getElementById("sync-status").textContent === "Loaded 6 saved records.");
       await page.locator('[data-view="opportunities"]').click();
       await page.locator("#detail-status").selectOption("offer");
       await page.waitForFunction(() => document.getElementById("sync-status").textContent === "Saved to cloud");
@@ -106,7 +141,7 @@ const server = http.createServer((req, res) => {
       assert.deepEqual(errors, []);
       await page.close();
     }
-    console.log("PASS: desktop/mobile login, archived records, read-only restore, save, retry, sign-out and account isolation.");
+    console.log("PASS: four viewport sizes, recovered historical titles/categories, 30-day chart bounds, login, save, retry and account isolation.");
   } finally {
     if (browser) await browser.close();
     await new Promise((resolve) => server.close(resolve));
