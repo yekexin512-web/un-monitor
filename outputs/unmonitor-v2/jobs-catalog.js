@@ -8695,6 +8695,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "283769",
+      "title": "Programme Management Intern: Supporting the implementation of the non-staff capacities of the UNCCT/UNOCT Victims of Terrorism Programme",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Tech & Digital",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-10-05",
+      "postedDate": "2026-09-21",
+      "url": "https://careers.un.org/jobSearchDescription/283769?language=en",
+      "tags": [
+        "digital",
+        "programme"
+      ],
+      "summary": "Technical or digital role supporting software, ICT, digital transformation, AI, GIS, or technology-enabled workflows. Source: UN Careers. Location: NEW YORK. Title signal: Programme Management Intern: Supporting the implementation of the non-staff capacities of the UNCCT/UNOCT Victims of Terrorism Programme.",
+      "responsibilities": [
+        "Support digital tools, systems, prototypes, or technical documentation.",
+        "Assist with requirements gathering, testing, implementation support, or workflow mapping.",
+        "Contribute to technology-enabled analysis, automation, or knowledge products."
+      ],
+      "requirements": [
+        "Technical background in computer science, information systems, GIS, digital innovation, or related field.",
+        "Relevant software, web, database, GIS, or ICT skills.",
+        "Ability to explain technical work clearly to non-technical stakeholders."
+      ]
+    },
+    {
       "id": "283817",
       "title": "Intern: Organizations and Ecosystems Development (2 positions)",
       "organization": "UN Careers",
@@ -9733,6 +9760,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "284638",
+      "title": "Programme Management intern: Supporting organisational culture through innovation, diversity and inclusion",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-10-06",
+      "postedDate": "2026-09-21",
+      "url": "https://careers.un.org/jobSearchDescription/284638?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: NEW YORK. Title signal: Programme Management intern: Supporting organisational culture through innovation, diversity and inclusion.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "284668",
       "title": "Human Resources Intern",
       "organization": "UN Careers",
@@ -9766,7 +9819,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Economics & Development",
       "location": "NEW YORK",
       "continent": "North America",
-      "deadline": "2026-09-22",
+      "deadline": "2026-09-29",
       "postedDate": "2026-09-16",
       "url": "https://careers.un.org/jobSearchDescription/284711?language=en",
       "tags": [
@@ -9792,7 +9845,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Communications & Advocacy",
       "location": "NEW YORK",
       "continent": "North America",
-      "deadline": "2026-09-22",
+      "deadline": "2026-09-29",
       "postedDate": "2026-09-16",
       "url": "https://careers.un.org/jobSearchDescription/284714?language=en",
       "tags": [
@@ -10152,6 +10205,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "284967",
+      "title": "Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-04",
+      "postedDate": "2026-09-21",
+      "url": "https://careers.un.org/jobSearchDescription/284967?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: GENEVA. Title signal: Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "285014",
       "title": "Intern - Strategic Communications and Advocacy",
       "organization": "UN Careers",
@@ -10205,6 +10284,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285044",
+      "title": "Human Resources Intern: Outreach and Talent Acquisition",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-05",
+      "postedDate": "2026-09-21",
+      "url": "https://careers.un.org/jobSearchDescription/285044?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: GENEVA. Title signal: Human Resources Intern: Outreach and Talent Acquisition.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
       "id": "285058",
       "title": "Intern (Social Media)",
       "organization": "UN Careers",
@@ -10229,6 +10335,188 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong writing, editing, storytelling, and communication skills.",
         "Experience or interest in social media, campaigns, multimedia, or public information.",
         "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "285124",
+      "title": "Protocol Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "BEIJING",
+      "continent": "Asia",
+      "deadline": "2026-10-05",
+      "postedDate": "2026-09-21",
+      "url": "https://careers.un.org/jobSearchDescription/285124?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: BEIJING. Title signal: Protocol Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "FAO-2601979",
+      "title": "Call for Expression of Interest - Internship Programme for FAO headquarters (HQ)",
+      "organization": "FAO",
+      "source": "FAO",
+      "category": "Programme & Project",
+      "location": "Italy-Rome",
+      "continent": "Europe",
+      "deadline": "2026-07-06",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.fao.org/careersection/fao_external/jobdetail.ftl?lang=en&job=2601979",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: FAO. Location: Italy-Rome. Title signal: Call for Expression of Interest - Internship Programme for FAO headquarters (HQ).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "FAO-2601980",
+      "title": "Call for Expression of Interest - Internship Programme for Africa (RAF)",
+      "organization": "FAO",
+      "source": "FAO",
+      "category": "Programme & Project",
+      "location": "Various Locations",
+      "continent": "Remote / Global",
+      "deadline": "2026-07-06",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.fao.org/careersection/fao_external/jobdetail.ftl?lang=en&job=2601980",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: FAO. Location: Various Locations. Title signal: Call for Expression of Interest - Internship Programme for Africa (RAF).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "FAO-2601981",
+      "title": "Call for Expression of Interest - Internship Programme for Asia and the Pacific (RAP)",
+      "organization": "FAO",
+      "source": "FAO",
+      "category": "Programme & Project",
+      "location": "Various Locations",
+      "continent": "Remote / Global",
+      "deadline": "2026-07-06",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.fao.org/careersection/fao_external/jobdetail.ftl?lang=en&job=2601981",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: FAO. Location: Various Locations. Title signal: Call for Expression of Interest - Internship Programme for Asia and the Pacific (RAP).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "FAO-2601982",
+      "title": "Call for Expression of Interest - Internship Programme for Europe and Central Asia (REU)",
+      "organization": "FAO",
+      "source": "FAO",
+      "category": "Programme & Project",
+      "location": "Various Locations",
+      "continent": "Remote / Global",
+      "deadline": "2026-07-06",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.fao.org/careersection/fao_external/jobdetail.ftl?lang=en&job=2601982",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: FAO. Location: Various Locations. Title signal: Call for Expression of Interest - Internship Programme for Europe and Central Asia (REU).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "FAO-2601983",
+      "title": "Call for Expression of Interest - Internship Programme for Latin America and the Caribbean (RLC)",
+      "organization": "FAO",
+      "source": "FAO",
+      "category": "Programme & Project",
+      "location": "Various Locations",
+      "continent": "Remote / Global",
+      "deadline": "2026-07-06",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.fao.org/careersection/fao_external/jobdetail.ftl?lang=en&job=2601983",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: FAO. Location: Various Locations. Title signal: Call for Expression of Interest - Internship Programme for Latin America and the Caribbean (RLC).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "FAO-2601984",
+      "title": "Call for Expression of Interest - Internship Programme for Near East and North Africa (RNE)",
+      "organization": "FAO",
+      "source": "FAO",
+      "category": "Programme & Project",
+      "location": "Various Locations",
+      "continent": "Remote / Global",
+      "deadline": "2026-07-06",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.fao.org/careersection/fao_external/jobdetail.ftl?lang=en&job=2601984",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: FAO. Location: Various Locations. Title signal: Call for Expression of Interest - Internship Programme for Near East and North Africa (RNE).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
       ]
     },
     {
@@ -10451,7 +10739,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Multiple, Multiple",
       "continent": "Remote / Global",
       "deadline": "2026-12-31",
-      "postedDate": "2026-08-23",
+      "postedDate": "2026-09-21",
       "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Bureau-Of-Human-Resources-Management/1347540857/",
       "tags": [
         "finance"
@@ -10477,7 +10765,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Multiple, Multiple",
       "continent": "Remote / Global",
       "deadline": "2026-12-31",
-      "postedDate": "2026-08-23",
+      "postedDate": "2026-09-21",
       "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Communication-and-Information-Sector/1347542457/",
       "tags": [
         "communications",
@@ -10936,7 +11224,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Seoul, Korea, Republic of",
       "continent": "Asia",
       "deadline": "2026-09-21",
-      "postedDate": "2026-09-07",
+      "postedDate": "2026-09-08",
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Seoul-Korea-Republic-of/External-Relations-Intern_JR2668310-1",
       "summary": "Partnerships or external-relations role supporting donor engagement, stakeholder mapping, fundraising, or resource mobilization. Source: UNHCR. Location: Seoul, Korea, Republic of. Title signal: External Relations Intern.",
       "responsibilities": [
@@ -10959,7 +11247,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Seoul, Korea, Republic of",
       "continent": "Asia",
       "deadline": "2026-09-21",
-      "postedDate": "2026-09-07",
+      "postedDate": "2026-09-08",
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Seoul-Korea-Republic-of/Protection-Intern_JR2668311-1",
       "summary": "Humanitarian, migration, protection, health, nutrition, education, or social-policy role supporting vulnerable populations. Source: UNHCR. Location: Seoul, Korea, Republic of. Title signal: Protection Intern.",
       "responsibilities": [
@@ -11185,6 +11473,58 @@ window.UN_MONITOR_JOB_CATALOG = {
         "programme"
       ],
       "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNHCR. Location: Budapest (GSC), Hungary. Title signal: Marketing Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNHCR-JR2668728",
+      "title": "BIDT Intern",
+      "organization": "UNHCR",
+      "source": "UNHCR",
+      "category": "Programme & Project",
+      "location": "Seoul, Korea, Republic of",
+      "continent": "Asia",
+      "deadline": "2026-10-05",
+      "postedDate": "2026-09-22",
+      "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Seoul-Korea-Republic-of/BIDT-Intern_JR2668728",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNHCR. Location: Seoul, Korea, Republic of. Title signal: BIDT Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNHCR-JR2668779",
+      "title": "RSD Intern",
+      "organization": "UNHCR",
+      "source": "UNHCR",
+      "category": "Programme & Project",
+      "location": "Rome, Italy",
+      "continent": "Europe",
+      "deadline": "2026-09-28",
+      "postedDate": "2026-09-22",
+      "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Rome-Italy/RSD-Intern_JR2668779-1",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNHCR. Location: Rome, Italy. Title signal: RSD Intern.",
       "responsibilities": [
         "Track activities, deliverables, meetings, and programme documentation.",
         "Support reporting, coordination, note-taking, research, and knowledge management.",
@@ -12830,7 +13170,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "San Salvador, El Salvador, The Republic",
       "continent": "North America",
       "deadline": "2026-09-23",
-      "postedDate": "2026-09-10",
+      "postedDate": "2026-09-11",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "programme"
@@ -12857,7 +13197,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Rome, Italy",
       "continent": "Europe",
       "deadline": "2026-09-29",
-      "postedDate": "2026-09-15",
+      "postedDate": "2026-09-16",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "programme"
@@ -12883,7 +13223,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Addis Ababa, Ethiopia, Federal Dem. Rep",
       "continent": "Africa",
       "deadline": "2026-09-29",
-      "postedDate": "2026-09-16",
+      "postedDate": "2026-09-17",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "finance"
@@ -12909,13 +13249,39 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Rome, Italy",
       "continent": "Europe",
       "deadline": "2026-09-30",
-      "postedDate": "2026-09-16",
+      "postedDate": "2026-09-17",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "data",
         "programme"
       ],
       "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: WFP. Location: Rome, Italy. Title signal: Internship - Programme Knowledge and Information Management - Global HQ, Programme Division (PRG) Rome, Italy.",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
+      "id": "WFP-JR126934",
+      "title": "Logistics Intern",
+      "organization": "WFP",
+      "source": "WFP",
+      "category": "Data & Analytics",
+      "location": "Kigali, Rwanda, The Republic Of",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-05",
+      "postedDate": "2026-09-22",
+      "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
+      "tags": [
+        "data"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: WFP. Location: Kigali, Rwanda, The Republic Of. Title signal: Logistics Intern.",
       "responsibilities": [
         "Clean, organize, and analyze datasets or monitoring information.",
         "Support dashboards, indicators, visualizations, reports, or information-management products.",
