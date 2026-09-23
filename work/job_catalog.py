@@ -15,7 +15,7 @@ PUBLIC_FIELDS = (
     "id", "title", "organization", "source", "category", "location", "continent",
     "deadline", "postedDate", "url", "tags", "summary", "responsibilities", "requirements",
 )
-PUBLIC_SOURCES = {"UN Careers", "UNICEF", "UNHCR", "UNIDO", "WFP", "FAO", "ITU", "UNU", "UNESCO"}
+PUBLIC_SOURCES = {"UN Careers", "UNICEF", "UNHCR", "UNDP", "UNIDO", "WFP", "FAO", "ITU", "UNU", "UNESCO"}
 
 
 def parse_jobs(content: str, global_name: str) -> list[dict]:

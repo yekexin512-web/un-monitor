@@ -31,7 +31,7 @@ class ExportFallbackTests(unittest.TestCase):
                 search_url="https://careers.un.org/", playwright_headless=True)))
             stack.enter_context(patch("un_intern_monitor.scraper.fetch_internship_jobs",
                                       side_effect=RuntimeError("temporarily unavailable")))
-            for source in ("unicef", "unhcr", "unido", "wfp", "fao", "itu", "unu"):
+            for source in ("unicef", "unhcr", "undp", "unido", "wfp", "fao", "itu", "unu"):
                 stack.enter_context(patch(f"un_intern_monitor.multi_scraper.fetch_{source}_jobs", return_value=[]))
             stack.enter_context(patch("un_intern_monitor.multi_scraper.fetch_unesco_jobs", return_value=[new_job]))
             with redirect_stdout(StringIO()):

@@ -396,13 +396,17 @@ def fetch_unu_jobs() -> list[Job]:
 
 def fetch_undp_jobs() -> list[Job]:
     url = "https://jobs.undp.org/cj_view_jobs.cfm"
-    response = requests.get(url, headers=HEADERS, timeout=90)
-    response.raise_for_status()
+    response = _get(url, timeout=90)
     soup = BeautifulSoup(response.text, "html.parser")
     jobs_by_id: dict[str, Job] = {}
     for link in soup.find_all("a", href=re.compile(r"/requisitions/job/\d+")):
         text = re.sub(r"\s+", " ", link.get_text(" ", strip=True))
-        if not is_internship_text(text):
+        post_level = _between(text, "Post level", "Apply by").strip().upper()
+        if post_level != "IN" and not re.search(
+            r"\b(intern|interns|internship|internships|stage|stages|stagiaire|stagiaires)\b",
+            text,
+            flags=re.IGNORECASE,
+        ):
             continue
         raw_id = _id_from_path(str(link["href"]))
         if not raw_id:
@@ -415,7 +419,7 @@ def fetch_undp_jobs() -> list[Job]:
             location=_after(text, "Location"),
             posted_date=None,
             deadline_date=parse_date(_between(text, "Apply by", "Agency")),
-            apply_url=str(link["href"]),
+            apply_url=urljoin(url, str(link["href"])),
             source="UNDP",
         )
     return list(jobs_by_id.values())
