@@ -255,3 +255,14 @@ test("legacy assessment records remain visible as interview records", async () =
   assert.equal(a.jobs()[0].status, "interview");
   assert.equal(a.writes.length, 0);
 });
+
+test("saved is a cloud status but is not counted as an application", async () => {
+  const a = app({ user: userA, records: [{ ...record("live-1", "saved"), applied_at: null }] });
+  await a.start();
+  assert.equal(a.jobs()[0].status, "saved");
+  assert.equal(a.run("isSubmittedApplication(state.jobs[0])"), false);
+
+  await a.run("updateJobStatus('live-1', 'saved')");
+  assert.equal(a.writes.at(-1).status, "saved");
+  assert.equal(a.writes.at(-1).applied_at, null);
+});

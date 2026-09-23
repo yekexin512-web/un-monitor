@@ -26,6 +26,7 @@ const categoryAliases = {
 
 const statusLabels = {
   found: "Found",
+  saved: "Saved",
   applied: "Applied / awaiting reply",
   no_reply: "No reply",
   interview: "Interview",
@@ -37,8 +38,8 @@ const statusLabels = {
 };
 
 const allowedStatuses = Object.keys(statusLabels);
-const dashboardStatuses = ["found", "applied", "no_reply", "interview", "ghosted", "offer", "rejected", "rejected_interview", "withdrawn"];
-const submittedStatuses = dashboardStatuses.filter((status) => status !== "found");
+const dashboardStatuses = ["found", "saved", "applied", "no_reply", "interview", "ghosted", "offer", "rejected", "rejected_interview", "withdrawn"];
+const submittedStatuses = dashboardStatuses.filter((status) => !["found", "saved"].includes(status));
 const pipelineColors = {
   tracked: { node: "#b8aea7", flow: "rgba(184, 174, 167, 0.58)" },
   found: { node: "#f28c28", flow: "rgba(248, 180, 108, 0.66)" },
@@ -684,7 +685,7 @@ function accountSavedState(userId) {
 }
 
 function isSubmittedApplication(job) {
-  return Boolean(job.appliedAt || job.status !== "found");
+  return Boolean(job.appliedAt || submittedStatuses.includes(job.status));
 }
 
 function applyRemoteApplications(records, cachedJobs = []) {

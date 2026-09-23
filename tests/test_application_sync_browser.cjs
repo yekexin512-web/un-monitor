@@ -84,6 +84,8 @@ const server = http.createServer((req, res) => {
       await page.waitForFunction(() => document.getElementById("sync-status").textContent === "Loaded 26 saved records.");
       assert.equal(await page.locator("#auth-status").innerText(), "test@example.test");
       assert.equal(await page.locator("#metric-applied-total").innerText(), "26");
+      assert.equal(await page.locator('#status-filter option[value="saved"]').innerText(), "Saved");
+      assert.equal(await page.locator('#detail-status option[value="saved"]').innerText(), "Saved");
       assert.equal(await page.evaluate(() => window.testWrites.length), 0);
       await page.locator('[data-view="dashboard"]').click();
       await page.locator('[data-range="30"]').click();
