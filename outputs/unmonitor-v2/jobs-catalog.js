@@ -7329,7 +7329,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Climate & Environment",
       "location": "TUNIS",
       "continent": "Remote / Global",
-      "deadline": "2026-09-02",
+      "deadline": "2026-10-01",
       "postedDate": "2026-08-19",
       "url": "https://careers.un.org/jobSearchDescription/282835?language=en",
       "summary": "Environment or climate role supporting research, data, reporting, and policy work on sustainability topics. Source: UN Careers. Location: TUNIS. Title signal: Urban Climate Intern.",
@@ -10338,6 +10338,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285042",
+      "title": "Intern - Information Management",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Data & Analytics",
+      "location": "ISTANBUL",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-06",
+      "postedDate": "2026-09-23",
+      "url": "https://careers.un.org/jobSearchDescription/285042?language=en",
+      "tags": [
+        "data"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UN Careers. Location: ISTANBUL. Title signal: Intern - Information Management.",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
       "id": "285044",
       "title": "Human Resources Intern: Outreach and Talent Acquisition",
       "organization": "UN Careers",
@@ -10463,6 +10489,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Support reporting, coordination, note-taking, research, and knowledge management.",
         "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
         "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "285322",
+      "title": "Intern in Banjul, Gambia (several positons)",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-09-30",
+      "postedDate": "2026-09-23",
+      "url": "https://careers.un.org/jobSearchDescription/285322?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: GENEVA. Title signal: Intern in Banjul, Gambia (several positons).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
       ],
       "requirements": [
         "Strong organization, writing, coordination, and research skills.",
@@ -12995,6 +13047,33 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNICEF-595861",
+      "title": "Batch Recruitment (5 Positions): Intern Partnership, Advocacy and Communication (PAC), Yaoundé, Douala, Buea, Bertoua and Maroua, Cameroon, WCAR, (6months)",
+      "organization": "UNICEF",
+      "source": "UNICEF",
+      "category": "Communications & Advocacy",
+      "location": "Cameroon",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-04",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.unicef.org/en-us/job/595861/batch-recruitment-5-positions-intern-partnership-advocacy-and-communication-pac-yaoundé-douala-buea-bertoua-and-maroua-cameroon-wcar-6months",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNICEF. Location: Cameroon. Title signal: Batch Recruitment (5 Positions): Intern Partnership, Advocacy and Communication (PAC), Yaoundé, Douala, Buea, Bertoua and Maroua, Cameroon, WCAR, (6months).",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
       ]
     },
     {
