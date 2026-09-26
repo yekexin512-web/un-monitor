@@ -10601,6 +10601,29 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285199",
+      "title": "Economic Affairs Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "ADDIS ABABA",
+      "continent": "Africa",
+      "deadline": "2026-10-01",
+      "postedDate": "2026-09-25",
+      "url": "https://careers.un.org/jobSearchDescription/285199?language=en",
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: ADDIS ABABA. Title signal: Economic Affairs Intern.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
       "id": "285241",
       "title": "Stagiaire Infographie//Design, Photographie/Vidéo/ Montage",
       "organization": "UN Careers",
@@ -10625,6 +10648,55 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "285251",
+      "title": "Audio-Visual Editing and Digital Media Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Tech & Digital",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-07",
+      "postedDate": "2026-09-24",
+      "url": "https://careers.un.org/jobSearchDescription/285251?language=en",
+      "tags": [
+        "digital"
+      ],
+      "summary": "Technical or digital role supporting software, ICT, digital transformation, AI, GIS, or technology-enabled workflows. Source: UN Careers. Location: GENEVA. Title signal: Audio-Visual Editing and Digital Media Intern.",
+      "responsibilities": [
+        "Support digital tools, systems, prototypes, or technical documentation.",
+        "Assist with requirements gathering, testing, implementation support, or workflow mapping.",
+        "Contribute to technology-enabled analysis, automation, or knowledge products."
+      ],
+      "requirements": [
+        "Technical background in computer science, information systems, GIS, digital innovation, or related field.",
+        "Relevant software, web, database, GIS, or ICT skills.",
+        "Ability to explain technical work clearly to non-technical stakeholders."
+      ]
+    },
+    {
+      "id": "285294",
+      "title": "Economic Affairs Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-08",
+      "postedDate": "2026-09-25",
+      "url": "https://careers.un.org/jobSearchDescription/285294?language=en",
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: GENEVA. Title signal: Economic Affairs Intern.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
       ]
     },
     {
@@ -10677,6 +10749,29 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "285462",
+      "title": "Intern Emergency Response",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Humanitarian & Protection",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-10",
+      "postedDate": "2026-09-25",
+      "url": "https://careers.un.org/jobSearchDescription/285462?language=en",
+      "summary": "Humanitarian, migration, protection, health, nutrition, education, or social-policy role supporting vulnerable populations. Source: UN Careers. Location: GENEVA. Title signal: Intern Emergency Response.",
+      "responsibilities": [
+        "Support programme implementation, research, monitoring, or field coordination.",
+        "Contribute to documentation, needs analysis, protection or service-delivery follow-up.",
+        "Prepare notes, data summaries, and programme materials for humanitarian or social-policy teams."
+      ],
+      "requirements": [
+        "Interest or background in humanitarian affairs, migration, protection, public health, education, or social policy.",
+        "Research, documentation, and coordination skills.",
+        "Sensitivity to working with vulnerable populations and rights-based approaches."
       ]
     },
     {
@@ -11276,6 +11371,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Support reporting, coordination, note-taking, research, and knowledge management.",
         "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
         "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNDP-37140",
+      "title": "Intern",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Programme & Project",
+      "location": "Colombo, Sri Lanka",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-01",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37140",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNDP. Location: Colombo, Sri Lanka. Title signal: Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
       ],
       "requirements": [
         "Strong organization, writing, coordination, and research skills.",
@@ -13290,6 +13411,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "UNIDO-1353753855",
+      "title": "Project Administrator (roster)",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Admin, Finance & HR",
+      "location": "Vienna, Austria",
+      "continent": "Europe",
+      "deadline": "2026-11-22",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Vienna-Project-Administrator-%28roster%29/1353753855/",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UNIDO. Location: Vienna, Austria. Title signal: Project Administrator (roster).",
+      "responsibilities": [
+        "Support documentation, tracking, and daily operational workflows.",
+        "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
+        "Prepare records, tables, notes, and process follow-up material.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Organization, attention to detail, Excel, and documentation skills.",
+        "Interest in operations, finance, HR, compliance, administration, or procurement.",
+        "Ability to work carefully with procedures and records."
+      ]
+    },
+    {
       "id": "UNIDO-1367266255",
       "title": "Intern - Data and Information Management and AI",
       "organization": "UNIDO",
@@ -13340,6 +13488,301 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong writing, editing, storytelling, and communication skills.",
         "Experience or interest in social media, campaigns, multimedia, or public information.",
         "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNIDO-1367447655",
+      "title": "National Lead Technical Advisor",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "ZAM - Other cities, Zambia",
+      "continent": "Remote / Global",
+      "deadline": "2026-09-28",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/ZAM-Other-cities-National-Lead-Technical-Advisor/1367447655/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: ZAM - Other cities, Zambia. Title signal: National Lead Technical Advisor.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNIDO-1367455355",
+      "title": "Environmental and Social Safeguard Specialist",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Climate & Environment",
+      "location": "ZAM - Other cities, Zambia",
+      "continent": "Remote / Global",
+      "deadline": "2026-09-28",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/ZAM-Other-cities-Environmental-and-Social-Safeguard-Specialist/1367455355/",
+      "summary": "Environment or climate role supporting research, data, reporting, and policy work on sustainability topics. Source: UNIDO. Location: ZAM - Other cities, Zambia. Title signal: Environmental and Social Safeguard Specialist.",
+      "responsibilities": [
+        "Support research on climate, environment, energy, chemicals, waste, or green economy topics.",
+        "Prepare evidence products, summaries, tables, or presentations.",
+        "Assist with programme documentation and stakeholder materials.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Background or strong interest in environment, climate, energy, sustainability, or development.",
+        "Research, writing, and data-handling skills.",
+        "Ability to connect technical topics with policy or programme needs."
+      ]
+    },
+    {
+      "id": "UNIDO-1367460455",
+      "title": "National Resource Efficient and Cleaner Production (RECP) and Climate Change coordinator",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Climate & Environment",
+      "location": "Bangkok, Thailand",
+      "continent": "Asia",
+      "deadline": "2026-09-28",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Bangkok-National-Resource-Efficient-and-Cleaner-Production-%28RECP%29-and-Climate-Change-coordinator/1367460455/",
+      "summary": "Environment or climate role supporting research, data, reporting, and policy work on sustainability topics. Source: UNIDO. Location: Bangkok, Thailand. Title signal: National Resource Efficient and Cleaner Production (RECP) and Climate Change coordinator.",
+      "responsibilities": [
+        "Support research on climate, environment, energy, chemicals, waste, or green economy topics.",
+        "Prepare evidence products, summaries, tables, or presentations.",
+        "Assist with programme documentation and stakeholder materials.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Background or strong interest in environment, climate, energy, sustainability, or development.",
+        "Research, writing, and data-handling skills.",
+        "Ability to connect technical topics with policy or programme needs."
+      ]
+    },
+    {
+      "id": "UNIDO-1367465455",
+      "title": "National Local Monitoring, Evaluation and Learning Expert",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Data & Analytics",
+      "location": "Lusaka, Zambia",
+      "continent": "North America",
+      "deadline": "2026-09-28",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Lusaka-National-Local-Monitoring%2C-Evaluation-and-Learning-Expert/1367465455/",
+      "tags": [
+        "data",
+        "monitoring"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UNIDO. Location: Lusaka, Zambia. Title signal: National Local Monitoring, Evaluation and Learning Expert.",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
+      "id": "UNIDO-1367756855",
+      "title": "National Community Outreach Expert- Kitwe/Solwezi",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Communications & Advocacy",
+      "location": "ZAM - Other cities, Zambia",
+      "continent": "Remote / Global",
+      "deadline": "2026-09-09",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/ZAM-Other-cities-National-Community-Outreach-Expert-KitweSolwezi/1367756855/",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNIDO. Location: ZAM - Other cities, Zambia. Title signal: National Community Outreach Expert- Kitwe/Solwezi.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNIDO-1367761455",
+      "title": "National Community Outreach Expert - Luapula",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Communications & Advocacy",
+      "location": "ZAM - Other cities, Zambia",
+      "continent": "Remote / Global",
+      "deadline": "2026-09-30",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/ZAM-Other-cities-National-Community-Outreach-Expert-Luapula/1367761455/",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNIDO. Location: ZAM - Other cities, Zambia. Title signal: National Community Outreach Expert - Luapula.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNIDO-1367840355",
+      "title": "National Data Entry and Monitoring & Evaluation Administrator, Cairo/Egypt",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Data & Analytics",
+      "location": "Home Based, Home Based",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-01",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Home-Based-National-Data-Entry-and-Monitoring-&-Evaluation-Administrator%2C-CairoEgypt/1367840355/",
+      "tags": [
+        "data",
+        "monitoring"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UNIDO. Location: Home Based, Home Based. Title signal: National Data Entry and Monitoring & Evaluation Administrator, Cairo/Egypt.",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
+      "id": "UNIDO-1368679555",
+      "title": "ASM Development Expert",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "ZAM - Other cities, Zambia",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-07",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/ZAM-Other-cities-ASM-Development-Expert/1368679555/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: ZAM - Other cities, Zambia. Title signal: ASM Development Expert.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNIDO-1369104555",
+      "title": "Programme Assistant",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "Bogota, Colombia",
+      "continent": "South America",
+      "deadline": "2026-10-12",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Bogota-Programme-Assistant/1369104555/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Bogota, Colombia. Title signal: Programme Assistant.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNIDO-1369619155",
+      "title": "Senior Industrial Corridor Development Consultant",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "Home Based, Home Based",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-15",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Home-Based-Senior-Industrial-Corridor-Development-Consultant/1369619155/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Home Based, Home Based. Title signal: Senior Industrial Corridor Development Consultant.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNIDO-1369639555",
+      "title": "Independent National Expert - CAIP Site Selection Technical Assessment",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "Nairobi, Kenya",
+      "continent": "Africa",
+      "deadline": "2026-10-16",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Nairobi-Independent-National-Expert-CAIP-Site-Selection-Technical-Assessment/1369639555/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Nairobi, Kenya. Title signal: Independent National Expert - CAIP Site Selection Technical Assessment.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
       ]
     },
     {
@@ -13775,8 +14218,8 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Programme & Project",
       "location": "San Salvador, El Salvador, The Republic",
       "continent": "North America",
-      "deadline": "2026-09-23",
-      "postedDate": "2026-09-11",
+      "deadline": "2026-09-27",
+      "postedDate": "2026-09-26",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "programme"
