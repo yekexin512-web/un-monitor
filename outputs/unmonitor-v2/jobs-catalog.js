@@ -10624,6 +10624,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285216",
+      "title": "Intern - Programme Management",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "BANGKOK",
+      "continent": "Asia",
+      "deadline": "2026-10-12",
+      "postedDate": "2026-09-28",
+      "url": "https://careers.un.org/jobSearchDescription/285216?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: BANGKOK. Title signal: Intern - Programme Management.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "285241",
       "title": "Stagiaire Infographie//Design, Photographie/Vidéo/ Montage",
       "organization": "UN Careers",
@@ -10674,6 +10700,29 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Technical background in computer science, information systems, GIS, digital innovation, or related field.",
         "Relevant software, web, database, GIS, or ICT skills.",
         "Ability to explain technical work clearly to non-technical stakeholders."
+      ]
+    },
+    {
+      "id": "285256",
+      "title": "Economic intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-11",
+      "postedDate": "2026-09-28",
+      "url": "https://careers.un.org/jobSearchDescription/285256?language=en",
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: GENEVA. Title signal: Economic intern.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
       ]
     },
     {
@@ -10740,6 +10789,85 @@ window.UN_MONITOR_JOB_CATALOG = {
         "programme"
       ],
       "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: GENEVA. Title signal: Publications Digitization and Records Management Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "285359",
+      "title": "Intern for communications and knowledge management",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "PANAMA CITY",
+      "continent": "North America",
+      "deadline": "2026-10-26",
+      "postedDate": "2026-09-28",
+      "url": "https://careers.un.org/jobSearchDescription/285359?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: PANAMA CITY. Title signal: Intern for communications and knowledge management.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "285377",
+      "title": "Intern - RCS Philippines",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "MANILA",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-07",
+      "postedDate": "2026-09-28",
+      "url": "https://careers.un.org/jobSearchDescription/285377?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: MANILA. Title signal: Intern - RCS Philippines.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "285461",
+      "title": "Interns",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-11",
+      "postedDate": "2026-09-28",
+      "url": "https://careers.un.org/jobSearchDescription/285461?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: GENEVA. Title signal: Interns.",
       "responsibilities": [
         "Track activities, deliverables, meetings, and programme documentation.",
         "Support reporting, coordination, note-taking, research, and knowledge management.",
@@ -11255,7 +11383,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Partnerships",
       "location": "Bruxelles, Belgium",
       "continent": "Remote / Global",
-      "deadline": "2026-09-29",
+      "deadline": "2026-09-30",
       "postedDate": "2026-06-29",
       "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/36913",
       "summary": "Partnerships or external-relations role supporting donor engagement, stakeholder mapping, fundraising, or resource mobilization. Source: UNDP. Location: Bruxelles, Belgium. Title signal: Partnership Support Intern.",
@@ -13773,6 +13901,60 @@ window.UN_MONITOR_JOB_CATALOG = {
         "programme"
       ],
       "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Nairobi, Kenya. Title signal: Independent National Expert - CAIP Site Selection Technical Assessment.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNIDO-1369762455",
+      "title": "Expert régional de la chaîne de valeur du bois",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "Home Based, Home Based",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-19",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Home-Based-Expert-r%C3%A9gional-de-la-cha%C3%AEne-de-valeur-du-bois/1369762455/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Home Based, Home Based. Title signal: Expert régional de la chaîne de valeur du bois.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNIDO-1369768855",
+      "title": "Expert principal en stratégies régionales de mise à niveau des chaînes de valeur",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "Home Based, Home Based",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-19",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Home-Based-Expert-principal-en-strat%C3%A9gies-r%C3%A9gionales-de-mise-%C3%A0-niveau-des-cha%C3%AEnes-de-valeur/1369768855/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Home Based, Home Based. Title signal: Expert principal en stratégies régionales de mise à niveau des chaînes de valeur.",
       "responsibilities": [
         "Track activities, deliverables, meetings, and programme documentation.",
         "Support reporting, coordination, note-taking, research, and knowledge management.",
