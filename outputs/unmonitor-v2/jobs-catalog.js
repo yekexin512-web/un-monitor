@@ -8695,6 +8695,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "283759",
+      "title": "Legal Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Legal & Human Rights",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-10-14",
+      "postedDate": "2026-10-01",
+      "url": "https://careers.un.org/jobSearchDescription/283759?language=en",
+      "tags": [
+        "legal"
+      ],
+      "summary": "Legal, governance, or human-rights role focused on research, analysis, documentation, and support to legal/policy teams. Source: UN Careers. Location: NEW YORK. Title signal: Legal Intern.",
+      "responsibilities": [
+        "Conduct legal, governance, or human-rights desk research.",
+        "Summarize documents, cases, policies, or country developments.",
+        "Support reports, briefings, meeting preparation, or documentation workflows."
+      ],
+      "requirements": [
+        "Background in law, international relations, human rights, governance, or related field.",
+        "Strong legal/policy research and concise writing skills.",
+        "Attention to detail and ability to handle sensitive material."
+      ]
+    },
+    {
       "id": "283769",
       "title": "Programme Management Intern: Supporting the implementation of the non-staff capacities of the UNCCT/UNOCT Victims of Terrorism Programme",
       "organization": "UN Careers",
@@ -8729,7 +8755,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Programme & Project",
       "location": "BEIJING",
       "continent": "Asia",
-      "deadline": "2026-10-04",
+      "deadline": "2026-10-11",
       "postedDate": "2026-09-24",
       "url": "https://careers.un.org/jobSearchDescription/283773?language=en",
       "tags": [
@@ -9684,6 +9710,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Background in economics, public policy, development, social sciences, or a related field.",
         "Strong research, writing, Excel, and analytical skills.",
         "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "284487",
+      "title": "INTERN - HUMAN RIGHTS, I",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Legal & Human Rights",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-13",
+      "postedDate": "2026-09-30",
+      "url": "https://careers.un.org/jobSearchDescription/284487?language=en",
+      "tags": [
+        "legal"
+      ],
+      "summary": "Legal, governance, or human-rights role focused on research, analysis, documentation, and support to legal/policy teams. Source: UN Careers. Location: GENEVA. Title signal: INTERN - HUMAN RIGHTS, I.",
+      "responsibilities": [
+        "Conduct legal, governance, or human-rights desk research.",
+        "Summarize documents, cases, policies, or country developments.",
+        "Support reports, briefings, meeting preparation, or documentation workflows."
+      ],
+      "requirements": [
+        "Background in law, international relations, human rights, governance, or related field.",
+        "Strong legal/policy research and concise writing skills.",
+        "Attention to detail and ability to handle sensitive material."
       ]
     },
     {
@@ -10775,6 +10827,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285283",
+      "title": "Intern - Project Implementation",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "MEXICO CITY",
+      "continent": "North America",
+      "deadline": "2026-10-14",
+      "postedDate": "2026-09-30",
+      "url": "https://careers.un.org/jobSearchDescription/285283?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: MEXICO CITY. Title signal: Intern - Project Implementation.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "285294",
       "title": "Economic Affairs Intern",
       "organization": "UN Careers",
@@ -10795,6 +10873,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Background in economics, public policy, development, social sciences, or a related field.",
         "Strong research, writing, Excel, and analytical skills.",
         "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "285297",
+      "title": "Internship with UPR Branch",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-22",
+      "postedDate": "2026-10-01",
+      "url": "https://careers.un.org/jobSearchDescription/285297?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: GENEVA. Title signal: Internship with UPR Branch.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
       ]
     },
     {
@@ -10831,7 +10935,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Programme & Project",
       "location": "GENEVA",
       "continent": "Europe",
-      "deadline": "2026-09-30",
+      "deadline": "2026-10-07",
       "postedDate": "2026-09-24",
       "url": "https://careers.un.org/jobSearchDescription/285330?language=en",
       "tags": [
@@ -11526,6 +11630,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong writing, editing, storytelling, and communication skills.",
         "Experience or interest in social media, campaigns, multimedia, or public information.",
         "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNDP-37114",
+      "title": "Conflict Prevention and Peacebuilding Intern",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Tech & Digital",
+      "location": "Bangkok, Thailand",
+      "continent": "Asia",
+      "deadline": "2026-10-07",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37114",
+      "tags": [
+        "digital"
+      ],
+      "summary": "Technical or digital role supporting software, ICT, digital transformation, AI, GIS, or technology-enabled workflows. Source: UNDP. Location: Bangkok, Thailand. Title signal: Conflict Prevention and Peacebuilding Intern.",
+      "responsibilities": [
+        "Support digital tools, systems, prototypes, or technical documentation.",
+        "Assist with requirements gathering, testing, implementation support, or workflow mapping.",
+        "Contribute to technology-enabled analysis, automation, or knowledge products."
+      ],
+      "requirements": [
+        "Technical background in computer science, information systems, GIS, digital innovation, or related field.",
+        "Relevant software, web, database, GIS, or ICT skills.",
+        "Ability to explain technical work clearly to non-technical stakeholders."
       ]
     },
     {
@@ -12411,6 +12541,29 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNHCR-JR2668840",
+      "title": "PSP Fundraising Intern (Donor Care & Development)",
+      "organization": "UNHCR",
+      "source": "UNHCR",
+      "category": "Partnerships",
+      "location": "Kuala Lumpur, Malaysia",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-13",
+      "postedDate": "2026-10-01",
+      "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Kuala-Lumpur-Malaysia/PSP-Fundraising-Intern--Donor-Care---Development-_JR2668840",
+      "summary": "Partnerships or external-relations role supporting donor engagement, stakeholder mapping, fundraising, or resource mobilization. Source: UNHCR. Location: Kuala Lumpur, Malaysia. Title signal: PSP Fundraising Intern (Donor Care & Development).",
+      "responsibilities": [
+        "Support donor/stakeholder mapping and external-relations tracking.",
+        "Prepare briefing notes, partner profiles, presentations, or visibility material.",
+        "Assist with resource-mobilization and partnership documentation."
+      ],
+      "requirements": [
+        "Strong research, writing, and stakeholder-analysis skills.",
+        "Interest in partnerships, fundraising, external relations, or private-sector engagement.",
+        "Ability to synthesize information for senior audiences."
       ]
     },
     {
@@ -13559,6 +13712,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "UNICEF-595900",
+      "title": "Planning, Monitoring and Evaluation (PM&E) Internship, Mbabane, Eswatini (6 months only)",
+      "organization": "UNICEF",
+      "source": "UNICEF",
+      "category": "Data & Analytics",
+      "location": "Eswatini (formerly Swaziland)",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-07",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.unicef.org/en-us/job/595900/planning-monitoring-and-evaluation-pme-internship-mbabane-eswatini-6-months-only",
+      "tags": [
+        "data",
+        "monitoring"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UNICEF. Location: Eswatini (formerly Swaziland). Title signal: Planning, Monitoring and Evaluation (PM&E) Internship, Mbabane, Eswatini (6 months only).",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
       "id": "UNICEF-job595210",
       "title": "UNICEF Thailand - Young Professionals Programme (Communication), UNICEF Thailand Country Office, Bangkok, Thailand, Job#595210",
       "organization": "UNICEF",
@@ -14574,6 +14754,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "WFP-JR126957",
+      "title": "Monitoring and Evaluation Internship - Bridgetown, Barbados",
+      "organization": "WFP",
+      "source": "WFP",
+      "category": "Data & Analytics",
+      "location": "Bridgetown, Barbados",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-18",
+      "postedDate": "2026-10-01",
+      "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
+      "tags": [
+        "data",
+        "monitoring"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: WFP. Location: Bridgetown, Barbados. Title signal: Monitoring and Evaluation Internship - Bridgetown, Barbados.",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
       "id": "WFP-JR127185",
       "title": "Internship - Treasury Team Chief Financial Officer Division (CFO) Division Rome, Italy",
       "organization": "WFP",
@@ -14597,6 +14804,33 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "WFP-JR127242",
+      "title": "Communications Intern (Barbados)",
+      "organization": "WFP",
+      "source": "WFP",
+      "category": "Communications & Advocacy",
+      "location": "Bridgetown, Barbados",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-18",
+      "postedDate": "2026-10-01",
+      "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: WFP. Location: Bridgetown, Barbados. Title signal: Communications Intern (Barbados).",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
       ]
     }
   ]
