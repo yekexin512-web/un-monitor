@@ -11364,6 +11364,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285574",
+      "title": "Support to the coordination of the Regional Platform for Disaster Risk Reduction (RP27) - Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Admin, Finance & HR",
+      "location": "PANAMA CITY",
+      "continent": "North America",
+      "deadline": "2026-10-20",
+      "postedDate": "2026-10-05",
+      "url": "https://careers.un.org/jobSearchDescription/285574?language=en",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UN Careers. Location: PANAMA CITY. Title signal: Support to the coordination of the Regional Platform for Disaster Risk Reduction (RP27) - Intern.",
+      "responsibilities": [
+        "Support documentation, tracking, and daily operational workflows.",
+        "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
+        "Prepare records, tables, notes, and process follow-up material."
+      ],
+      "requirements": [
+        "Organization, attention to detail, Excel, and documentation skills.",
+        "Interest in operations, finance, HR, compliance, administration, or procurement.",
+        "Ability to work carefully with procedures and records."
+      ]
+    },
+    {
       "id": "285630",
       "title": "Internship - Communication specialist",
       "organization": "UN Careers",
@@ -13014,7 +13040,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Kuala Lumpur, Malaysia",
       "continent": "Remote / Global",
       "deadline": "2026-10-13",
-      "postedDate": "2026-10-01",
+      "postedDate": "2026-09-30",
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Kuala-Lumpur-Malaysia/PSP-Fundraising-Intern--Donor-Care---Development-_JR2668840",
       "summary": "Partnerships or external-relations role supporting donor engagement, stakeholder mapping, fundraising, or resource mobilization. Source: UNHCR. Location: Kuala Lumpur, Malaysia. Title signal: PSP Fundraising Intern (Donor Care & Development).",
       "responsibilities": [
@@ -15252,7 +15278,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Bridgetown, Barbados",
       "continent": "Remote / Global",
       "deadline": "2026-10-18",
-      "postedDate": "2026-10-01",
+      "postedDate": "2026-09-30",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "data",
@@ -15279,7 +15305,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Rome, Italy",
       "continent": "Europe",
       "deadline": "2026-10-12",
-      "postedDate": "2026-09-30",
+      "postedDate": "2026-09-29",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "programme"
@@ -15305,7 +15331,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Bridgetown, Barbados",
       "continent": "Remote / Global",
       "deadline": "2026-10-18",
-      "postedDate": "2026-10-01",
+      "postedDate": "2026-09-30",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "communications",

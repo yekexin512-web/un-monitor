@@ -1,5 +1,5 @@
 window.UN_MONITOR_LIVE_JOBS = {
-  "generatedAt": "2026-10-05T06:29:02",
+  "generatedAt": "2026-10-06T07:05:12",
   "errors": [],
   "jobs": [
     {
@@ -196,205 +196,6 @@ window.UN_MONITOR_LIVE_JOBS = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
-      ]
-    },
-    {
-      "id": "284895",
-      "title": "Communications & Multimedia Intern",
-      "organization": "UN Careers",
-      "location": "SANTIAGO",
-      "continent": "South America",
-      "source": "UN Careers",
-      "category": "Communications & Advocacy",
-      "tags": [
-        "communications",
-        "advocacy"
-      ],
-      "deadline": "2026-10-05",
-      "postedDate": "2026-09-22",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.un.org/jobSearchDescription/284895?language=en",
-      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: SANTIAGO. Title signal: Communications & Multimedia Intern.",
-      "responsibilities": [
-        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
-        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
-        "Help translate programme evidence into accessible public-facing content."
-      ],
-      "requirements": [
-        "Strong writing, editing, storytelling, and communication skills.",
-        "Experience or interest in social media, campaigns, multimedia, or public information.",
-        "Ability to adapt messages for different audiences."
-      ]
-    },
-    {
-      "id": "285044",
-      "title": "Human Resources Intern: Outreach and Talent Acquisition",
-      "organization": "UN Careers",
-      "location": "GENEVA",
-      "continent": "Europe",
-      "source": "UN Careers",
-      "category": "Communications & Advocacy",
-      "tags": [
-        "communications",
-        "advocacy"
-      ],
-      "deadline": "2026-10-05",
-      "postedDate": "2026-09-21",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.un.org/jobSearchDescription/285044?language=en",
-      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: GENEVA. Title signal: Human Resources Intern: Outreach and Talent Acquisition.",
-      "responsibilities": [
-        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
-        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
-        "Help translate programme evidence into accessible public-facing content."
-      ],
-      "requirements": [
-        "Strong writing, editing, storytelling, and communication skills.",
-        "Experience or interest in social media, campaigns, multimedia, or public information.",
-        "Ability to adapt messages for different audiences."
-      ]
-    },
-    {
-      "id": "285087",
-      "title": "Internship for the Editorial Team",
-      "organization": "UN Careers",
-      "location": "GENEVA",
-      "continent": "Europe",
-      "source": "UN Careers",
-      "category": "Programme & Project",
-      "tags": [
-        "programme"
-      ],
-      "deadline": "2026-10-05",
-      "postedDate": "2026-09-22",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.un.org/jobSearchDescription/285087?language=en",
-      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: GENEVA. Title signal: Internship for the Editorial Team.",
-      "responsibilities": [
-        "Track activities, deliverables, meetings, and programme documentation.",
-        "Support reporting, coordination, note-taking, research, and knowledge management.",
-        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
-      ],
-      "requirements": [
-        "Strong organization, writing, coordination, and research skills.",
-        "Interest in project/programme management and UN operational workflows.",
-        "Ability to work across teams and keep clear records."
-      ]
-    },
-    {
-      "id": "283769",
-      "title": "Programme Management Intern: Supporting the implementation of the non-staff capacities of the UNCCT/UNOCT Victims of Terrorism Programme",
-      "organization": "UN Careers",
-      "location": "NEW YORK",
-      "continent": "North America",
-      "source": "UN Careers",
-      "category": "Tech & Digital",
-      "tags": [
-        "digital",
-        "programme"
-      ],
-      "deadline": "2026-10-05",
-      "postedDate": "2026-09-21",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.un.org/jobSearchDescription/283769?language=en",
-      "summary": "Technical or digital role supporting software, ICT, digital transformation, AI, GIS, or technology-enabled workflows. Source: UN Careers. Location: NEW YORK. Title signal: Programme Management Intern: Supporting the implementation of the non-staff capacities of the UNCCT/UNOCT Victims of Terrorism Programme.",
-      "responsibilities": [
-        "Support digital tools, systems, prototypes, or technical documentation.",
-        "Assist with requirements gathering, testing, implementation support, or workflow mapping.",
-        "Contribute to technology-enabled analysis, automation, or knowledge products."
-      ],
-      "requirements": [
-        "Technical background in computer science, information systems, GIS, digital innovation, or related field.",
-        "Relevant software, web, database, GIS, or ICT skills.",
-        "Ability to explain technical work clearly to non-technical stakeholders."
-      ]
-    },
-    {
-      "id": "285124",
-      "title": "Protocol Intern",
-      "organization": "UN Careers",
-      "location": "BEIJING",
-      "continent": "Asia",
-      "source": "UN Careers",
-      "category": "Programme & Project",
-      "tags": [
-        "programme"
-      ],
-      "deadline": "2026-10-05",
-      "postedDate": "2026-09-21",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.un.org/jobSearchDescription/285124?language=en",
-      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: BEIJING. Title signal: Protocol Intern.",
-      "responsibilities": [
-        "Track activities, deliverables, meetings, and programme documentation.",
-        "Support reporting, coordination, note-taking, research, and knowledge management.",
-        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
-      ],
-      "requirements": [
-        "Strong organization, writing, coordination, and research skills.",
-        "Interest in project/programme management and UN operational workflows.",
-        "Ability to work across teams and keep clear records."
-      ]
-    },
-    {
-      "id": "UNHCR-JR2668728",
-      "title": "BIDT Intern",
-      "organization": "UNHCR",
-      "location": "Seoul, Korea, Republic of",
-      "continent": "Asia",
-      "source": "UNHCR",
-      "category": "Programme & Project",
-      "tags": [
-        "programme"
-      ],
-      "deadline": "2026-10-05",
-      "postedDate": "2026-09-22",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Seoul-Korea-Republic-of/BIDT-Intern_JR2668728",
-      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNHCR. Location: Seoul, Korea, Republic of. Title signal: BIDT Intern.",
-      "responsibilities": [
-        "Track activities, deliverables, meetings, and programme documentation.",
-        "Support reporting, coordination, note-taking, research, and knowledge management.",
-        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
-      ],
-      "requirements": [
-        "Strong organization, writing, coordination, and research skills.",
-        "Interest in project/programme management and UN operational workflows.",
-        "Ability to work across teams and keep clear records."
-      ]
-    },
-    {
-      "id": "WFP-JR126934",
-      "title": "Logistics Intern",
-      "organization": "WFP",
-      "location": "Kigali, Rwanda, The Republic Of",
-      "continent": "Remote / Global",
-      "source": "WFP",
-      "category": "Data & Analytics",
-      "tags": [
-        "data"
-      ],
-      "deadline": "2026-10-05",
-      "postedDate": "2026-09-22",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
-      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: WFP. Location: Kigali, Rwanda, The Republic Of. Title signal: Logistics Intern.",
-      "responsibilities": [
-        "Clean, organize, and analyze datasets or monitoring information.",
-        "Support dashboards, indicators, visualizations, reports, or information-management products.",
-        "Document data workflows and help teams use evidence for decision-making."
-      ],
-      "requirements": [
-        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
-        "Comfort with data cleaning, structured analysis, and documentation.",
-        "Ability to translate data into clear written or visual outputs."
       ]
     },
     {
@@ -1044,32 +845,6 @@ window.UN_MONITOR_LIVE_JOBS = {
       ]
     },
     {
-      "id": "285462",
-      "title": "Intern Emergency Response",
-      "organization": "UN Careers",
-      "location": "GENEVA",
-      "continent": "Europe",
-      "source": "UN Careers",
-      "category": "Humanitarian & Protection",
-      "tags": [],
-      "deadline": "2026-10-10",
-      "postedDate": "2026-09-25",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.un.org/jobSearchDescription/285462?language=en",
-      "summary": "Humanitarian, migration, protection, health, nutrition, education, or social-policy role supporting vulnerable populations. Source: UN Careers. Location: GENEVA. Title signal: Intern Emergency Response.",
-      "responsibilities": [
-        "Support programme implementation, research, monitoring, or field coordination.",
-        "Contribute to documentation, needs analysis, protection or service-delivery follow-up.",
-        "Prepare notes, data summaries, and programme materials for humanitarian or social-policy teams."
-      ],
-      "requirements": [
-        "Interest or background in humanitarian affairs, migration, protection, public health, education, or social policy.",
-        "Research, documentation, and coordination skills.",
-        "Sensitivity to working with vulnerable populations and rights-based approaches."
-      ]
-    },
-    {
       "id": "285478",
       "title": "Economic Affairs Intern",
       "organization": "UN Careers",
@@ -1147,34 +922,6 @@ window.UN_MONITOR_LIVE_JOBS = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
-      ]
-    },
-    {
-      "id": "284910",
-      "title": "Intern in Information Systems and Communication Technologies, Office of Intergovernmental Support and Coordination for Sustainable Development (OISC)",
-      "organization": "UN Careers",
-      "location": "NEW YORK",
-      "continent": "North America",
-      "source": "UN Careers",
-      "category": "Tech & Digital",
-      "tags": [
-        "digital"
-      ],
-      "deadline": "2026-10-11",
-      "postedDate": "2026-10-02",
-      "status": "found",
-      "appliedAt": null,
-      "url": "https://careers.un.org/jobSearchDescription/284910?language=en",
-      "summary": "Technical or digital role supporting software, ICT, digital transformation, AI, GIS, or technology-enabled workflows. Source: UN Careers. Location: NEW YORK. Title signal: Intern in Information Systems and Communication Technologies, Office of Intergovernmental Support and Coordination for Sustainable Development (OISC).",
-      "responsibilities": [
-        "Support digital tools, systems, prototypes, or technical documentation.",
-        "Assist with requirements gathering, testing, implementation support, or workflow mapping.",
-        "Contribute to technology-enabled analysis, automation, or knowledge products."
-      ],
-      "requirements": [
-        "Technical background in computer science, information systems, GIS, digital innovation, or related field.",
-        "Relevant software, web, database, GIS, or ICT skills.",
-        "Ability to explain technical work clearly to non-technical stakeholders."
       ]
     },
     {
@@ -1360,7 +1107,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "programme"
       ],
       "deadline": "2026-10-12",
-      "postedDate": "2026-09-30",
+      "postedDate": "2026-09-29",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -1442,7 +1189,7 @@ window.UN_MONITOR_LIVE_JOBS = {
       "category": "Partnerships",
       "tags": [],
       "deadline": "2026-10-13",
-      "postedDate": "2026-10-01",
+      "postedDate": "2026-09-30",
       "status": "found",
       "appliedAt": null,
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Kuala-Lumpur-Malaysia/PSP-Fundraising-Intern--Donor-Care---Development-_JR2668840",
@@ -1978,7 +1725,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "advocacy"
       ],
       "deadline": "2026-10-18",
-      "postedDate": "2026-10-01",
+      "postedDate": "2026-09-30",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -2007,7 +1754,7 @@ window.UN_MONITOR_LIVE_JOBS = {
         "monitoring"
       ],
       "deadline": "2026-10-18",
-      "postedDate": "2026-10-01",
+      "postedDate": "2026-09-30",
       "status": "found",
       "appliedAt": null,
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
@@ -2105,6 +1852,34 @@ window.UN_MONITOR_LIVE_JOBS = {
         "Interest or background in humanitarian affairs, migration, protection, public health, education, or social policy.",
         "Research, documentation, and coordination skills.",
         "Sensitivity to working with vulnerable populations and rights-based approaches."
+      ]
+    },
+    {
+      "id": "285574",
+      "title": "Support to the coordination of the Regional Platform for Disaster Risk Reduction (RP27) - Intern",
+      "organization": "UN Careers",
+      "location": "PANAMA CITY",
+      "continent": "North America",
+      "source": "UN Careers",
+      "category": "Admin, Finance & HR",
+      "tags": [
+        "finance"
+      ],
+      "deadline": "2026-10-20",
+      "postedDate": "2026-10-05",
+      "status": "found",
+      "appliedAt": null,
+      "url": "https://careers.un.org/jobSearchDescription/285574?language=en",
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UN Careers. Location: PANAMA CITY. Title signal: Support to the coordination of the Regional Platform for Disaster Risk Reduction (RP27) - Intern.",
+      "responsibilities": [
+        "Support documentation, tracking, and daily operational workflows.",
+        "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
+        "Prepare records, tables, notes, and process follow-up material."
+      ],
+      "requirements": [
+        "Organization, attention to detail, Excel, and documentation skills.",
+        "Interest in operations, finance, HR, compliance, administration, or procurement.",
+        "Ability to work carefully with procedures and records."
       ]
     },
     {
