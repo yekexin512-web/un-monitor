@@ -11492,6 +11492,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285846",
+      "title": "UNEP Finance Initiative (UNEP FI) Internship for Africa and Middle East Regional Support",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-20",
+      "postedDate": "2026-10-06",
+      "url": "https://careers.un.org/jobSearchDescription/285846?language=en",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: GENEVA. Title signal: UNEP Finance Initiative (UNEP FI) Internship for Africa and Middle East Regional Support.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
       "id": "FAO-2601979",
       "title": "Call for Expression of Interest - Internship Programme for FAO headquarters (HQ)",
       "organization": "FAO",
@@ -13040,7 +13066,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Kuala Lumpur, Malaysia",
       "continent": "Remote / Global",
       "deadline": "2026-10-13",
-      "postedDate": "2026-09-30",
+      "postedDate": "2026-10-01",
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Kuala-Lumpur-Malaysia/PSP-Fundraising-Intern--Donor-Care---Development-_JR2668840",
       "summary": "Partnerships or external-relations role supporting donor engagement, stakeholder mapping, fundraising, or resource mobilization. Source: UNHCR. Location: Kuala Lumpur, Malaysia. Title signal: PSP Fundraising Intern (Donor Care & Development).",
       "responsibilities": [
@@ -14713,6 +14739,87 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "UNIDO-1370682355",
+      "title": "Technical Expert - Circularity and Resource Efficiency in the Automotive Sector",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "Home Based, Home Based",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-27",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Home-Based-Technical-Expert-Circularity-and-Resource-Efficiency-in-the-Automotive-Sector/1370682355/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Home Based, Home Based. Title signal: Technical Expert - Circularity and Resource Efficiency in the Automotive Sector.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNIDO-1370684755",
+      "title": "Project Associate",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "Vienna, Austria",
+      "continent": "Europe",
+      "deadline": "2026-10-27",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Vienna-Project-Associate/1370684755/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Vienna, Austria. Title signal: Project Associate.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNIDO-1370695655",
+      "title": "Finance Administrator",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Economics & Development",
+      "location": "Vienna, Austria",
+      "continent": "Europe",
+      "deadline": "2026-10-27",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Vienna-Finance-Administrator/1370695655/",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UNIDO. Location: Vienna, Austria. Title signal: Finance Administrator.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
       "id": "UNU-2739419",
       "title": "REMOTE Internship: Research Intern - Neuroscience, Learning and AI in Higher Education",
       "organization": "UNU",
@@ -15278,7 +15385,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Bridgetown, Barbados",
       "continent": "Remote / Global",
       "deadline": "2026-10-18",
-      "postedDate": "2026-09-30",
+      "postedDate": "2026-10-01",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "data",
@@ -15305,7 +15412,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Rome, Italy",
       "continent": "Europe",
       "deadline": "2026-10-12",
-      "postedDate": "2026-09-29",
+      "postedDate": "2026-09-30",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "programme"
@@ -15331,7 +15438,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Bridgetown, Barbados",
       "continent": "Remote / Global",
       "deadline": "2026-10-18",
-      "postedDate": "2026-09-30",
+      "postedDate": "2026-10-01",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "communications",
