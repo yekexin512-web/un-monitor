@@ -11059,6 +11059,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285305",
+      "title": "INTERN - STRATEGIC PLANNING",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-10-21",
+      "postedDate": "2026-10-07",
+      "url": "https://careers.un.org/jobSearchDescription/285305?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: NEW YORK. Title signal: INTERN - STRATEGIC PLANNING.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "285322",
       "title": "Intern in Banjul, Gambia (several positons)",
       "organization": "UN Careers",
@@ -11364,6 +11390,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285569",
+      "title": "Intern - Periodista/Community Manager",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "SANTIAGO",
+      "continent": "South America",
+      "deadline": "2026-10-19",
+      "postedDate": "2026-10-06",
+      "url": "https://careers.un.org/jobSearchDescription/285569?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: SANTIAGO. Title signal: Intern - Periodista/Community Manager.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "285574",
       "title": "Support to the coordination of the Regional Platform for Disaster Risk Reduction (RP27) - Intern",
       "organization": "UN Careers",
@@ -11469,6 +11521,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285753",
+      "title": "Intern - Comunicador audiovisual/Diseñador gráfico/Fotógrafo",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "SANTIAGO",
+      "continent": "South America",
+      "deadline": "2026-10-19",
+      "postedDate": "2026-10-06",
+      "url": "https://careers.un.org/jobSearchDescription/285753?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: SANTIAGO. Title signal: Intern - Comunicador audiovisual/Diseñador gráfico/Fotógrafo.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "285762",
       "title": "Environment Affairs Intern: Environment and development",
       "organization": "UN Careers",
@@ -11492,6 +11570,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285840",
+      "title": "IASC Secretariat Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-13",
+      "postedDate": "2026-10-07",
+      "url": "https://careers.un.org/jobSearchDescription/285840?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: GENEVA. Title signal: IASC Secretariat Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "285846",
       "title": "UNEP Finance Initiative (UNEP FI) Internship for Africa and Middle East Regional Support",
       "organization": "UN Careers",
@@ -11506,6 +11610,33 @@ window.UN_MONITOR_JOB_CATALOG = {
         "finance"
       ],
       "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: GENEVA. Title signal: UNEP Finance Initiative (UNEP FI) Internship for Africa and Middle East Regional Support.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "285946",
+      "title": "UNEP Finance Initiative (UNEP FI) Policy Internship",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-21",
+      "postedDate": "2026-10-07",
+      "url": "https://careers.un.org/jobSearchDescription/285946?language=en",
+      "tags": [
+        "policy",
+        "finance"
+      ],
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: GENEVA. Title signal: UNEP Finance Initiative (UNEP FI) Policy Internship.",
       "responsibilities": [
         "Support policy research, background notes, and evidence synthesis.",
         "Analyze programme, economic, budget, or development information for team outputs.",
@@ -12223,6 +12354,85 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNDP-37322",
+      "title": "Internship, Data Analysis and Report Synthesis with UNDP RBAS in NY, USA (Office-Based)",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Data & Analytics",
+      "location": "New York, United States",
+      "continent": "North America",
+      "deadline": "2026-10-14",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37322",
+      "tags": [
+        "data"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UNDP. Location: New York, United States. Title signal: Internship, Data Analysis and Report Synthesis with UNDP RBAS in NY, USA (Office-Based).",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
+      "id": "UNDP-37331",
+      "title": "Translation and Communications Intern",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Communications & Advocacy",
+      "location": "Beijing, China",
+      "continent": "Asia",
+      "deadline": "2026-10-18",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37331",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNDP. Location: Beijing, China. Title signal: Translation and Communications Intern.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNDP-37332",
+      "title": "INTERNSHIP: Operations and Common Premise/Services",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Admin, Finance & HR",
+      "location": "Istanbul, Türkiye",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-21",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37332",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UNDP. Location: Istanbul, Türkiye. Title signal: INTERNSHIP: Operations and Common Premise/Services.",
+      "responsibilities": [
+        "Support documentation, tracking, and daily operational workflows.",
+        "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
+        "Prepare records, tables, notes, and process follow-up material."
+      ],
+      "requirements": [
+        "Organization, attention to detail, Excel, and documentation skills.",
+        "Interest in operations, finance, HR, compliance, administration, or procurement.",
+        "Ability to work carefully with procedures and records."
       ]
     },
     {
@@ -14253,6 +14463,56 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "UNICEF-596164",
+      "title": "National Communication and Advocacy Intern- Human Interest Story & Social Media Content (6 months)",
+      "organization": "UNICEF",
+      "source": "UNICEF",
+      "category": "Communications & Advocacy",
+      "location": "Liberia",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-14",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.unicef.org/en-us/job/596164/national-communication-and-advocacy-intern-human-interest-story-social-media-content-6-months",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNICEF. Location: Liberia. Title signal: National Communication and Advocacy Intern- Human Interest Story & Social Media Content (6 months).",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNICEF-596175",
+      "title": "National Intern: WASH Knowledge Management (KM), Accra Ghana- 26 Weeks",
+      "organization": "UNICEF",
+      "source": "UNICEF",
+      "category": "Humanitarian & Protection",
+      "location": "Ghana",
+      "continent": "Africa",
+      "deadline": "2026-10-15",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.unicef.org/en-us/job/596175/national-intern-wash-knowledge-management-km-accra-ghana-26-weeks",
+      "summary": "Humanitarian, migration, protection, health, nutrition, education, or social-policy role supporting vulnerable populations. Source: UNICEF. Location: Ghana. Title signal: National Intern: WASH Knowledge Management (KM), Accra Ghana- 26 Weeks.",
+      "responsibilities": [
+        "Support programme implementation, research, monitoring, or field coordination.",
+        "Contribute to documentation, needs analysis, protection or service-delivery follow-up.",
+        "Prepare notes, data summaries, and programme materials for humanitarian or social-policy teams."
+      ],
+      "requirements": [
+        "Interest or background in humanitarian affairs, migration, protection, public health, education, or social policy.",
+        "Research, documentation, and coordination skills.",
+        "Sensitivity to working with vulnerable populations and rights-based approaches."
+      ]
+    },
+    {
       "id": "UNICEF-job595210",
       "title": "UNICEF Thailand - Young Professionals Programme (Communication), UNICEF Thailand Country Office, Bangkok, Thailand, Job#595210",
       "organization": "UNICEF",
@@ -14817,6 +15077,85 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Background in economics, public policy, development, social sciences, or a related field.",
         "Strong research, writing, Excel, and analytical skills.",
         "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "UNIDO-1370825355",
+      "title": "Intern (UNIDO Italian Investment and Technology Promotion Office)",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "Rome, Italy",
+      "continent": "Europe",
+      "deadline": "2026-10-14",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Rome-Intern-%28UNIDO-Italian-Investment-and-Technology-Promotion-Office%29/1370825355/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Rome, Italy. Title signal: Intern (UNIDO Italian Investment and Technology Promotion Office).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNIDO-1370852755",
+      "title": "Intern (Climate Innovation and Montreal Protocol - Cross-Cutting, Finance and GESI-ESS)",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Economics & Development",
+      "location": "Vienna, Austria",
+      "continent": "Europe",
+      "deadline": "2026-10-14",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Vienna-Intern-%28Climate-Innovation-and-Montreal-Protocol-Cross-Cutting%2C-Finance-and-GESI-ESS%29/1370852755/",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UNIDO. Location: Vienna, Austria. Title signal: Intern (Climate Innovation and Montreal Protocol - Cross-Cutting, Finance and GESI-ESS).",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "UNIDO-1370855055",
+      "title": "Intern (Climate Innovation and Montreal Protocol - Cross-Cutting, Events and Communications)",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Communications & Advocacy",
+      "location": "Vienna, Austria",
+      "continent": "Europe",
+      "deadline": "2026-10-14",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Vienna-Intern-%28Climate-Innovation-and-Montreal-Protocol-Cross-Cutting%2C-Events-and-Communications%29/1370855055/",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNIDO. Location: Vienna, Austria. Title signal: Intern (Climate Innovation and Montreal Protocol - Cross-Cutting, Events and Communications).",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
       ]
     },
     {
