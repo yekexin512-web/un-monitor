@@ -10935,6 +10935,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285250",
+      "title": "Political Affairs Intern at OSRSG-CAAC in Brussels, Belgium",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "BRUSSELS, NEW YORK",
+      "continent": "Europe",
+      "deadline": "2026-10-18",
+      "postedDate": "2026-10-08",
+      "url": "https://careers.un.org/jobSearchDescription/285250?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: BRUSSELS, NEW YORK. Title signal: Political Affairs Intern at OSRSG-CAAC in Brussels, Belgium.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "285251",
       "title": "Audio-Visual Editing and Digital Media Intern",
       "organization": "UN Careers",
@@ -11442,6 +11468,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285590",
+      "title": "(GENEVA, SWITZERLAND) Intern - Programme Management (Event Coordination and Stakeholder Engagement)",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "NEW YORK, GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-22",
+      "postedDate": "2026-10-08",
+      "url": "https://careers.un.org/jobSearchDescription/285590?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: NEW YORK, GENEVA. Title signal: (GENEVA, SWITZERLAND) Intern - Programme Management (Event Coordination and Stakeholder Engagement).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "285630",
       "title": "Internship - Communication specialist",
       "organization": "UN Careers",
@@ -11570,6 +11622,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285799",
+      "title": "Digital Communications Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Tech & Digital",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-10-29",
+      "postedDate": "2026-10-09",
+      "url": "https://careers.un.org/jobSearchDescription/285799?language=en",
+      "tags": [
+        "communications",
+        "digital"
+      ],
+      "summary": "Technical or digital role supporting software, ICT, digital transformation, AI, GIS, or technology-enabled workflows. Source: UN Careers. Location: NEW YORK. Title signal: Digital Communications Intern.",
+      "responsibilities": [
+        "Support digital tools, systems, prototypes, or technical documentation.",
+        "Assist with requirements gathering, testing, implementation support, or workflow mapping.",
+        "Contribute to technology-enabled analysis, automation, or knowledge products."
+      ],
+      "requirements": [
+        "Technical background in computer science, information systems, GIS, digital innovation, or related field.",
+        "Relevant software, web, database, GIS, or ICT skills.",
+        "Ability to explain technical work clearly to non-technical stakeholders."
+      ]
+    },
+    {
       "id": "285840",
       "title": "IASC Secretariat Intern",
       "organization": "UN Careers",
@@ -11646,6 +11725,110 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Background in economics, public policy, development, social sciences, or a related field.",
         "Strong research, writing, Excel, and analytical skills.",
         "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "286113",
+      "title": "Outreach/Social Media intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-29",
+      "postedDate": "2026-10-09",
+      "url": "https://careers.un.org/jobSearchDescription/286113?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: GENEVA. Title signal: Outreach/Social Media intern.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "286119",
+      "title": "Social Media Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "GEMENA",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-29",
+      "postedDate": "2026-10-09",
+      "url": "https://careers.un.org/jobSearchDescription/286119?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: GEMENA. Title signal: Social Media Intern.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "286123",
+      "title": "INTERN - NGO LIAISON UNIT, POLITICAL AFFAIRS AND PARTNERSHIPS SECTION",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Partnerships",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-22",
+      "postedDate": "2026-10-08",
+      "url": "https://careers.un.org/jobSearchDescription/286123?language=en",
+      "summary": "Partnerships or external-relations role supporting donor engagement, stakeholder mapping, fundraising, or resource mobilization. Source: UN Careers. Location: GENEVA. Title signal: INTERN - NGO LIAISON UNIT, POLITICAL AFFAIRS AND PARTNERSHIPS SECTION.",
+      "responsibilities": [
+        "Support donor/stakeholder mapping and external-relations tracking.",
+        "Prepare briefing notes, partner profiles, presentations, or visibility material.",
+        "Assist with resource-mobilization and partnership documentation."
+      ],
+      "requirements": [
+        "Strong research, writing, and stakeholder-analysis skills.",
+        "Interest in partnerships, fundraising, external relations, or private-sector engagement.",
+        "Ability to synthesize information for senior audiences."
+      ]
+    },
+    {
+      "id": "286186",
+      "title": "Communication Support Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "NAIROBI",
+      "continent": "Africa",
+      "deadline": "2026-10-22",
+      "postedDate": "2026-10-08",
+      "url": "https://careers.un.org/jobSearchDescription/286186?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: NAIROBI. Title signal: Communication Support Intern.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
       ]
     },
     {
@@ -11892,7 +12075,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Geneva, Switzerland",
       "continent": "Europe",
       "deadline": "2026-10-15",
-      "postedDate": "2026-09-10",
+      "postedDate": "2026-10-09",
       "url": "https://jobs.itu.int/job/Geneva-Unpaid-Internship-Circular-Economy-Intern/1367897955/",
       "tags": [
         "programme"
@@ -13276,7 +13459,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Kuala Lumpur, Malaysia",
       "continent": "Remote / Global",
       "deadline": "2026-10-13",
-      "postedDate": "2026-10-01",
+      "postedDate": "2026-09-30",
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Kuala-Lumpur-Malaysia/PSP-Fundraising-Intern--Donor-Care---Development-_JR2668840",
       "summary": "Partnerships or external-relations role supporting donor engagement, stakeholder mapping, fundraising, or resource mobilization. Source: UNHCR. Location: Kuala Lumpur, Malaysia. Title signal: PSP Fundraising Intern (Donor Care & Development).",
       "responsibilities": [
@@ -15107,55 +15290,54 @@ window.UN_MONITOR_JOB_CATALOG = {
     },
     {
       "id": "UNIDO-1370852755",
-      "title": "Intern (Climate Innovation and Montreal Protocol - Cross-Cutting, Finance and GESI-ESS)",
+      "title": "Intern (A2D Facility)",
       "organization": "UNIDO",
       "source": "UNIDO",
-      "category": "Economics & Development",
+      "category": "Programme & Project",
       "location": "Vienna, Austria",
       "continent": "Europe",
       "deadline": "2026-10-14",
       "postedDate": "2026-06-29",
-      "url": "https://careers.unido.org/job/Vienna-Intern-%28Climate-Innovation-and-Montreal-Protocol-Cross-Cutting%2C-Finance-and-GESI-ESS%29/1370852755/",
+      "url": "https://careers.unido.org/job/Vienna-Intern-%28A2D-Facility%29/1370852755/",
       "tags": [
-        "finance"
+        "programme"
       ],
-      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UNIDO. Location: Vienna, Austria. Title signal: Intern (Climate Innovation and Montreal Protocol - Cross-Cutting, Finance and GESI-ESS).",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Vienna, Austria. Title signal: Intern (A2D Facility).",
       "responsibilities": [
-        "Support policy research, background notes, and evidence synthesis.",
-        "Analyze programme, economic, budget, or development information for team outputs.",
-        "Prepare short written products such as briefs, talking points, tables, and presentations."
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
       ],
       "requirements": [
-        "Background in economics, public policy, development, social sciences, or a related field.",
-        "Strong research, writing, Excel, and analytical skills.",
-        "Interest in UN development priorities and sustainable development issues."
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
       ]
     },
     {
       "id": "UNIDO-1370855055",
-      "title": "Intern (Climate Innovation and Montreal Protocol - Cross-Cutting, Events and Communications)",
+      "title": "Intern (A2D Facility)",
       "organization": "UNIDO",
       "source": "UNIDO",
-      "category": "Communications & Advocacy",
+      "category": "Programme & Project",
       "location": "Vienna, Austria",
       "continent": "Europe",
       "deadline": "2026-10-14",
       "postedDate": "2026-06-29",
-      "url": "https://careers.unido.org/job/Vienna-Intern-%28Climate-Innovation-and-Montreal-Protocol-Cross-Cutting%2C-Events-and-Communications%29/1370855055/",
+      "url": "https://careers.unido.org/job/Vienna-Intern-%28A2D-Facility%29/1370855055/",
       "tags": [
-        "communications",
-        "advocacy"
+        "programme"
       ],
-      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNIDO. Location: Vienna, Austria. Title signal: Intern (Climate Innovation and Montreal Protocol - Cross-Cutting, Events and Communications).",
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Vienna, Austria. Title signal: Intern (A2D Facility).",
       "responsibilities": [
-        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
-        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
-        "Help translate programme evidence into accessible public-facing content."
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
       ],
       "requirements": [
-        "Strong writing, editing, storytelling, and communication skills.",
-        "Experience or interest in social media, campaigns, multimedia, or public information.",
-        "Ability to adapt messages for different audiences."
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
       ]
     },
     {
@@ -15724,7 +15906,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Bridgetown, Barbados",
       "continent": "Remote / Global",
       "deadline": "2026-10-18",
-      "postedDate": "2026-10-01",
+      "postedDate": "2026-09-30",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "data",
@@ -15751,7 +15933,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Rome, Italy",
       "continent": "Europe",
       "deadline": "2026-10-12",
-      "postedDate": "2026-09-30",
+      "postedDate": "2026-09-29",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "programme"
@@ -15777,7 +15959,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Bridgetown, Barbados",
       "continent": "Remote / Global",
       "deadline": "2026-10-18",
-      "postedDate": "2026-10-01",
+      "postedDate": "2026-09-30",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "communications",
