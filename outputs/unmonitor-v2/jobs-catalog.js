@@ -4486,8 +4486,8 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Programme & Project",
       "location": "DAKAR",
       "continent": "Remote / Global",
-      "deadline": "2026-08-03",
-      "postedDate": "2026-07-21",
+      "deadline": "2026-10-23",
+      "postedDate": "2026-10-09",
       "url": "https://careers.un.org/jobSearchDescription/281352?language=en",
       "tags": [
         "programme"
@@ -11701,6 +11701,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285855",
+      "title": "Public Information Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "BEIRUT",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-25",
+      "postedDate": "2026-10-11",
+      "url": "https://careers.un.org/jobSearchDescription/285855?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: BEIRUT. Title signal: Public Information Intern.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
       "id": "285946",
       "title": "UNEP Finance Initiative (UNEP FI) Policy Internship",
       "organization": "UN Careers",
@@ -11765,6 +11792,58 @@ window.UN_MONITOR_JOB_CATALOG = {
         "programme"
       ],
       "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: GENEVA. Title signal: Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "286081",
+      "title": "INTERN for the Secretariat of the Group of Human Rights Experts on Nicaragua",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Legal & Human Rights",
+      "location": "PANAMA CITY",
+      "continent": "North America",
+      "deadline": "2026-11-10",
+      "postedDate": "2026-10-10",
+      "url": "https://careers.un.org/jobSearchDescription/286081?language=en",
+      "tags": [
+        "legal"
+      ],
+      "summary": "Legal, governance, or human-rights role focused on research, analysis, documentation, and support to legal/policy teams. Source: UN Careers. Location: PANAMA CITY. Title signal: INTERN for the Secretariat of the Group of Human Rights Experts on Nicaragua.",
+      "responsibilities": [
+        "Conduct legal, governance, or human-rights desk research.",
+        "Summarize documents, cases, policies, or country developments.",
+        "Support reports, briefings, meeting preparation, or documentation workflows."
+      ],
+      "requirements": [
+        "Background in law, international relations, human rights, governance, or related field.",
+        "Strong legal/policy research and concise writing skills.",
+        "Attention to detail and ability to handle sensitive material."
+      ]
+    },
+    {
+      "id": "286084",
+      "title": "Social Affairs Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "SANTIAGO",
+      "continent": "South America",
+      "deadline": "2026-10-29",
+      "postedDate": "2026-10-09",
+      "url": "https://careers.un.org/jobSearchDescription/286084?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: SANTIAGO. Title signal: Social Affairs Intern.",
       "responsibilities": [
         "Track activities, deliverables, meetings, and programme documentation.",
         "Support reporting, coordination, note-taking, research, and knowledge management.",
@@ -11881,6 +11960,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286161",
+      "title": "Policy and Data Internship",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Data & Analytics",
+      "location": "PORT LOUIS",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-15",
+      "postedDate": "2026-10-09",
+      "url": "https://careers.un.org/jobSearchDescription/286161?language=en",
+      "tags": [
+        "data",
+        "policy"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UN Careers. Location: PORT LOUIS. Title signal: Policy and Data Internship.",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
       "id": "286186",
       "title": "Communication Support Intern",
       "organization": "UN Careers",
@@ -11905,6 +12011,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong writing, editing, storytelling, and communication skills.",
         "Experience or interest in social media, campaigns, multimedia, or public information.",
         "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "286205",
+      "title": "Nowcasts intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-22",
+      "postedDate": "2026-10-09",
+      "url": "https://careers.un.org/jobSearchDescription/286205?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: GENEVA. Title signal: Nowcasts intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
       ]
     },
     {
@@ -13666,7 +13798,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Kuala Lumpur, Malaysia",
       "continent": "Remote / Global",
       "deadline": "2026-10-13",
-      "postedDate": "2026-09-30",
+      "postedDate": "2026-10-01",
       "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Kuala-Lumpur-Malaysia/PSP-Fundraising-Intern--Donor-Care---Development-_JR2668840",
       "summary": "Partnerships or external-relations role supporting donor engagement, stakeholder mapping, fundraising, or resource mobilization. Source: UNHCR. Location: Kuala Lumpur, Malaysia. Title signal: PSP Fundraising Intern (Donor Care & Development).",
       "responsibilities": [
@@ -16113,7 +16245,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Bridgetown, Barbados",
       "continent": "Remote / Global",
       "deadline": "2026-10-18",
-      "postedDate": "2026-09-30",
+      "postedDate": "2026-10-01",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "data",
@@ -16140,7 +16272,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Rome, Italy",
       "continent": "Europe",
       "deadline": "2026-10-12",
-      "postedDate": "2026-09-29",
+      "postedDate": "2026-09-30",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "programme"
@@ -16158,6 +16290,60 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "WFP-JR127192",
+      "title": "Stagiaire - Appui à la section \"Préparation et Réponse aux Urgences\"",
+      "organization": "WFP",
+      "source": "WFP",
+      "category": "Programme & Project",
+      "location": "Antananarivo, Madagascar, The Democratic",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-23",
+      "postedDate": "2026-10-10",
+      "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: WFP. Location: Antananarivo, Madagascar, The Democratic. Title signal: Stagiaire - Appui à la section \"Préparation et Réponse aux Urgences\".",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "WFP-JR127194",
+      "title": "Stagiaire - Appui à la section \"Résilience\"",
+      "organization": "WFP",
+      "source": "WFP",
+      "category": "Programme & Project",
+      "location": "Antananarivo, Madagascar, The Democratic",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-23",
+      "postedDate": "2026-10-10",
+      "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: WFP. Location: Antananarivo, Madagascar, The Democratic. Title signal: Stagiaire - Appui à la section \"Résilience\".",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "WFP-JR127242",
       "title": "Communications Intern (Barbados)",
       "organization": "WFP",
@@ -16166,7 +16352,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Bridgetown, Barbados",
       "continent": "Remote / Global",
       "deadline": "2026-10-18",
-      "postedDate": "2026-09-30",
+      "postedDate": "2026-10-01",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "communications",
