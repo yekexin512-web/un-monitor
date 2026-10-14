@@ -11241,6 +11241,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285337",
+      "title": "Public Information Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-10-22",
+      "postedDate": "2026-10-13",
+      "url": "https://careers.un.org/jobSearchDescription/285337?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: NEW YORK. Title signal: Public Information Intern.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
       "id": "285358",
       "title": "Strategic Communications Intern",
       "organization": "UN Careers",
@@ -11598,6 +11625,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285603",
+      "title": "News Writing / Reporting - Public Information Intern - News and Content - English",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-10-27",
+      "postedDate": "2026-10-14",
+      "url": "https://careers.un.org/jobSearchDescription/285603?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: NEW YORK. Title signal: News Writing / Reporting - Public Information Intern - News and Content - English.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
       "id": "285630",
       "title": "Internship - Communication specialist",
       "organization": "UN Careers",
@@ -11942,7 +11996,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Legal & Human Rights",
       "location": "PANAMA CITY",
       "continent": "North America",
-      "deadline": "2026-11-10",
+      "deadline": "2026-10-23",
       "postedDate": "2026-10-10",
       "url": "https://careers.un.org/jobSearchDescription/286081?language=en",
       "tags": [
@@ -12250,6 +12304,84 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286303",
+      "title": "Intern: Data Analysis and Results Management",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Data & Analytics",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-20",
+      "postedDate": "2026-10-13",
+      "url": "https://careers.un.org/jobSearchDescription/286303?language=en",
+      "tags": [
+        "data"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UN Careers. Location: GENEVA. Title signal: Intern: Data Analysis and Results Management.",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
+      "id": "286317",
+      "title": "Policy Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-10-21",
+      "postedDate": "2026-10-12",
+      "url": "https://careers.un.org/jobSearchDescription/286317?language=en",
+      "tags": [
+        "policy"
+      ],
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: NEW YORK. Title signal: Policy Intern.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "286353",
+      "title": "Intern - Administration and Business Operations",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Admin, Finance & HR",
+      "location": "ADDIS ABABA",
+      "continent": "Africa",
+      "deadline": "2026-10-19",
+      "postedDate": "2026-10-13",
+      "url": "https://careers.un.org/jobSearchDescription/286353?language=en",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UN Careers. Location: ADDIS ABABA. Title signal: Intern - Administration and Business Operations.",
+      "responsibilities": [
+        "Support documentation, tracking, and daily operational workflows.",
+        "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
+        "Prepare records, tables, notes, and process follow-up material."
+      ],
+      "requirements": [
+        "Organization, attention to detail, Excel, and documentation skills.",
+        "Interest in operations, finance, HR, compliance, administration, or procurement.",
+        "Ability to work carefully with procedures and records."
+      ]
+    },
+    {
       "id": "286358",
       "title": "BUILDINGS AND COOLING UNIT INTERN",
       "organization": "UN Careers",
@@ -12302,6 +12434,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286379",
+      "title": "Methane Alert and Response System Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "PARIS",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-20",
+      "postedDate": "2026-10-13",
+      "url": "https://careers.un.org/jobSearchDescription/286379?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: PARIS. Title signal: Methane Alert and Response System Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "286380",
       "title": "Intern, Political Affairs",
       "organization": "UN Careers",
@@ -12316,6 +12474,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "programme"
       ],
       "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: NAIROBI. Title signal: Intern, Political Affairs.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "286385",
+      "title": "GlobalABC Intern - ICBC and Hubs & Action Groups",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "PARIS",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-22",
+      "postedDate": "2026-10-13",
+      "url": "https://careers.un.org/jobSearchDescription/286385?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: PARIS. Title signal: GlobalABC Intern - ICBC and Hubs & Action Groups.",
       "responsibilities": [
         "Track activities, deliverables, meetings, and programme documentation.",
         "Support reporting, coordination, note-taking, research, and knowledge management.",
@@ -12348,6 +12532,33 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Background in economics, public policy, development, social sciences, or a related field.",
         "Strong research, writing, Excel, and analytical skills.",
         "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "286398",
+      "title": "Cultural diplomacy and knowledge outreach intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-11-07",
+      "postedDate": "2026-10-13",
+      "url": "https://careers.un.org/jobSearchDescription/286398?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: GENEVA. Title signal: Cultural diplomacy and knowledge outreach intern.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
       ]
     },
     {
@@ -13270,7 +13481,7 @@ window.UN_MONITOR_JOB_CATALOG = {
     },
     {
       "id": "UNDP-37401",
-      "title": "Project Operations Intern - Turkish Speaking - Office Based",
+      "title": "Project Operations Intern - Turkish Speaking - Office Based - Full Time",
       "organization": "UNDP",
       "source": "UNDP",
       "category": "Admin, Finance & HR",
@@ -13282,7 +13493,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "tags": [
         "finance"
       ],
-      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UNDP. Location: Istanbul, Türkiye. Title signal: Project Operations Intern - Turkish Speaking - Office Based.",
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UNDP. Location: Istanbul, Türkiye. Title signal: Project Operations Intern - Turkish Speaking - Office Based - Full Time.",
       "responsibilities": [
         "Support documentation, tracking, and daily operational workflows.",
         "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
@@ -13313,6 +13524,60 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Track activities, deliverables, meetings, and programme documentation.",
         "Support reporting, coordination, note-taking, research, and knowledge management.",
         "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNDP-37446",
+      "title": "Stagiaire : Politiques et partenariats pour l'économie circulaire",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Programme & Project",
+      "location": "Abidjan, Cote d'Ivoire",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-21",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37446",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNDP. Location: Abidjan, Cote d'Ivoire. Title signal: Stagiaire : Politiques et partenariats pour l'économie circulaire.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNDP-37458",
+      "title": "Stagiaire en Opérationnalisation de l'économie circulaire",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Programme & Project",
+      "location": "Abidjan, Cote d'Ivoire",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-21",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37458",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNDP. Location: Abidjan, Cote d'Ivoire. Title signal: Stagiaire en Opérationnalisation de l'économie circulaire.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
       ],
       "requirements": [
         "Strong organization, writing, coordination, and research skills.",
@@ -15451,6 +15716,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "UNICEF-596280",
+      "title": "Internship: UPSHIFT Scale Intern, GPD/Office of Innovation - Stockholm, Sweden - 6 months (full time) - Remote",
+      "organization": "UNICEF",
+      "source": "UNICEF",
+      "category": "Programme & Project",
+      "location": "Sweden",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-20",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.unicef.org/en-us/job/596280/internship-upshift-scale-intern-gpdoffice-of-innovation-stockholm-sweden-6-months-full-time-remote",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNICEF. Location: Sweden. Title signal: Internship: UPSHIFT Scale Intern, GPD/Office of Innovation - Stockholm, Sweden - 6 months (full time) - Remote.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "UNICEF-job595210",
       "title": "UNICEF Thailand - Young Professionals Programme (Communication), UNICEF Thailand Country Office, Bangkok, Thailand, Job#595210",
       "organization": "UNICEF",
@@ -16687,7 +16978,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Bridgetown, Barbados",
       "continent": "Remote / Global",
       "deadline": "2026-10-18",
-      "postedDate": "2026-09-30",
+      "postedDate": "2026-10-01",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "data",
@@ -16740,7 +17031,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Antananarivo, Madagascar, The Democratic",
       "continent": "Remote / Global",
       "deadline": "2026-10-23",
-      "postedDate": "2026-10-09",
+      "postedDate": "2026-10-10",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "programme"
@@ -16767,7 +17058,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Antananarivo, Madagascar, The Democratic",
       "continent": "Remote / Global",
       "deadline": "2026-10-23",
-      "postedDate": "2026-10-09",
+      "postedDate": "2026-10-10",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "programme"
@@ -16794,7 +17085,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Bridgetown, Barbados",
       "continent": "Remote / Global",
       "deadline": "2026-10-18",
-      "postedDate": "2026-09-30",
+      "postedDate": "2026-10-01",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "communications",
