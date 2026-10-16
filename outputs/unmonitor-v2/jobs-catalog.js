@@ -12303,6 +12303,58 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286217",
+      "title": "Intern - Quality Management Handbook",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-11-05",
+      "postedDate": "2026-10-15",
+      "url": "https://careers.un.org/jobSearchDescription/286217?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: GENEVA. Title signal: Intern - Quality Management Handbook.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "286264",
+      "title": "Intern - Peacebuilding and Prevention",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "BEIRUT",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-29",
+      "postedDate": "2026-10-15",
+      "url": "https://careers.un.org/jobSearchDescription/286264?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: BEIRUT. Title signal: Intern - Peacebuilding and Prevention.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "286274",
       "title": "Social Media Intern",
       "organization": "UN Careers",
@@ -12519,7 +12571,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Programme & Project",
       "location": "PARIS",
       "continent": "Remote / Global",
-      "deadline": "2026-10-20",
+      "deadline": "2026-10-21",
       "postedDate": "2026-10-13",
       "url": "https://careers.un.org/jobSearchDescription/286379?language=en",
       "tags": [
@@ -12663,6 +12715,109 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong writing, editing, storytelling, and communication skills.",
         "Experience or interest in social media, campaigns, multimedia, or public information.",
         "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "286452",
+      "title": "GlobalABC intern - Strategic Communications, Partnerships and Events",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "PARIS",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-24",
+      "postedDate": "2026-10-15",
+      "url": "https://careers.un.org/jobSearchDescription/286452?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: PARIS. Title signal: GlobalABC intern - Strategic Communications, Partnerships and Events.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "286498",
+      "title": "Sustainable Development and Natural Resources Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "MEXICO CITY",
+      "continent": "North America",
+      "deadline": "2026-10-28",
+      "postedDate": "2026-10-15",
+      "url": "https://careers.un.org/jobSearchDescription/286498?language=en",
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: MEXICO CITY. Title signal: Sustainable Development and Natural Resources Intern.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "286563",
+      "title": "Legal Research Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Legal & Human Rights",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-29",
+      "postedDate": "2026-10-15",
+      "url": "https://careers.un.org/jobSearchDescription/286563?language=en",
+      "tags": [
+        "research",
+        "legal"
+      ],
+      "summary": "Legal, governance, or human-rights role focused on research, analysis, documentation, and support to legal/policy teams. Source: UN Careers. Location: GENEVA. Title signal: Legal Research Intern.",
+      "responsibilities": [
+        "Conduct legal, governance, or human-rights desk research.",
+        "Summarize documents, cases, policies, or country developments.",
+        "Support reports, briefings, meeting preparation, or documentation workflows."
+      ],
+      "requirements": [
+        "Background in law, international relations, human rights, governance, or related field.",
+        "Strong legal/policy research and concise writing skills.",
+        "Attention to detail and ability to handle sensitive material."
+      ]
+    },
+    {
+      "id": "286580",
+      "title": "Crime Prevention and Criminal Justice Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "VIENTIANE",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-28",
+      "postedDate": "2026-10-15",
+      "url": "https://careers.un.org/jobSearchDescription/286580?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: VIENTIANE. Title signal: Crime Prevention and Criminal Justice Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
       ]
     },
     {
@@ -13681,6 +13836,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Support reporting, coordination, note-taking, research, and knowledge management.",
         "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
         "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNDP-37449",
+      "title": "Pathfinder Multisectoral Tools Development Internship",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Programme & Project",
+      "location": "Home Based",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-22",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37449",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNDP. Location: Home Based. Title signal: Pathfinder Multisectoral Tools Development Internship.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
       ],
       "requirements": [
         "Strong organization, writing, coordination, and research skills.",
@@ -15899,6 +16080,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "UNICEF-596327",
+      "title": "Internship, Estagiário de Comunicação UNICEF Salvador, BA, Brasil.",
+      "organization": "UNICEF",
+      "source": "UNICEF",
+      "category": "Programme & Project",
+      "location": "Brazil",
+      "continent": "South America",
+      "deadline": "2026-10-21",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.unicef.org/en-us/job/596327/internship-estagiário-de-comunicação-unicef-salvador-ba-brasil",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNICEF. Location: Brazil. Title signal: Internship, Estagiário de Comunicação UNICEF Salvador, BA, Brasil..",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "UNICEF-job595210",
       "title": "UNICEF Thailand - Young Professionals Programme (Communication), UNICEF Thailand Country Office, Bangkok, Thailand, Job#595210",
       "organization": "UNICEF",
@@ -15952,6 +16159,33 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Organization, attention to detail, Excel, and documentation skills.",
         "Interest in operations, finance, HR, compliance, administration, or procurement.",
         "Ability to work carefully with procedures and records."
+      ]
+    },
+    {
+      "id": "UNIDO-1367237355",
+      "title": "Team Leader (Electro-Mechanic & Equipment)",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "Vienna, Austria",
+      "continent": "Europe",
+      "deadline": "2026-11-12",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Vienna-Team-Leader-%28Electro-Mechanic-&-Equipment%29/1367237355/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Vienna, Austria. Title signal: Team Leader (Electro-Mechanic & Equipment).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
       ]
     },
     {
@@ -17323,8 +17557,8 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Data & Analytics",
       "location": "Bridgetown, Barbados",
       "continent": "Remote / Global",
-      "deadline": "2026-10-18",
-      "postedDate": "2026-10-01",
+      "deadline": "2026-11-02",
+      "postedDate": "2026-10-16",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "data",
@@ -17430,8 +17664,8 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Communications & Advocacy",
       "location": "Bridgetown, Barbados",
       "continent": "Remote / Global",
-      "deadline": "2026-10-18",
-      "postedDate": "2026-10-01",
+      "deadline": "2026-11-02",
+      "postedDate": "2026-10-16",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "communications",
