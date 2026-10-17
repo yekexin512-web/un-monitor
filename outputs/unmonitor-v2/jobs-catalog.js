@@ -11397,6 +11397,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "285401",
+      "title": "Intern- Data Research",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Data & Analytics",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-11-07",
+      "postedDate": "2026-10-16",
+      "url": "https://careers.un.org/jobSearchDescription/285401?language=en",
+      "tags": [
+        "data",
+        "research"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UN Careers. Location: NEW YORK. Title signal: Intern- Data Research.",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
       "id": "285424",
       "title": "Intern - Journal of the United Nations",
       "organization": "UN Careers",
@@ -12329,6 +12356,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286228",
+      "title": "Intern - Archivist",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-11-10",
+      "postedDate": "2026-10-12",
+      "url": "https://careers.un.org/jobSearchDescription/286228?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: GENEVA. Title signal: Intern - Archivist.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "286264",
       "title": "Intern - Peacebuilding and Prevention",
       "organization": "UN Careers",
@@ -12821,6 +12874,29 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286706",
+      "title": "Intern: ITC in Iraq - Inclusive Economic Development",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-10-23",
+      "postedDate": "2026-10-16",
+      "url": "https://careers.un.org/jobSearchDescription/286706?language=en",
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: GENEVA. Title signal: Intern: ITC in Iraq - Inclusive Economic Development.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
       "id": "FAO-2601979",
       "title": "Call for Expression of Interest - Internship Programme for FAO headquarters (HQ)",
       "organization": "FAO",
@@ -13264,6 +13340,33 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNDP-36124",
+      "title": "SDG Finance and Private Sector Development Research Intern - 36124 (Home Based)",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Economics & Development",
+      "location": "Istanbul, Türkiye",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-30",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/36124",
+      "tags": [
+        "research",
+        "finance"
+      ],
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UNDP. Location: Istanbul, Türkiye. Title signal: SDG Finance and Private Sector Development Research Intern - 36124 (Home Based).",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
       ]
     },
     {
@@ -13921,6 +14024,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong writing, editing, storytelling, and communication skills.",
         "Experience or interest in social media, campaigns, multimedia, or public information.",
         "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNDP-37546",
+      "title": "Food and Power Initiative Intern, Planet Hub, BPPS (Home-based)",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Programme & Project",
+      "location": "Panama City, Panama",
+      "continent": "North America",
+      "deadline": "2026-10-30",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37546",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNDP. Location: Panama City, Panama. Title signal: Food and Power Initiative Intern, Planet Hub, BPPS (Home-based).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
       ]
     },
     {
