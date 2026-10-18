@@ -40,20 +40,6 @@ const statusLabels = {
 const allowedStatuses = Object.keys(statusLabels);
 const dashboardStatuses = ["found", "saved", "applied", "no_reply", "interview", "ghosted", "offer", "rejected", "rejected_interview", "withdrawn"];
 const submittedStatuses = dashboardStatuses.filter((status) => !["found", "saved"].includes(status));
-const pipelineColors = {
-  tracked: { node: "#b8aea7", flow: "rgba(184, 174, 167, 0.58)" },
-  found: { node: "#f28c28", flow: "rgba(248, 180, 108, 0.66)" },
-  submitted: { node: "#537da8", flow: "rgba(146, 177, 207, 0.62)" },
-  applied: { node: "#78b7b0", flow: "rgba(146, 208, 200, 0.58)" },
-  assessment: { node: "#e7c743", flow: "rgba(241, 218, 112, 0.58)" },
-  interview: { node: "#3f73a8", flow: "rgba(117, 156, 196, 0.58)" },
-  no_reply: { node: "#d5a447", flow: "rgba(229, 193, 114, 0.6)" },
-  ghosted: { node: "#8b7ca8", flow: "rgba(173, 157, 198, 0.58)" },
-  offer: { node: "#e6535c", flow: "rgba(235, 119, 127, 0.58)" },
-  withdrawn: { node: "#6fb1aa", flow: "rgba(129, 199, 193, 0.58)" },
-  rejected: { node: "#4e9b52", flow: "rgba(136, 191, 139, 0.58)" },
-  rejected_interview: { node: "#b55b5b", flow: "rgba(205, 133, 133, 0.58)" },
-};
 const now = new Date();
 const today = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0);
 const unicefSearchUrl = "https://jobs.unicef.org/en-us/search/?search-keyword=internship";
@@ -1178,7 +1164,6 @@ function renderDashboard() {
   document.getElementById("metric-applied-total").textContent = state.jobs.filter(isSubmittedApplication).length;
   renderApplicationChart();
   renderCategoryChart();
-  renderPipelineSankey();
   renderKanban();
 }
 
@@ -1250,79 +1235,6 @@ function renderCategoryChart() {
     `;
     chart.append(row);
   });
-}
-
-function renderPipelineSankey() {
-  const chart = document.getElementById("pipeline-sankey");
-  if (!chart) return;
-  chart.innerHTML = "";
-
-  const noReply = state.jobs.filter((job) => job.status === "applied" || job.status === "no_reply").length;
-  const rejected = state.jobs.filter((job) => job.status === "rejected").length;
-  const interviewCurrent = state.jobs.filter((job) => job.status === "interview").length;
-  const ghosted = state.jobs.filter((job) => job.status === "ghosted").length;
-  const rejectedInterview = state.jobs.filter((job) => job.status === "rejected_interview").length;
-  const offers = state.jobs.filter((job) => job.status === "offer").length;
-  const interviewReached = interviewCurrent + ghosted + rejectedInterview + offers;
-  const applied = noReply + rejected + interviewReached;
-  const scaleTotal = Math.max(1, applied);
-
-  const viewWidth = 1100;
-  const viewHeight = 390;
-  const nodeWidth = 24;
-  const x = { applied: 70, first: 410, second: 765 };
-  const y = { applied: 195, interview: 65, noReply: 195, rejected: 325, ghosted: 85, rejectedInterview: 195, offer: 305 };
-  const flowWidth = (count) => {
-    if (!count) return 0;
-    return Math.max(7, Math.min(96, (count / scaleTotal) * 108));
-  };
-  const nodeHeight = (count) => Math.max(16, flowWidth(count));
-  const curve = (fromX, fromY, toX, toY) => {
-    const midX = fromX + (toX - fromX) * 0.55;
-    return `M ${fromX} ${fromY} C ${midX} ${fromY}, ${midX} ${toY}, ${toX} ${toY}`;
-  };
-  const label = (count, text, labelX, labelY, anchor = "start") => `
-    <text class="pipeline-count" x="${labelX}" y="${labelY}" text-anchor="${anchor}">${count}</text>
-    <text class="pipeline-label" x="${labelX}" y="${labelY + 31}" text-anchor="${anchor}">${escapeHtml(text)}</text>
-  `;
-  const node = (nodeX, centerY, count, color) => {
-    const height = nodeHeight(count);
-    return `<rect class="pipeline-node" x="${nodeX}" y="${centerY - height / 2}" width="${nodeWidth}" height="${height}" fill="${color}" />`;
-  };
-  const link = (fromX, fromY, toX, toY, count, color, name) => `
-    <path class="pipeline-link" d="${curve(fromX, fromY, toX, toY)}" stroke="${color}" stroke-width="${flowWidth(count)}">
-      <title>${count} ${escapeHtml(name)}</title>
-    </path>
-  `;
-
-  const links = [];
-  if (noReply) links.push(link(x.applied + nodeWidth, y.applied, x.first, y.noReply, noReply, pipelineColors.no_reply.flow, "no reply"));
-  if (interviewReached) links.push(link(x.applied + nodeWidth, y.applied, x.first, y.interview, interviewReached, pipelineColors.interview.flow, "interview"));
-  if (rejected) links.push(link(x.applied + nodeWidth, y.applied, x.first, y.rejected, rejected, pipelineColors.rejected.flow, "rejected"));
-  if (ghosted) links.push(link(x.first + nodeWidth, y.interview, x.second, y.ghosted, ghosted, pipelineColors.ghosted.flow, "ghosted"));
-  if (rejectedInterview) links.push(link(x.first + nodeWidth, y.interview, x.second, y.rejectedInterview, rejectedInterview, pipelineColors.rejected_interview.flow, "rejected after interview"));
-  if (offers) links.push(link(x.first + nodeWidth, y.interview, x.second, y.offer, offers, pipelineColors.offer.flow, "offer"));
-
-  const nodes = [node(x.applied, y.applied, applied, pipelineColors.submitted.node)];
-  const labels = [label(applied, "Applied", x.applied + 38, y.applied - 18)];
-  const addStage = (count, text, nodeX, centerY, colorKey) => {
-    nodes.push(node(nodeX, centerY, count, pipelineColors[colorKey].node));
-    labels.push(label(count, text, nodeX + 38, centerY - 18));
-  };
-  addStage(interviewReached, interviewCurrent ? `Interview (${interviewCurrent} active)` : "Interview", x.first, y.interview, "interview");
-  addStage(noReply, "No reply", x.first, y.noReply, "no_reply");
-  addStage(rejected, "Rejected", x.first, y.rejected, "rejected");
-  addStage(ghosted, "Ghosted", x.second, y.ghosted, "ghosted");
-  addStage(rejectedInterview, "Rejected", x.second, y.rejectedInterview, "rejected_interview");
-  addStage(offers, "Offer", x.second, y.offer, "offer");
-
-  chart.innerHTML = `
-    <svg viewBox="0 0 ${viewWidth} ${viewHeight}" role="img" aria-label="Application pipeline flow">
-      <g>${links.join("")}</g>
-      <g>${nodes.join("")}</g>
-      <g>${labels.join("")}</g>
-    </svg>
-  `;
 }
 
 function renderKanban() {

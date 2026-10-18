@@ -102,10 +102,6 @@ const server = http.createServer((req, res) => {
         .map(job => ({ title: job.title, organization: job.organization, category: job.category })));
       assert.equal(restoredApplications.length, 26);
       assert.ok(restoredApplications.every(job => !job.title.startsWith("Archived job") && job.organization !== "Unknown organization" && job.category !== "Unspecified"));
-      const pipeline = await page.locator("#pipeline-sankey").innerText();
-      for (const label of ["Applied", "No reply", "Interview", "Ghosted", "Rejected", "Offer"]) {
-        assert.ok(pipeline.includes(label), `Pipeline is missing ${label}`);
-      }
       const chartBounds = await page.locator("#application-chart").evaluate((chart) => {
         const bounds = chart.getBoundingClientRect();
         return { width: chart.clientWidth, scrollWidth: chart.scrollWidth,
@@ -128,16 +124,7 @@ const server = http.createServer((req, res) => {
         return labels.some((label, index) => index > 0 && labels[index - 1].right + 2 > label.left);
       });
       assert.equal(labelsOverlap, false, `30-day date labels overlap at ${width}px`);
-      const pipelineBounds = await page.locator("#pipeline-sankey svg").evaluate((svg) => {
-        const box = svg.getBoundingClientRect();
-        return [...svg.querySelectorAll("text")].every((text) => {
-          const textBox = text.getBoundingClientRect();
-          return textBox.left >= box.left - 1 && textBox.right <= box.right + 1 && textBox.top >= box.top - 1 && textBox.bottom <= box.bottom + 1;
-        });
-      });
-      assert.ok(pipelineBounds, `Pipeline labels escape SVG at ${width}px`);
       await page.locator("#dashboard-view > .content-grid").screenshot({ path: path.resolve(__dirname, `../logs/history-charts-${width}.png`) });
-      await page.locator("#pipeline-sankey").screenshot({ path: path.resolve(__dirname, `../logs/pipeline-${width}.png`) });
       await page.screenshot({ path: path.resolve(__dirname, `../logs/records-${width}.png`) });
       const accountBox = await page.locator("#auth-card").boundingBox();
       assert.ok(accountBox.x >= 0 && accountBox.x + accountBox.width <= width);
@@ -174,7 +161,7 @@ const server = http.createServer((req, res) => {
       assert.deepEqual(errors, []);
       await page.close();
     }
-    console.log("PASS: 25 historical applications, Due today, four viewport timelines, two-stage pipeline, login and account isolation.");
+    console.log("PASS: 25 historical applications, Due today, four viewport timelines, status board, login and account isolation.");
   } finally {
     if (browser) await browser.close();
     await new Promise((resolve) => server.close(resolve));
