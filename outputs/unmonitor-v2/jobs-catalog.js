@@ -12277,6 +12277,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286169",
+      "title": "Intern | CPCD Office of the Director | Knowledge Management, Automation & Digital Publishing",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Tech & Digital",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-10-31",
+      "postedDate": "2026-10-17",
+      "url": "https://careers.un.org/jobSearchDescription/286169?language=en",
+      "tags": [
+        "digital"
+      ],
+      "summary": "Technical or digital role supporting software, ICT, digital transformation, AI, GIS, or technology-enabled workflows. Source: UN Careers. Location: NEW YORK. Title signal: Intern | CPCD Office of the Director | Knowledge Management, Automation & Digital Publishing.",
+      "responsibilities": [
+        "Support digital tools, systems, prototypes, or technical documentation.",
+        "Assist with requirements gathering, testing, implementation support, or workflow mapping.",
+        "Contribute to technology-enabled analysis, automation, or knowledge products."
+      ],
+      "requirements": [
+        "Technical background in computer science, information systems, GIS, digital innovation, or related field.",
+        "Relevant software, web, database, GIS, or ICT skills.",
+        "Ability to explain technical work clearly to non-technical stakeholders."
+      ]
+    },
+    {
       "id": "286186",
       "title": "Communication Support Intern",
       "organization": "UN Careers",
