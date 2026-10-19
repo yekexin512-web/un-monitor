@@ -12900,6 +12900,29 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286611",
+      "title": "Sustainable Development Affairs Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "BANGKOK",
+      "continent": "Asia",
+      "deadline": "2026-11-18",
+      "postedDate": "2026-10-19",
+      "url": "https://careers.un.org/jobSearchDescription/286611?language=en",
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: BANGKOK. Title signal: Sustainable Development Affairs Intern.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
       "id": "286706",
       "title": "Intern: ITC in Iraq - Inclusive Economic Development",
       "organization": "UN Careers",
