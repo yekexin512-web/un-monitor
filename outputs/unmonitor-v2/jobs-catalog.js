@@ -12042,6 +12042,87 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286078",
+      "title": "Pasantía de Apoyo al Área de Seguridad y Justicia sobre Monitoreo Judicial",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "MEXICO CITY",
+      "continent": "North America",
+      "deadline": "2026-11-01",
+      "postedDate": "2026-10-19",
+      "url": "https://careers.un.org/jobSearchDescription/286078?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: MEXICO CITY. Title signal: Pasantía de Apoyo al Área de Seguridad y Justicia sobre Monitoreo Judicial.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "286079",
+      "title": "Pasantía con enfoque en violaciones graves a los derechos HUMANOS",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "MEXICO CITY",
+      "continent": "North America",
+      "deadline": "2026-11-01",
+      "postedDate": "2026-10-19",
+      "url": "https://careers.un.org/jobSearchDescription/286079?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: MEXICO CITY. Title signal: Pasantía con enfoque en violaciones graves a los derechos HUMANOS.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "286080",
+      "title": "Pasantía en Diseño y Comunicación Visual",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "MEXICO CITY",
+      "continent": "North America",
+      "deadline": "2026-11-01",
+      "postedDate": "2026-10-19",
+      "url": "https://careers.un.org/jobSearchDescription/286080?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: MEXICO CITY. Title signal: Pasantía en Diseño y Comunicación Visual.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "286081",
       "title": "INTERN for the Secretariat of the Group of Human Rights Experts on Nicaragua",
       "organization": "UN Careers",
@@ -12847,6 +12928,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286531",
+      "title": "INTERN - HUMAN RIGHTS",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Legal & Human Rights",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-11-03",
+      "postedDate": "2026-10-19",
+      "url": "https://careers.un.org/jobSearchDescription/286531?language=en",
+      "tags": [
+        "legal"
+      ],
+      "summary": "Legal, governance, or human-rights role focused on research, analysis, documentation, and support to legal/policy teams. Source: UN Careers. Location: GENEVA. Title signal: INTERN - HUMAN RIGHTS.",
+      "responsibilities": [
+        "Conduct legal, governance, or human-rights desk research.",
+        "Summarize documents, cases, policies, or country developments.",
+        "Support reports, briefings, meeting preparation, or documentation workflows."
+      ],
+      "requirements": [
+        "Background in law, international relations, human rights, governance, or related field.",
+        "Strong legal/policy research and concise writing skills.",
+        "Attention to detail and ability to handle sensitive material."
+      ]
+    },
+    {
       "id": "286563",
       "title": "Legal Research Intern",
       "organization": "UN Careers",
@@ -12920,6 +13027,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Background in economics, public policy, development, social sciences, or a related field.",
         "Strong research, writing, Excel, and analytical skills.",
         "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "286677",
+      "title": "Library Intern - Office of the Registrar",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Data & Analytics",
+      "location": "ARUSHA",
+      "continent": "Africa",
+      "deadline": "2026-10-25",
+      "postedDate": "2026-10-19",
+      "url": "https://careers.un.org/jobSearchDescription/286677?language=en",
+      "tags": [
+        "data"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UN Careers. Location: ARUSHA. Title signal: Library Intern - Office of the Registrar.",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
       ]
     },
     {
@@ -13090,6 +13223,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "programme"
       ],
       "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: FAO. Location: Various Locations. Title signal: Call for Expression of Interest - Internship Programme for Near East and North Africa (RNE).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "FAO-2602160",
+      "title": "Call for Expression of Interest -Internship Programme for the World Food Forum (WFF)",
+      "organization": "FAO",
+      "source": "FAO",
+      "category": "Programme & Project",
+      "location": "Italy-Rome",
+      "continent": "Europe",
+      "deadline": "2026-07-06",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.fao.org/careersection/fao_external/jobdetail.ftl?lang=en&job=2602160",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: FAO. Location: Italy-Rome. Title signal: Call for Expression of Interest -Internship Programme for the World Food Forum (WFF).",
       "responsibilities": [
         "Track activities, deliverables, meetings, and programme documentation.",
         "Support reporting, coordination, note-taking, research, and knowledge management.",
@@ -13522,28 +13681,29 @@ window.UN_MONITOR_JOB_CATALOG = {
     },
     {
       "id": "UNDP-36925",
-      "title": "Internship Paid",
+      "title": "Communications Intern",
       "organization": "UNDP",
       "source": "UNDP",
-      "category": "Programme & Project",
+      "category": "Communications & Advocacy",
       "location": "Bonn, Germany",
       "continent": "Europe",
       "deadline": "2026-10-28",
       "postedDate": "2026-06-29",
       "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/36925",
       "tags": [
-        "programme"
+        "communications",
+        "advocacy"
       ],
-      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNDP. Location: Bonn, Germany. Title signal: Internship Paid.",
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNDP. Location: Bonn, Germany. Title signal: Communications Intern.",
       "responsibilities": [
-        "Track activities, deliverables, meetings, and programme documentation.",
-        "Support reporting, coordination, note-taking, research, and knowledge management.",
-        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
       ],
       "requirements": [
-        "Strong organization, writing, coordination, and research skills.",
-        "Interest in project/programme management and UN operational workflows.",
-        "Ability to work across teams and keep clear records."
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
       ]
     },
     {
@@ -14136,7 +14296,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Multiple, Multiple",
       "continent": "Remote / Global",
       "deadline": "2026-12-31",
-      "postedDate": "2026-09-21",
+      "postedDate": "2026-10-20",
       "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Bureau-Of-Human-Resources-Management/1347540857/",
       "tags": [
         "finance"
@@ -14162,7 +14322,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Multiple, Multiple",
       "continent": "Remote / Global",
       "deadline": "2026-12-31",
-      "postedDate": "2026-09-21",
+      "postedDate": "2026-10-20",
       "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Communication-and-Information-Sector/1347542457/",
       "tags": [
         "communications",
@@ -17816,7 +17976,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Antananarivo, Madagascar, The Democratic",
       "continent": "Remote / Global",
       "deadline": "2026-10-23",
-      "postedDate": "2026-10-10",
+      "postedDate": "2026-10-20",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "programme"
@@ -17876,6 +18036,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "programme"
       ],
       "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: WFP. Location: Freetown, Sierra Leone, The Rep. Of. Title signal: Intern-VAM.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "WFP-JR127688",
+      "title": "Internship - Management Services, WFP China Office, Beijing",
+      "organization": "WFP",
+      "source": "WFP",
+      "category": "Programme & Project",
+      "location": "Beijing, China",
+      "continent": "Asia",
+      "deadline": "2026-11-02",
+      "postedDate": "2026-10-20",
+      "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: WFP. Location: Beijing, China. Title signal: Internship - Management Services, WFP China Office, Beijing.",
       "responsibilities": [
         "Track activities, deliverables, meetings, and programme documentation.",
         "Support reporting, coordination, note-taking, research, and knowledge management.",
