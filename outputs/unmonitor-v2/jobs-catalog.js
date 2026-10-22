@@ -12065,6 +12065,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286051",
+      "title": "Urban Food Systems Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "PARIS",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-05",
+      "postedDate": "2026-10-21",
+      "url": "https://careers.un.org/jobSearchDescription/286051?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: PARIS. Title signal: Urban Food Systems Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "286060",
       "title": "INTERN - PUBLIC INFORMATION",
       "organization": "UN Careers",
@@ -12434,6 +12460,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286174",
+      "title": "Intern - Project and Knowledge Management Support",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "MONTREAL",
+      "continent": "North America",
+      "deadline": "2026-11-05",
+      "postedDate": "2026-10-21",
+      "url": "https://careers.un.org/jobSearchDescription/286174?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: MONTREAL. Title signal: Intern - Project and Knowledge Management Support.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "286186",
       "title": "Communication Support Intern",
       "organization": "UN Careers",
@@ -12553,6 +12605,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "programme"
       ],
       "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: BEIRUT. Title signal: Intern - Peacebuilding and Prevention.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "286269",
+      "title": "Programme Management Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "ABIDJAN, NAIROBI",
+      "continent": "Africa",
+      "deadline": "2026-11-04",
+      "postedDate": "2026-10-21",
+      "url": "https://careers.un.org/jobSearchDescription/286269?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: ABIDJAN, NAIROBI. Title signal: Programme Management Intern.",
       "responsibilities": [
         "Track activities, deliverables, meetings, and programme documentation.",
         "Support reporting, coordination, note-taking, research, and knowledge management.",
@@ -12955,6 +13033,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286447",
+      "title": "Project Management Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "NAIROBI",
+      "continent": "Africa",
+      "deadline": "2026-11-04",
+      "postedDate": "2026-10-21",
+      "url": "https://careers.un.org/jobSearchDescription/286447?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: NAIROBI. Title signal: Project Management Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "286452",
       "title": "GlobalABC intern - Strategic Communications, Partnerships and Events",
       "organization": "UN Careers",
@@ -13190,6 +13294,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286607",
+      "title": "Internship - Human Rights - Office of the Director, Civil Society Team (Human Rights Council and Treaty Mechanisms Division)",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Legal & Human Rights",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-11-03",
+      "postedDate": "2026-10-21",
+      "url": "https://careers.un.org/jobSearchDescription/286607?language=en",
+      "tags": [
+        "legal"
+      ],
+      "summary": "Legal, governance, or human-rights role focused on research, analysis, documentation, and support to legal/policy teams. Source: UN Careers. Location: GENEVA. Title signal: Internship - Human Rights - Office of the Director, Civil Society Team (Human Rights Council and Treaty Mechanisms Division).",
+      "responsibilities": [
+        "Conduct legal, governance, or human-rights desk research.",
+        "Summarize documents, cases, policies, or country developments.",
+        "Support reports, briefings, meeting preparation, or documentation workflows."
+      ],
+      "requirements": [
+        "Background in law, international relations, human rights, governance, or related field.",
+        "Strong legal/policy research and concise writing skills.",
+        "Attention to detail and ability to handle sensitive material."
+      ]
+    },
+    {
       "id": "286611",
       "title": "Sustainable Development Affairs Intern",
       "organization": "UN Careers",
@@ -13266,6 +13396,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286702",
+      "title": "Intern: Talent Attraction and Outreach",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-11-07",
+      "postedDate": "2026-10-21",
+      "url": "https://careers.un.org/jobSearchDescription/286702?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: GENEVA. Title signal: Intern: Talent Attraction and Outreach.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
       "id": "286706",
       "title": "Intern: ITC in Iraq - Inclusive Economic Development",
       "organization": "UN Careers",
@@ -13286,6 +13443,84 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Background in economics, public policy, development, social sciences, or a related field.",
         "Strong research, writing, Excel, and analytical skills.",
         "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "286720",
+      "title": "Intern - Executive Office of the Basel, Rotterdam and Stockholm Conventions",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-11-01",
+      "postedDate": "2026-10-21",
+      "url": "https://careers.un.org/jobSearchDescription/286720?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: GENEVA. Title signal: Intern - Executive Office of the Basel, Rotterdam and Stockholm Conventions.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "286792",
+      "title": "Urban Law Intern (Multiple Positions)",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "NAIROBI",
+      "continent": "Africa",
+      "deadline": "2026-11-04",
+      "postedDate": "2026-10-21",
+      "url": "https://careers.un.org/jobSearchDescription/286792?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: NAIROBI. Title signal: Urban Law Intern (Multiple Positions).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "286948",
+      "title": "Intern: Security Risk Management",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Admin, Finance & HR",
+      "location": "VIENNA",
+      "continent": "Europe",
+      "deadline": "2026-11-11",
+      "postedDate": "2026-10-22",
+      "url": "https://careers.un.org/jobSearchDescription/286948?language=en",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UN Careers. Location: VIENNA. Title signal: Intern: Security Risk Management.",
+      "responsibilities": [
+        "Support documentation, tracking, and daily operational workflows.",
+        "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
+        "Prepare records, tables, notes, and process follow-up material."
+      ],
+      "requirements": [
+        "Organization, attention to detail, Excel, and documentation skills.",
+        "Interest in operations, finance, HR, compliance, administration, or procurement.",
+        "Ability to work carefully with procedures and records."
       ]
     },
     {
@@ -14469,6 +14704,33 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNDP-37652",
+      "title": "In Person: Communications Intern to Support the Knowledge Project in Dubai, UAE",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Communications & Advocacy",
+      "location": "Dubai, United Arab Emirates",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-04",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37652",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNDP. Location: Dubai, United Arab Emirates. Title signal: In Person: Communications Intern to Support the Knowledge Project in Dubai, UAE.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
       ]
     },
     {
@@ -16654,6 +16916,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "UNICEF-596461",
+      "title": "Special Call for Person Living with Disability: Internship, Youth & Disability Inclusion with UNICEF Indonesia - only for Indonesians LIVING WITH DISABILITY",
+      "organization": "UNICEF",
+      "source": "UNICEF",
+      "category": "Programme & Project",
+      "location": "Indonesia",
+      "continent": "Asia",
+      "deadline": "2026-11-11",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.unicef.org/en-us/job/596461/special-call-for-person-living-with-disability-internship-youth-disability-inclusion-with-unicef-indonesia-only-for-indonesians-living-with-disability",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNICEF. Location: Indonesia. Title signal: Special Call for Person Living with Disability: Internship, Youth & Disability Inclusion with UNICEF Indonesia - only for Indonesians LIVING WITH DISABILITY.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "UNICEF-job595210",
       "title": "UNICEF Thailand - Young Professionals Programme (Communication), UNICEF Thailand Country Office, Bangkok, Thailand, Job#595210",
       "organization": "UNICEF",
@@ -18265,8 +18553,8 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Programme & Project",
       "location": "Beijing, China",
       "continent": "Asia",
-      "deadline": "2026-11-02",
-      "postedDate": "2026-10-20",
+      "deadline": "2026-11-06",
+      "postedDate": "2026-10-22",
       "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
       "tags": [
         "programme"
@@ -18281,6 +18569,85 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "WFP-JR127738",
+      "title": "Internship - Policy Engagement - Programme Policy Team, WFP Beijing Office, China",
+      "organization": "WFP",
+      "source": "WFP",
+      "category": "Economics & Development",
+      "location": "Beijing, China",
+      "continent": "Asia",
+      "deadline": "2026-11-06",
+      "postedDate": "2026-10-22",
+      "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
+      "tags": [
+        "policy",
+        "programme"
+      ],
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: WFP. Location: Beijing, China. Title signal: Internship - Policy Engagement - Programme Policy Team, WFP Beijing Office, China.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "WFP-JR127744",
+      "title": "Internship - Knowledge Management, Due Diligence Team, Supply Chain Division - Rome, Italy",
+      "organization": "WFP",
+      "source": "WFP",
+      "category": "Programme & Project",
+      "location": "Rome, Italy",
+      "continent": "Europe",
+      "deadline": "2026-11-04",
+      "postedDate": "2026-10-22",
+      "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: WFP. Location: Rome, Italy. Title signal: Internship - Knowledge Management, Due Diligence Team, Supply Chain Division - Rome, Italy.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "WFP-JR127793",
+      "title": "Human Resources Intern",
+      "organization": "WFP",
+      "source": "WFP",
+      "category": "Admin, Finance & HR",
+      "location": "Dakar, Senegal, The Republic Of",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-20",
+      "postedDate": "2026-10-22",
+      "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: WFP. Location: Dakar, Senegal, The Republic Of. Title signal: Human Resources Intern.",
+      "responsibilities": [
+        "Support documentation, tracking, and daily operational workflows.",
+        "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
+        "Prepare records, tables, notes, and process follow-up material."
+      ],
+      "requirements": [
+        "Organization, attention to detail, Excel, and documentation skills.",
+        "Interest in operations, finance, HR, compliance, administration, or procurement.",
+        "Ability to work carefully with procedures and records."
       ]
     }
   ]
