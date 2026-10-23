@@ -13112,6 +13112,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286467",
+      "title": "Knowledge Management & Communications Support Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "NAIROBI, Bilbao",
+      "continent": "Africa",
+      "deadline": "2026-11-05",
+      "postedDate": "2026-10-22",
+      "url": "https://careers.un.org/jobSearchDescription/286467?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: NAIROBI, Bilbao. Title signal: Knowledge Management & Communications Support Intern.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
       "id": "286491",
       "title": "Socia Media Intern",
       "organization": "UN Careers",
@@ -13396,6 +13423,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286691",
+      "title": "UNEP Finance Initiative (UNEP FI) Pollution and Circular Economy Support Internship",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-11-08",
+      "postedDate": "2026-10-21",
+      "url": "https://careers.un.org/jobSearchDescription/286691?language=en",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: GENEVA. Title signal: UNEP Finance Initiative (UNEP FI) Pollution and Circular Economy Support Internship.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
       "id": "286702",
       "title": "Intern: Talent Attraction and Outreach",
       "organization": "UN Careers",
@@ -13498,6 +13551,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286913",
+      "title": "Intern - Administrative Assistant",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Admin, Finance & HR",
+      "location": "DILI (EAST TIMOR)",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-30",
+      "postedDate": "2026-10-23",
+      "url": "https://careers.un.org/jobSearchDescription/286913?language=en",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UN Careers. Location: DILI (EAST TIMOR). Title signal: Intern - Administrative Assistant.",
+      "responsibilities": [
+        "Support documentation, tracking, and daily operational workflows.",
+        "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
+        "Prepare records, tables, notes, and process follow-up material."
+      ],
+      "requirements": [
+        "Organization, attention to detail, Excel, and documentation skills.",
+        "Interest in operations, finance, HR, compliance, administration, or procurement.",
+        "Ability to work carefully with procedures and records."
+      ]
+    },
+    {
       "id": "286948",
       "title": "Intern: Security Risk Management",
       "organization": "UN Careers",
@@ -13521,6 +13600,33 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Organization, attention to detail, Excel, and documentation skills.",
         "Interest in operations, finance, HR, compliance, administration, or procurement.",
         "Ability to work carefully with procedures and records."
+      ]
+    },
+    {
+      "id": "287056",
+      "title": "Communications Intern (AI and Innovation)",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-11-08",
+      "postedDate": "2026-10-22",
+      "url": "https://careers.un.org/jobSearchDescription/287056?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: NEW YORK. Title signal: Communications Intern (AI and Innovation).",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
       ]
     },
     {
@@ -14734,6 +14840,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "UNDP-37696",
+      "title": "RBA Directorate/Front Office Intern",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Programme & Project",
+      "location": "New York, United States",
+      "continent": "North America",
+      "deadline": "2026-11-06",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37696",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNDP. Location: New York, United States. Title signal: RBA Directorate/Front Office Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "UNESCO-1331682557",
       "title": "INTERNSHIP: All Sectors/Bureaus",
       "organization": "UNESCO",
@@ -15586,6 +15718,84 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong research, writing, and stakeholder-analysis skills.",
         "Interest in partnerships, fundraising, external relations, or private-sector engagement.",
         "Ability to synthesize information for senior audiences."
+      ]
+    },
+    {
+      "id": "UNHCR-JR2668974",
+      "title": "Administration Intern",
+      "organization": "UNHCR",
+      "source": "UNHCR",
+      "category": "Admin, Finance & HR",
+      "location": "Dar Es Salaam, Tanzania",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-03",
+      "postedDate": "2026-10-23",
+      "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Dar-Es-Salaam-Tanzania/Administration-Intern_JR2668974",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UNHCR. Location: Dar Es Salaam, Tanzania. Title signal: Administration Intern.",
+      "responsibilities": [
+        "Support documentation, tracking, and daily operational workflows.",
+        "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
+        "Prepare records, tables, notes, and process follow-up material."
+      ],
+      "requirements": [
+        "Organization, attention to detail, Excel, and documentation skills.",
+        "Interest in operations, finance, HR, compliance, administration, or procurement.",
+        "Ability to work carefully with procedures and records."
+      ]
+    },
+    {
+      "id": "UNHCR-JR2668975",
+      "title": "Administration Intern",
+      "organization": "UNHCR",
+      "source": "UNHCR",
+      "category": "Admin, Finance & HR",
+      "location": "Dar Es Salaam, Tanzania",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-03",
+      "postedDate": "2026-10-23",
+      "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Dar-Es-Salaam-Tanzania/Administration-Intern_JR2668975",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UNHCR. Location: Dar Es Salaam, Tanzania. Title signal: Administration Intern.",
+      "responsibilities": [
+        "Support documentation, tracking, and daily operational workflows.",
+        "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
+        "Prepare records, tables, notes, and process follow-up material."
+      ],
+      "requirements": [
+        "Organization, attention to detail, Excel, and documentation skills.",
+        "Interest in operations, finance, HR, compliance, administration, or procurement.",
+        "Ability to work carefully with procedures and records."
+      ]
+    },
+    {
+      "id": "UNHCR-JR2668976",
+      "title": "Administration Intern",
+      "organization": "UNHCR",
+      "source": "UNHCR",
+      "category": "Admin, Finance & HR",
+      "location": "Dar Es Salaam, Tanzania",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-03",
+      "postedDate": "2026-10-23",
+      "url": "https://unhcr.wd3.myworkdayjobs.com/External/job/Dar-Es-Salaam-Tanzania/Administration-Intern_JR2668976",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Operations role supporting administration, finance, HR, risk, compliance, audit, procurement, or office workflows. Source: UNHCR. Location: Dar Es Salaam, Tanzania. Title signal: Administration Intern.",
+      "responsibilities": [
+        "Support documentation, tracking, and daily operational workflows.",
+        "Assist with finance, HR, administration, risk, compliance, audit, or procurement tasks.",
+        "Prepare records, tables, notes, and process follow-up material."
+      ],
+      "requirements": [
+        "Organization, attention to detail, Excel, and documentation skills.",
+        "Interest in operations, finance, HR, compliance, administration, or procurement.",
+        "Ability to work carefully with procedures and records."
       ]
     },
     {
@@ -17790,6 +18000,57 @@ window.UN_MONITOR_JOB_CATALOG = {
         "programme"
       ],
       "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Bosasso, Somalia. Title signal: Project Driver.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNIDO-1373927755",
+      "title": "External Relations Officer",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Partnerships",
+      "location": "Vienna, Austria",
+      "continent": "Europe",
+      "deadline": "2026-11-15",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Vienna-External-Relations-Officer/1373927755/",
+      "summary": "Partnerships or external-relations role supporting donor engagement, stakeholder mapping, fundraising, or resource mobilization. Source: UNIDO. Location: Vienna, Austria. Title signal: External Relations Officer.",
+      "responsibilities": [
+        "Support donor/stakeholder mapping and external-relations tracking.",
+        "Prepare briefing notes, partner profiles, presentations, or visibility material.",
+        "Assist with resource-mobilization and partnership documentation.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong research, writing, and stakeholder-analysis skills.",
+        "Interest in partnerships, fundraising, external relations, or private-sector engagement.",
+        "Ability to synthesize information for senior audiences."
+      ]
+    },
+    {
+      "id": "UNIDO-1374000155",
+      "title": "Expert(e) en Suivi-Évaluation et Pilotage de la Performance des Entreprises Accompagnées",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "COI - Other cities, Comoros",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-12",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/COI-Other-cities-Expert%28e%29-en-Suivi-%C3%89valuation-et-Pilotage-de-la-Performance-des-Entreprises-Accompagn%C3%A9es/1374000155/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: COI - Other cities, Comoros. Title signal: Expert(e) en Suivi-Évaluation et Pilotage de la Performance des Entreprises Accompagnées.",
       "responsibilities": [
         "Track activities, deliverables, meetings, and programme documentation.",
         "Support reporting, coordination, note-taking, research, and knowledge management.",
