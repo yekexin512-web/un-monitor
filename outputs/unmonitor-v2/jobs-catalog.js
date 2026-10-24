@@ -12118,6 +12118,32 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286071",
+      "title": "Information Systems Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Tech & Digital",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-11-05",
+      "postedDate": "2026-10-23",
+      "url": "https://careers.un.org/jobSearchDescription/286071?language=en",
+      "tags": [
+        "digital"
+      ],
+      "summary": "Technical or digital role supporting software, ICT, digital transformation, AI, GIS, or technology-enabled workflows. Source: UN Careers. Location: NEW YORK. Title signal: Information Systems Intern.",
+      "responsibilities": [
+        "Support digital tools, systems, prototypes, or technical documentation.",
+        "Assist with requirements gathering, testing, implementation support, or workflow mapping.",
+        "Contribute to technology-enabled analysis, automation, or knowledge products."
+      ],
+      "requirements": [
+        "Technical background in computer science, information systems, GIS, digital innovation, or related field.",
+        "Relevant software, web, database, GIS, or ICT skills.",
+        "Ability to explain technical work clearly to non-technical stakeholders."
+      ]
+    },
+    {
       "id": "286078",
       "title": "Pasantía de Apoyo al Área de Seguridad y Justicia sobre Monitoreo Judicial",
       "organization": "UN Careers",
@@ -13551,6 +13577,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286879",
+      "title": "PUBLIC INFORMATION - DIGITAL COMMUNICATIONS INTERN",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Tech & Digital",
+      "location": "ETH - OTHER CITIES",
+      "continent": "Remote / Global",
+      "deadline": "2026-10-27",
+      "postedDate": "2026-10-21",
+      "url": "https://careers.un.org/jobSearchDescription/286879?language=en",
+      "tags": [
+        "communications",
+        "digital"
+      ],
+      "summary": "Technical or digital role supporting software, ICT, digital transformation, AI, GIS, or technology-enabled workflows. Source: UN Careers. Location: ETH - OTHER CITIES. Title signal: PUBLIC INFORMATION - DIGITAL COMMUNICATIONS INTERN.",
+      "responsibilities": [
+        "Support digital tools, systems, prototypes, or technical documentation.",
+        "Assist with requirements gathering, testing, implementation support, or workflow mapping.",
+        "Contribute to technology-enabled analysis, automation, or knowledge products."
+      ],
+      "requirements": [
+        "Technical background in computer science, information systems, GIS, digital innovation, or related field.",
+        "Relevant software, web, database, GIS, or ICT skills.",
+        "Ability to explain technical work clearly to non-technical stakeholders."
+      ]
+    },
+    {
       "id": "286913",
       "title": "Intern - Administrative Assistant",
       "organization": "UN Careers",
@@ -13600,6 +13653,58 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Organization, attention to detail, Excel, and documentation skills.",
         "Interest in operations, finance, HR, compliance, administration, or procurement.",
         "Ability to work carefully with procedures and records."
+      ]
+    },
+    {
+      "id": "286970",
+      "title": "AI-enhanced DevSecOps development Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "BANGKOK",
+      "continent": "Asia",
+      "deadline": "2026-11-20",
+      "postedDate": "2026-10-21",
+      "url": "https://careers.un.org/jobSearchDescription/286970?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: BANGKOK. Title signal: AI-enhanced DevSecOps development Intern.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "287027",
+      "title": "INTERN - ECONOMIC AFFAIRS (TRADE POLICY)",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "BANGKOK",
+      "continent": "Asia",
+      "deadline": "2026-12-05",
+      "postedDate": "2026-10-22",
+      "url": "https://careers.un.org/jobSearchDescription/287027?language=en",
+      "tags": [
+        "policy"
+      ],
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: BANGKOK. Title signal: INTERN - ECONOMIC AFFAIRS (TRADE POLICY).",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
       ]
     },
     {
@@ -14874,7 +14979,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Multiple, Multiple",
       "continent": "Remote / Global",
       "deadline": "2026-12-31",
-      "postedDate": "2026-09-25",
+      "postedDate": "2026-10-24",
       "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-All-SectorsBureaus/1331682557/",
       "tags": [
         "programme"
@@ -14953,7 +15058,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Multiple, Multiple",
       "continent": "Remote / Global",
       "deadline": "2026-12-31",
-      "postedDate": "2026-09-25",
+      "postedDate": "2026-10-24",
       "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Communications-and-Public-Engagement/1347728357/",
       "tags": [
         "communications",
@@ -14980,7 +15085,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Multiple, Multiple",
       "continent": "Remote / Global",
       "deadline": "2026-12-31",
-      "postedDate": "2026-09-25",
+      "postedDate": "2026-10-24",
       "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Culture-Sector/1347730257/",
       "tags": [
         "programme"
@@ -15006,7 +15111,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Multiple, Multiple",
       "continent": "Remote / Global",
       "deadline": "2026-12-31",
-      "postedDate": "2026-09-25",
+      "postedDate": "2026-10-24",
       "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Digital-Business-Solutions/1347770857/",
       "tags": [
         "digital"
@@ -15032,7 +15137,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Multiple, Multiple",
       "continent": "Remote / Global",
       "deadline": "2026-12-31",
-      "postedDate": "2026-09-25",
+      "postedDate": "2026-10-24",
       "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Education-Sector/1347773857/",
       "summary": "Humanitarian, migration, protection, health, nutrition, education, or social-policy role supporting vulnerable populations. Source: UNESCO. Location: Multiple, Multiple. Title signal: INTERNSHIP: Education Sector.",
       "responsibilities": [
@@ -15055,7 +15160,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Paris, France",
       "continent": "Europe",
       "deadline": "2026-06-30",
-      "postedDate": "2026-09-25",
+      "postedDate": "2026-10-24",
       "url": "https://careers.unesco.org/job/Paris-INTERNSHIP-Division-of-Internal-Oversight-Services/1347780957/",
       "tags": [
         "programme"
@@ -15081,7 +15186,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Multiple, Multiple",
       "continent": "Remote / Global",
       "deadline": "2026-12-31",
-      "postedDate": "2026-09-25",
+      "postedDate": "2026-10-24",
       "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Governing-Bodies-Secretariat/1347787357/",
       "tags": [
         "programme"
@@ -15107,7 +15212,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Multiple, Multiple",
       "continent": "Remote / Global",
       "deadline": "2026-12-31",
-      "postedDate": "2026-09-25",
+      "postedDate": "2026-10-24",
       "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Intergovernmental-Oceanographic-Commission/1347790957/",
       "tags": [
         "programme"
@@ -18064,6 +18169,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "UNIDO-1374171255",
+      "title": "Adaptation Fund Project Development Consultant (Ghana)",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "Home Based, Home Based",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-06",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Home-Based-Adaptation-Fund-Project-Development-Consultant-%28Ghana%29/1374171255/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Home Based, Home Based. Title signal: Adaptation Fund Project Development Consultant (Ghana).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
       "id": "UNU-2739419",
       "title": "REMOTE Internship: Research Intern - Neuroscience, Learning and AI in Higher Education",
       "organization": "UNU",
@@ -18909,6 +19041,33 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Organization, attention to detail, Excel, and documentation skills.",
         "Interest in operations, finance, HR, compliance, administration, or procurement.",
         "Ability to work carefully with procedures and records."
+      ]
+    },
+    {
+      "id": "WFP-JR127797",
+      "title": "Internship - Media and Communications, Partnership Team - WFP London Office, UK",
+      "organization": "WFP",
+      "source": "WFP",
+      "category": "Communications & Advocacy",
+      "location": "London, United Kingdom",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-08",
+      "postedDate": "2026-10-24",
+      "url": "https://wd3.myworkdaysite.com/en-US/recruiting/wfp/job_openings/jobs?workerSubType=59387fe40123101e856f1834e09b0002",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: WFP. Location: London, United Kingdom. Title signal: Internship - Media and Communications, Partnership Team - WFP London Office, UK.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
       ]
     }
   ]
