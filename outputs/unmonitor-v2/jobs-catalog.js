@@ -13059,6 +13059,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286428",
+      "title": "Youth and Disability Inclusion and Digital Communications Support Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Tech & Digital",
+      "location": "JAKARTA",
+      "continent": "Asia",
+      "deadline": "2026-11-05",
+      "postedDate": "2026-10-19",
+      "url": "https://careers.un.org/jobSearchDescription/286428?language=en",
+      "tags": [
+        "communications",
+        "digital"
+      ],
+      "summary": "Technical or digital role supporting software, ICT, digital transformation, AI, GIS, or technology-enabled workflows. Source: UN Careers. Location: JAKARTA. Title signal: Youth and Disability Inclusion and Digital Communications Support Intern.",
+      "responsibilities": [
+        "Support digital tools, systems, prototypes, or technical documentation.",
+        "Assist with requirements gathering, testing, implementation support, or workflow mapping.",
+        "Contribute to technology-enabled analysis, automation, or knowledge products."
+      ],
+      "requirements": [
+        "Technical background in computer science, information systems, GIS, digital innovation, or related field.",
+        "Relevant software, web, database, GIS, or ICT skills.",
+        "Ability to explain technical work clearly to non-technical stakeholders."
+      ]
+    },
+    {
       "id": "286447",
       "title": "Project Management Intern",
       "organization": "UN Careers",
@@ -13705,6 +13732,34 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "287017",
+      "title": "Intern - Communication, M&E and Research Specialist Crimes That Affect the Environment Team",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "BANGKOK",
+      "continent": "Asia",
+      "deadline": "2026-11-08",
+      "postedDate": "2026-10-26",
+      "url": "https://careers.un.org/jobSearchDescription/287017?language=en",
+      "tags": [
+        "research",
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: BANGKOK. Title signal: Intern - Communication, M&E and Research Specialist Crimes That Affect the Environment Team.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
       ]
     },
     {
