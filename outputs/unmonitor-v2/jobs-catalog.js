@@ -13797,7 +13797,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Programme & Project",
       "location": "NEW YORK",
       "continent": "North America",
-      "deadline": "2026-11-02",
+      "deadline": "2026-11-09",
       "postedDate": "2026-10-20",
       "url": "https://careers.un.org/jobSearchDescription/286795?language=en",
       "tags": [
@@ -13851,7 +13851,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Tech & Digital",
       "location": "NEW YORK",
       "continent": "North America",
-      "deadline": "2026-11-02",
+      "deadline": "2026-11-09",
       "postedDate": "2026-10-20",
       "url": "https://careers.un.org/jobSearchDescription/286816?language=en",
       "tags": [
@@ -13905,7 +13905,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Tech & Digital",
       "location": "NEW YORK",
       "continent": "North America",
-      "deadline": "2026-11-02",
+      "deadline": "2026-11-09",
       "postedDate": "2026-10-20",
       "url": "https://careers.un.org/jobSearchDescription/286898?language=en",
       "tags": [
@@ -14176,6 +14176,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "data"
       ],
       "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UN Careers. Location: GENEVA. Title signal: Intern - Data Analysis and Visualization.",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
+      ]
+    },
+    {
+      "id": "287208",
+      "title": "Transport, Logistics and Supply Chain Management Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Data & Analytics",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-11-10",
+      "postedDate": "2026-10-28",
+      "url": "https://careers.un.org/jobSearchDescription/287208?language=en",
+      "tags": [
+        "data"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UN Careers. Location: GENEVA. Title signal: Transport, Logistics and Supply Chain Management Intern.",
       "responsibilities": [
         "Clean, organize, and analyze datasets or monitoring information.",
         "Support dashboards, indicators, visualizations, reports, or information-management products.",
@@ -18932,6 +18958,58 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Support reporting, coordination, note-taking, research, and knowledge management.",
         "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
         "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNIDO-1374757355",
+      "title": "Intern (UNIDO Country Office in Cambodia)",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "Phnom-Penh, Cambodia",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-04",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Phnom-Penh-Intern-%28UNIDO-Country-Office-in-Cambodia%29/1374757355/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Phnom-Penh, Cambodia. Title signal: Intern (UNIDO Country Office in Cambodia).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNIDO-1374770655",
+      "title": "Intern (UNIDO Investment and Technology Promotion Office Korea)",
+      "organization": "UNIDO",
+      "source": "UNIDO",
+      "category": "Programme & Project",
+      "location": "Seoul, Korea, Republic of",
+      "continent": "Asia",
+      "deadline": "2026-11-11",
+      "postedDate": "2026-06-29",
+      "url": "https://careers.unido.org/job/Seoul-Intern-%28UNIDO-Investment-and-Technology-Promotion-Office-Korea%29/1374770655/",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNIDO. Location: Seoul, Korea, Republic of. Title signal: Intern (UNIDO Investment and Technology Promotion Office Korea).",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
       ],
       "requirements": [
         "Strong organization, writing, coordination, and research skills.",
