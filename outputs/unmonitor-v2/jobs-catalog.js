@@ -12259,7 +12259,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Programme & Project",
       "location": "MEXICO CITY",
       "continent": "North America",
-      "deadline": "2026-11-01",
+      "deadline": "2026-11-14",
       "postedDate": "2026-10-19",
       "url": "https://careers.un.org/jobSearchDescription/286078?language=en",
       "tags": [
@@ -12286,7 +12286,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Programme & Project",
       "location": "MEXICO CITY",
       "continent": "North America",
-      "deadline": "2026-11-01",
+      "deadline": "2026-11-14",
       "postedDate": "2026-10-19",
       "url": "https://careers.un.org/jobSearchDescription/286079?language=en",
       "tags": [
@@ -12313,7 +12313,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Programme & Project",
       "location": "MEXICO CITY",
       "continent": "North America",
-      "deadline": "2026-11-01",
+      "deadline": "2026-11-14",
       "postedDate": "2026-10-19",
       "url": "https://careers.un.org/jobSearchDescription/286080?language=en",
       "tags": [
@@ -12538,6 +12538,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong research, writing, and stakeholder-analysis skills.",
         "Interest in partnerships, fundraising, external relations, or private-sector engagement.",
         "Ability to synthesize information for senior audiences."
+      ]
+    },
+    {
+      "id": "286144",
+      "title": "Programme Management Intern: Support Counter-Terrorism Programming",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Programme & Project",
+      "location": "NEW YORK",
+      "continent": "North America",
+      "deadline": "2026-11-05",
+      "postedDate": "2026-10-29",
+      "url": "https://careers.un.org/jobSearchDescription/286144?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UN Careers. Location: NEW YORK. Title signal: Programme Management Intern: Support Counter-Terrorism Programming.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
       ]
     },
     {
@@ -13429,6 +13455,33 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286519",
+      "title": "Communication Specialist Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "DOHA",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-12",
+      "postedDate": "2026-10-30",
+      "url": "https://careers.un.org/jobSearchDescription/286519?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: DOHA. Title signal: Communication Specialist Intern.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
       "id": "286531",
       "title": "INTERN - HUMAN RIGHTS",
       "organization": "UN Careers",
@@ -13951,6 +14004,29 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "286946",
+      "title": "Intern - Humanitarian Affairs",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Humanitarian & Protection",
+      "location": "DOHA",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-12",
+      "postedDate": "2026-10-30",
+      "url": "https://careers.un.org/jobSearchDescription/286946?language=en",
+      "summary": "Humanitarian, migration, protection, health, nutrition, education, or social-policy role supporting vulnerable populations. Source: UN Careers. Location: DOHA. Title signal: Intern - Humanitarian Affairs.",
+      "responsibilities": [
+        "Support programme implementation, research, monitoring, or field coordination.",
+        "Contribute to documentation, needs analysis, protection or service-delivery follow-up.",
+        "Prepare notes, data summaries, and programme materials for humanitarian or social-policy teams."
+      ],
+      "requirements": [
+        "Interest or background in humanitarian affairs, migration, protection, public health, education, or social policy.",
+        "Research, documentation, and coordination skills.",
+        "Sensitivity to working with vulnerable populations and rights-based approaches."
+      ]
+    },
+    {
       "id": "286948",
       "title": "Intern: Security Risk Management",
       "organization": "UN Careers",
@@ -14081,6 +14157,32 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong writing, editing, storytelling, and communication skills.",
         "Experience or interest in social media, campaigns, multimedia, or public information.",
         "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "287087",
+      "title": "Interns - Support the work of UNEP/MAP in implementing the Programme of Work and Budget for the period 2026-2027",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "ATHENS",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-14",
+      "postedDate": "2026-10-29",
+      "url": "https://careers.un.org/jobSearchDescription/287087?language=en",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: ATHENS. Title signal: Interns - Support the work of UNEP/MAP in implementing the Programme of Work and Budget for the period 2026-2027.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
       ]
     },
     {
@@ -15625,6 +15727,87 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Track activities, deliverables, meetings, and programme documentation.",
         "Support reporting, coordination, note-taking, research, and knowledge management.",
         "Assist teams with day-to-day implementation and follow-up with partners or colleagues."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNDP-37785",
+      "title": "Stagiaire - Infrastructure numérique et architecture des systèmes",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Programme & Project",
+      "location": "Abidjan, Cote d'Ivoire",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-06",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37785",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNDP. Location: Abidjan, Cote d'Ivoire. Title signal: Stagiaire - Infrastructure numérique et architecture des systèmes.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNDP-37795",
+      "title": "Stagiaire - Données, intelligence artificielle (IA) et transformation numérique",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Programme & Project",
+      "location": "Abidjan, Cote d'Ivoire",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-06",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37795",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNDP. Location: Abidjan, Cote d'Ivoire. Title signal: Stagiaire - Données, intelligence artificielle (IA) et transformation numérique.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNDP-37797",
+      "title": "Stagiaire en Investissement",
+      "organization": "UNDP",
+      "source": "UNDP",
+      "category": "Programme & Project",
+      "location": "Abidjan, Cote d'Ivoire",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-06",
+      "postedDate": "2026-06-29",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37797",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNDP. Location: Abidjan, Cote d'Ivoire. Title signal: Stagiaire en Investissement.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
       ],
       "requirements": [
         "Strong organization, writing, coordination, and research skills.",
@@ -17961,6 +18144,60 @@ window.UN_MONITOR_JOB_CATALOG = {
         "advocacy"
       ],
       "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNICEF. Location: Italy. Title signal: Supporter Content - Knowledge Management Intern, Division of Private Fundraising and Partnerships (PFP).",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNICEF-596669",
+      "title": "Stagiaires en Ressources Humaines 02 mois, Bangui",
+      "organization": "UNICEF",
+      "source": "UNICEF",
+      "category": "Programme & Project",
+      "location": "Central African Republic",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-11",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.unicef.org/en-us/job/596669/stagiaires-en-ressources-humaines-02-mois-bangui",
+      "tags": [
+        "programme"
+      ],
+      "summary": "Programme support role involving coordination, documentation, reporting, stakeholder follow-up, and implementation support. Source: UNICEF. Location: Central African Republic. Title signal: Stagiaires en Ressources Humaines 02 mois, Bangui.",
+      "responsibilities": [
+        "Track activities, deliverables, meetings, and programme documentation.",
+        "Support reporting, coordination, note-taking, research, and knowledge management.",
+        "Assist teams with day-to-day implementation and follow-up with partners or colleagues.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong organization, writing, coordination, and research skills.",
+        "Interest in project/programme management and UN operational workflows.",
+        "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "UNICEF-596670",
+      "title": "Communication Internship, UNICEF China (for Chinese Nationals only), 6 months (on-site)",
+      "organization": "UNICEF",
+      "source": "UNICEF",
+      "category": "Communications & Advocacy",
+      "location": "China",
+      "continent": "Asia",
+      "deadline": "2026-11-29",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.unicef.org/en-us/job/596670/communication-internship-unicef-china-for-chinese-nationals-only-6-months-onsite",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNICEF. Location: China. Title signal: Communication Internship, UNICEF China (for Chinese Nationals only), 6 months (on-site).",
       "responsibilities": [
         "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
         "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
