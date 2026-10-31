@@ -13985,7 +13985,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "category": "Admin, Finance & HR",
       "location": "DILI (EAST TIMOR)",
       "continent": "Remote / Global",
-      "deadline": "2026-10-30",
+      "deadline": "2026-11-03",
       "postedDate": "2026-10-23",
       "url": "https://careers.un.org/jobSearchDescription/286913?language=en",
       "tags": [
@@ -14339,6 +14339,108 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Strong organization, writing, coordination, and research skills.",
         "Interest in project/programme management and UN operational workflows.",
         "Ability to work across teams and keep clear records."
+      ]
+    },
+    {
+      "id": "287356",
+      "title": "UNEP Finance Initiative (UNEP FI) Internship for Risk Centre - Support for Risk Programming",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "GENEVA",
+      "continent": "Europe",
+      "deadline": "2026-11-14",
+      "postedDate": "2026-10-30",
+      "url": "https://careers.un.org/jobSearchDescription/287356?language=en",
+      "tags": [
+        "finance"
+      ],
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: GENEVA. Title signal: UNEP Finance Initiative (UNEP FI) Internship for Risk Centre - Support for Risk Programming.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "287483",
+      "title": "Sustainable Development Affairs Intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Economics & Development",
+      "location": "BANGKOK",
+      "continent": "Asia",
+      "deadline": "2026-11-21",
+      "postedDate": "2026-10-31",
+      "url": "https://careers.un.org/jobSearchDescription/287483?language=en",
+      "summary": "Policy and development role focused on research, analysis, briefing material, and evidence for economic or sustainable-development work. Source: UN Careers. Location: BANGKOK. Title signal: Sustainable Development Affairs Intern.",
+      "responsibilities": [
+        "Support policy research, background notes, and evidence synthesis.",
+        "Analyze programme, economic, budget, or development information for team outputs.",
+        "Prepare short written products such as briefs, talking points, tables, and presentations."
+      ],
+      "requirements": [
+        "Background in economics, public policy, development, social sciences, or a related field.",
+        "Strong research, writing, Excel, and analytical skills.",
+        "Interest in UN development priorities and sustainable development issues."
+      ]
+    },
+    {
+      "id": "287492",
+      "title": "Public information intern",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Communications & Advocacy",
+      "location": "ADDIS ABABA",
+      "continent": "Africa",
+      "deadline": "2026-11-13",
+      "postedDate": "2026-10-30",
+      "url": "https://careers.un.org/jobSearchDescription/287492?language=en",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UN Careers. Location: ADDIS ABABA. Title signal: Public information intern.",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "287502",
+      "title": "Intern - Office of the ICJ Deputy-Registrar",
+      "organization": "UN Careers",
+      "source": "UN Careers",
+      "category": "Data & Analytics",
+      "location": "THE HAGUE",
+      "continent": "Europe",
+      "deadline": "2026-11-12",
+      "postedDate": "2026-10-30",
+      "url": "https://careers.un.org/jobSearchDescription/287502?language=en",
+      "tags": [
+        "data"
+      ],
+      "summary": "Data-oriented internship involving information management, monitoring, dashboards, statistics, or analytical support. Source: UN Careers. Location: THE HAGUE. Title signal: Intern - Office of the ICJ Deputy-Registrar.",
+      "responsibilities": [
+        "Clean, organize, and analyze datasets or monitoring information.",
+        "Support dashboards, indicators, visualizations, reports, or information-management products.",
+        "Document data workflows and help teams use evidence for decision-making."
+      ],
+      "requirements": [
+        "Experience with Excel and ideally Python, SQL, R, Power BI, Tableau, GIS, or similar tools.",
+        "Comfort with data cleaning, structured analysis, and documentation.",
+        "Ability to translate data into clear written or visual outputs."
       ]
     },
     {
@@ -16158,7 +16260,7 @@ window.UN_MONITOR_JOB_CATALOG = {
       "location": "Multiple, Multiple",
       "continent": "Remote / Global",
       "deadline": "2026-12-31",
-      "postedDate": "2026-10-02",
+      "postedDate": "2026-10-31",
       "url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-Division-of-Financial-Services/1371236357/",
       "tags": [
         "programme"
@@ -18102,6 +18204,34 @@ window.UN_MONITOR_JOB_CATALOG = {
       ]
     },
     {
+      "id": "UNICEF-596490",
+      "title": "Stagiaire en Partenariats et Communication - Senegal Country Office - Dakar (03 mois)",
+      "organization": "UNICEF",
+      "source": "UNICEF",
+      "category": "Communications & Advocacy",
+      "location": "Senegal",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-06",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.unicef.org/en-us/job/596490/stagiaire-en-partenariats-et-communication-senegal-country-office-dakar-03-mois",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNICEF. Location: Senegal. Title signal: Stagiaire en Partenariats et Communication - Senegal Country Office - Dakar (03 mois).",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content.",
+        "Confirm internship eligibility on the official vacancy page."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
       "id": "UNICEF-596567",
       "title": "Communication and Advocacy Intern , 12 months Algiers , Algeria",
       "organization": "UNICEF",
@@ -18202,6 +18332,34 @@ window.UN_MONITOR_JOB_CATALOG = {
         "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
         "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
         "Help translate programme evidence into accessible public-facing content."
+      ],
+      "requirements": [
+        "Strong writing, editing, storytelling, and communication skills.",
+        "Experience or interest in social media, campaigns, multimedia, or public information.",
+        "Ability to adapt messages for different audiences."
+      ]
+    },
+    {
+      "id": "UNICEF-596674",
+      "title": "Stagiaire Communication - Senegal Country Office - Dakar (03 mois)",
+      "organization": "UNICEF",
+      "source": "UNICEF",
+      "category": "Communications & Advocacy",
+      "location": "Senegal",
+      "continent": "Remote / Global",
+      "deadline": "2026-11-06",
+      "postedDate": "2026-06-29",
+      "url": "https://jobs.unicef.org/en-us/job/596674/stagiaire-communication-senegal-country-office-dakar-03-mois",
+      "tags": [
+        "communications",
+        "advocacy"
+      ],
+      "summary": "Communications role focused on public information, campaigns, advocacy, media, storytelling, or digital content. Source: UNICEF. Location: Senegal. Title signal: Stagiaire Communication - Senegal Country Office - Dakar (03 mois).",
+      "responsibilities": [
+        "Draft, edit, and package communication materials for web, social media, campaigns, or events.",
+        "Support advocacy research, media tracking, content planning, or stakeholder messaging.",
+        "Help translate programme evidence into accessible public-facing content.",
+        "Confirm internship eligibility on the official vacancy page."
       ],
       "requirements": [
         "Strong writing, editing, storytelling, and communication skills.",
